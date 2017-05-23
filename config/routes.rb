@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   # get 'pages/filter/:scope' => 'pages#index', as: :filtered_page
   # resources :imagegalleries
    root to: 'home#index'
-  # resources :posts, :pictures, :aboutpages, shallow: true do
-  #   resources :pictures
+  resources :posts, :pictures, :aboutpages, shallow: true do
+    resources :pictures
   #   member do
   #     post 'like'
   #     delete 'unlike'
@@ -32,5 +32,5 @@ Rails.application.routes.draw do
   #     end
   #     resources :replies
   #   end
-  # end
+  end
 end
