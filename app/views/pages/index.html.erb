@@ -1,0 +1,16 @@
+<div class="pages_details">
+  <table>
+    <tr>
+      <th class="page_image"> Image</th>
+      <th class="page_description">Description</th>
+    </tr>
+    <tr>
+      <% @pages.each do |page| %>
+        <% page.pictures.each do |pic, remov| %>
+          <td class="page_image"><%= image_tag(pic.image.url(:medium)) %></td>
+        <% end %>
+        <td><%= page.body %></td>
+      <% end %>
+    </tr>
+  </table>
+</div>

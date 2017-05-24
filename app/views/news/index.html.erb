@@ -1,0 +1,16 @@
+<div class="news_details">
+  <table>
+    <tr>
+      <th class="news_image"> Image</th>
+      <th class="news_body">Description</th>
+    </tr>
+    <tr>
+      <% @news.each do |news| %>
+        <% news.pictures.each do |pic, remov| %>
+          <td class="news_image"><%= image_tag(pic.image.url(:medium)) %></td>
+        <% end %>
+        <td><%= news.body %></td>
+      <% end %>
+    </tr>
+  </table>
+</div>

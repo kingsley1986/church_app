@@ -1,0 +1,15 @@
+<div class="page_wrapper_index" >
+  <didv class="content" >
+    <% @lives.each do |live| %>
+        <div class="post_body">
+          <%= truncate(live.body, length: 120) %>
+        </div>
+        <div class="post_created" >
+          <%= live.starting_date.strftime("Starting on %m/%d/%Y/%H/%M") %>
+        </div>
+        <div class="post_created" >
+          <%= live.end_date.strftime("Ends on %m/%d/%Y/%H/%M") %>
+        </div>
+    <% end %>
+  </div>
+</div>

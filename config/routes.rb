@@ -6,16 +6,16 @@ Rails.application.routes.draw do
       sign_out: 'logout'
     }
    } )
-  # resources :upcoming_events do
-  #   collection do
-  #     get  'past_events'
-  #     get 'upcomings'
-  #     get 'live_events'
-  #   end
-  # end
+  resources :upcoming_events do
+    collection do
+      get  'past_events'
+      get 'upcomings'
+      get 'live_events'
+    end
+  end
   # resources :pages
-  # resources :news
-  # get 'pages/filter/:scope' => 'pages#index', as: :filtered_page
+  resources :news
+  get 'pages/filter/:scope' => 'pages#index', as: :filtered_page
   # resources :imagegalleries
    root to: 'home#index'
   resources :posts, :pictures, :aboutpages, shallow: true do
