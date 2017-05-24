@@ -1,0 +1,55 @@
+<div class="page_wrapper_index" >
+  <didv class="content" >
+    <% @upcoming_events.each do |upcoming_event| %>
+      <table style="width: 100%;">
+        <tr>
+          <td>
+            <% if upcoming_event.starting_date > Time.current%>
+              <div class="post_title" >
+                <%= link_to upcoming_event.title, upcoming_event_path(upcoming_event)%>
+              </div>
+              <div class="post_body" %>
+                <%= truncate(upcoming_event.body, length: 120) %>
+              </div>
+              <div class="post_created" >
+                <%= upcoming_event.starting_date.strftime("Starting on %m/%d/%Y/%H/%M") %>
+              </div>
+              <div class="post_created" >
+                <%= upcoming_event.end_date.strftime("Ends on %m/%d/%Y") + " At " + upcoming_event.end_date.strftime("%H/%M") %>
+              </div>
+              <div class="img img1.imgAlbum" >
+                <% upcoming_event.pictures.each do |pic, remov| %>
+                  <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
+                <% end %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <% if upcoming_event.end_date < Time.current%>
+              <h2> This Programme is live now </h2>
+              <div class="post_title" >
+                <%= link_to upcoming_event.title, upcoming_event_path(upcoming_event)%>
+              </div>
+              <div class="post_body" %>
+                <%= truncate(upcoming_event.body, length: 120) %>
+              </div>
+              <div class="post_created" >
+                <%= upcoming_event.starting_date.strftime("Starting on %m/%d/%Y/%H/%M") %>
+              </div>
+              <div class="post_created" >
+                <%= upcoming_event.end_date.strftime("Ends on %m/%d/%Y") + " At " + upcoming_event.end_date.strftime("%H/%M") %>
+              </div>
+              <div class="img img1.imgAlbum" >
+                <% upcoming_event.pictures.each do |pic, remov| %>
+                  <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
+                <% end %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="page_wrapper_index" >
+  <didv class="content" >
+    <% @upcomings.each do |upcoming_event| %>
+        <div class="post_body">
+          <%= truncate(upcoming_event.body, length: 120) %>
+        </div>
+        <div class="post_created" >
+          <%= upcoming_event.starting_date.strftime("Starting on %m/%d/%Y/%H/%M") %>
+        </div>
+        <div class="post_created" >
+          <%= upcoming_event.end_date.strftime("Ends on %m/%d/%Y/%H/%M") %>
+        </div>
+    <% end %>
+  </div>
+</div>
