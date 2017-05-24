@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self)
   devise_for :users, ActiveAdmin::Devise.config.merge({
     controllers: {sessions: 'users/sessions'}, path: '',
     path_names: {
@@ -21,16 +20,16 @@ Rails.application.routes.draw do
    root to: 'home#index'
   resources :posts, :pictures, :aboutpages, shallow: true do
     resources :pictures
-  #   member do
-  #     post 'like'
-  #     delete 'unlike'
-  #   end
-  #   resources :comments do
-  #     member do
-  #       post 'like'
-  #       delete 'unlike'
-  #     end
-  #     resources :replies
-  #   end
+    member do
+      post 'like'
+      delete 'unlike'
+    end
+    resources :comments do
+      member do
+        post 'like'
+        delete 'unlike'
+      end
+      resources :replies
+    end
   end
 end
