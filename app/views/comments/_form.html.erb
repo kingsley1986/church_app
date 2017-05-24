@@ -1,0 +1,9 @@
+<%= simple_form_for ([@post, @post.comments.build]), :html => { :id => "new_comment_on_#{@post.id}" }  do |f| %>
+  <%= f.input :body%>
+    <%= f.simple_fields_for :pictures, Picture.new do |comment_pic| %>
+      <%=comment_pic.input :image %>
+    <% end %>
+      <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
+    </div>
+  </div>
+<% end %>

@@ -8,21 +8,22 @@ class PostsController < ApplicationController
   def show
   end
 
-  # def like
-  #   @post = Post.find(params[:id])
-  #    Like.create(likeable: @post, user: current_user, like: params[:like])
-  #    redirect_to :back
-  # end
+  def like
+    @post = Post.find(params[:id])
+    @post.update_attributes(like: true)
+    @post.liker_id += [current_user.id]
+    @post.save
+    redirect_to :back
+  end
 
 
-  # def unlike
-  #   @post = @post.likes.each do |user_like|
-  #     if user_like.user_id ==  current_user.id
-  #       user_like.destroy
-  #       redirect_to :back
-  #     end
-  #   end
-  # end
+  def unlike
+    @post = Post.find(params[:id])
+    @post.update_attributes(like: false)
+    @post.liker_id -= [current_user.id]
+    @post.save
+    redirect_to :back
+  end
 
   def new
     if pastor
@@ -38,7 +39,7 @@ class PostsController < ApplicationController
     if pastor
       @post.save
         redirect_to posts_path
-      else
+    else
         render :new
     end
   end
@@ -64,6 +65,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:id, :title, :post_body, pictures_attributes: [:id, :post_id, :image])
+    params.require(:post).permit(:id, :title, :post_body, :like, :liker_id, pictures_attributes: [:id, :post_id, :image])
   end
 end

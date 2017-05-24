@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523184942) do
+ActiveRecord::Schema.define(version: 20170524165949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(version: 20170523184942) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "comments", force: :cascade do |t|
+    t.string   "body"
+    t.integer  "post_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "user_id"
+    t.boolean  "like",       default: false
+    t.jsonb    "liker_id",   default: []
+  end
+
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+
   create_table "homes", force: :cascade do |t|
     t.string   "body"
     t.datetime "created_at", null: false
@@ -69,11 +81,24 @@ ActiveRecord::Schema.define(version: 20170523184942) do
     t.string   "title"
     t.string   "post_body"
     t.integer  "user_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "like",       default: false
+    t.jsonb    "liker_id",   default: []
+  end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
+  create_table "replies", force: :cascade do |t|
+    t.string   "reply_body"
+    t.integer  "comment_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+  add_index "replies", ["comment_id"], name: "index_replies_on_comment_id", using: :btree
+  add_index "replies", ["user_id"], name: "index_replies_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -99,5 +124,8 @@ ActiveRecord::Schema.define(version: 20170523184942) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "comments", "posts"
   add_foreign_key "posts", "users"
+  add_foreign_key "replies", "comments"
+  add_foreign_key "replies", "users"
 end
