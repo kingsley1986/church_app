@@ -1,12 +1,12 @@
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 col-md-offset-3" style="text-align: center">
   <% @posts.each do |post| %>
     <div class="row item" >
       <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
-        <h2><%= link_to post.title, post %></strike></h2>
-        <h5><%= truncate(post.post_body, length: 280) %></h5>
+        <div class="posttitle" style="color:blue; font-size20; font-weight:bold"><%= link_to post.title, post %></div>
+        <h5 style="text-align: center"><%= truncate(post.post_body, length: 280) %></h5>
         <p>posted <%= time_ago_in_words(post.created_at) %> ago</p>
         <% post.pictures.each do |pic, remov| %>
-          <p><%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %></p>
+            <div class="postimageclass" ><%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %></div>
         <% end %>
       </div>
     </div>

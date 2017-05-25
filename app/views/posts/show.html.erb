@@ -2,7 +2,7 @@
   <div class="row item" >
     <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
       <h2><%= @post.title %></strike></h2>
-      <h5><%= @post.post_body %></h5>
+      <div style="jwidth:455px;text-align:justify;"><%= @post.post_body %></div>
       <p>posted <%= time_ago_in_words(@post.created_at) %> ago</p>
       <% @post.pictures.each do |pic, remov| %>
         <p><%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %></p>

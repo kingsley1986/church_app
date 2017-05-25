@@ -1,3 +1,26 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.img-responsive {
+  // min-height: 150px;
+  //  min-width: 150px;
+  //  margin-left: auto;
+  //  margin-right: auto;
+  //  text-align: center;
+  //  display: table-cell;
+  //  vertical-align: middle;
+  //  margin-bottom: 20px;
+  //  margin: auto;
+   border: 3px solid green;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+
+a.img-responsive {
+  // display: block;
+  //    margin: 0 auto;
+     border: none;
+
+}
+
+
+hr.devidepost
+ {border-color: green;
+ }

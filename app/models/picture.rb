@@ -7,5 +7,6 @@ class Picture < ActiveRecord::Base
   belongs_to :picturable, polymorphic: true
   belongs_to :page
   belongs_to :news
+  belongs_to :home
   belongs_to :upcoming_event
 end

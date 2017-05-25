@@ -20,6 +20,8 @@
 
 
 
+
+
  body {
    background: #92c7d6;
    background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
@@ -71,25 +73,12 @@
  // image slider ends here
 
 
- hr.side
-  { border: 3px dashed #0000FF;
-   border-radius: 10px;
-   text-shadow: 4px 4px 2px rgba(245,245,220, 0.8);
-   text-shadow: 4px 4px 2px #f5f5dc;
-   -moz-box-shadow: 1px 1px 3px 2px #f5f5dc;
-   -webkit-box-shadow: 1px 1px 3px 2px #f5f5dc;
-    box-shadow:         1px 1px 3px 2px #f5f5dc;
-
-  }
- hr.devidepost
-  {border-color: red yellow green;
-  }
 
 
-a, a:link, a:visited {
-   color: white;
-   text-decoration: none;
- }
+// a, a:link, a:visited {
+//    color: white;
+//    text-decoration: none;
+//  }
 
  // body {
  //   background: url(http://css3exp.com/moon/img/space-bg.png) repeat-x fixed -80% 0;
