@@ -9,7 +9,6 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-
   # config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
@@ -19,8 +18,6 @@ ActiveAdmin.setup do |config|
   #
   # config.site_title_image = "logo.png"
 
-  config.current_user_method = :current_user
-  config.root_to = 'users#index'
   # == Default Namespace
   #
   # Set the default namespace each administration resource
@@ -57,7 +54,11 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # within the application controller.
-  # config.authentication_method = :authenticate_admin_user!
+  config.authentication_method = :authenticate_admin_user!
+  # config.authorization_adapter = ActiveAdmin::PunditAdapter
+  # config.pundit_default_policy = "ApplicationPolicy"
+
+
 
   # == User Authorization
   #
@@ -82,6 +83,8 @@ ActiveAdmin.setup do |config|
   # Method provided here should be defined in application_controller.rb.
   # config.on_unauthorized_access = :access_denied
 
+  config.current_user_method = :current_user
+
   # == Current User
   #
   # Active Admin will associate actions with the current
@@ -101,8 +104,8 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
+  # config.logout_link_path = :destroy_admin_user_session_path
   config.logout_link_path = :destroy_user_session_path
-
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
@@ -118,12 +121,14 @@ ActiveAdmin.setup do |config|
   # Default:
   # config.root_to = 'dashboard#index'
 
+  config.root_to = 'users#index'
+
   # == Admin Comments
   #
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  config.comments = false
+   config.comments = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
@@ -182,13 +187,6 @@ ActiveAdmin.setup do |config|
   # resources or you can disable them globally from here.
   #
   # config.breadcrumb = false
-
-  # == Create Another Checkbox
-  #
-  # Create another checkbox is disabled by default. You can customize it for individual
-  # resources or you can enable them globally from here.
-  #
-  # config.create_another = true
 
   # == Register Stylesheets & Javascripts
   #
@@ -280,18 +278,4 @@ ActiveAdmin.setup do |config|
   # of those filters by default here.
   #
   # config.include_default_association_filters = true
-
-  # == Footer
-  #
-  # By default, the footer shows the current Active Admin version. You can
-  # override the content of the footer here.
-  #
-  # config.footer = 'my custom footer text'
-
-  # == Sorting
-  #
-  # By default ActiveAdmin::OrderClause is used for sorting logic
-  # You can inherit it with own class and inject it for all resources
-  #
-  # config.order_clause = MyOrderClause
 end
