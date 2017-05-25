@@ -19,7 +19,9 @@ class User < ActiveRecord::Base
     before_validation :params_sanitizer, only: :update
 
   def params_sanitizer
-    self.try(:roles).delete("")
+    if self.try(:roles).include?("")
+      self.roles.delete("")
+    end
   end
 
   def self.roles
