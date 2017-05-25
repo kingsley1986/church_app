@@ -46,6 +46,8 @@ class PostsController < ApplicationController
 
 
   def edit
+    if pastor
+    end
   end
 
   def update
