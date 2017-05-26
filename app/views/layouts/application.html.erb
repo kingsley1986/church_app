@@ -8,7 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <%= render  "shared/header" %>
-
+<% flash.each do |name, msg| %>
+   <%= content_tag :div, msg, class: "alert alert-info" %>
+ <% end %>
 
 <body>
   <main>
@@ -20,9 +22,6 @@
   <div class="pulser"></div>
   <div class="pulser"></div>
 </main>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
   <% if current_page?(root_path) %>
     <%= render "shared/headertwo" %>
