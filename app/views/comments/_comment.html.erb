@@ -1,3 +1,4 @@
+<% if comment.approved == ["approved"] %>
 <hr class="devidepost">
   <div class="postboy" style="font-size:15px; margin-bottom:15px;">
     <%= comment.body %>
@@ -36,4 +37,5 @@
     <%= simple_form_for([comment, comment.replies.new], :html => { :id => "new_comment_on_#{comment.id}" } ) do |f| %>
       <%= f.input :reply_body, placeholder: "Reply to this comment", label: "reply", as: :text %>
     <% end %>
+  <% end %>
   <% end %>

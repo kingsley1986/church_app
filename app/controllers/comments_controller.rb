@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
+      flash[:notice] = "Successfully created a comment, we will review and approve your comment whithin 24 hours. Thank you #{@comment.user.first_name} "
       redirect_to :back
     else
       redirect_to :back
@@ -53,6 +54,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body, pictures_attributes: [:id, :comment_id, :image])
+    params.require(:comment).permit(:body, :approved, pictures_attributes: [:id, :comment_id, :image])
   end
 end

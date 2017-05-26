@@ -7,4 +7,16 @@ class Comment < ActiveRecord::Base
   has_many :replies
   accepts_nested_attributes_for :pictures
 
+  before_validation :params_sanitizer, only: :update
+
+  def params_sanitizer
+    if self[:approved].include?("")
+      self.approved.delete("")
+    end
+  end
+
+  def self.approver
+    ['rejected', 'decisioning', 'approved']
+  end
+
 end
