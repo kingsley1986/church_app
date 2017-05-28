@@ -1,3 +1,5 @@
+<div class="container container-table">
+    <div class="row vertical-center-row">
 <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
   <!-- Loading Screen -->
   <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
@@ -70,98 +72,152 @@
 </div>
 <script type="text/javascript">jssor_1_slider_init();</script>
       <!-- #endregion Jssor Slider End -->
-	<!--/about-->
-<div class="container">
-	<div class="row" style="text-align: center">
-		<div class="recent">
-      <button type="button" class="fa fa-comment btn btn-primary btn-lg" aria-hidden="true" style="margin-top:15px; margin-bottom:20px; font-weight:bold; font-size:20px;"><%= link_to "Click Here for posts and comments", posts_path %></button>
-		</div>
-	</div>
-  <hr class="side">
-</div>
-
-<div class="container" style=" text-align: justify; padding-left:5px; ">
-	<div class="row">
-		<div class="content">
-			<div class="col-md-4">
-				<div class="wow fadeInUp" data-wow-delay="0.2s" >
-					<div class="align-center"  style="background: white; ">
-						<h4>Home Page</h4>
+  <div class="content">
+    <div class="container_12">
+      <div class="grid_12">
+        <h3>Top Destinations</h3>
+      </div>
+      <div class="boxes">
+        <div class="grid_4">
+          <figure>
+            <div><img src="images/page1_img1.jpg" alt=""></div>
+            <figcaption>
+              <h3>Venice</h3>
+              Lorem ipsum dolor site geril amet, consectetur cing eliti. Suspendisse nulla leo mew dignissim eu velite a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat. Rabi tur oliti aliquam bibendum olor quis malesuadivamu. <a href="#" class="btn">Details</a> </figcaption>
+          </figure>
+        </div>
+        <div class="grid_4">
+          <figure>
+            <div><img src="images/page1_img2.jpg" alt=""></div>
+            <figcaption>
+              <h3>New York</h3>
+              Psum dolor sit ametylo gerto consectetur ertori hykill holit adipiscing lity. Donecto rtopil osueremo	kollit asec emmodem geteq tiloli. Aliquam dapibus neclol nami wertoli elittro eget vulpoli no
+              utaterbil congue turpis in su. <a href="#" class="btn">Details</a> </figcaption>
+          </figure>
+        </div>
+        <div class="grid_4">
+          <figure>
+            <div><img src="images/page1_img3.jpg" alt=""></div>
+            <figcaption>
+              <h3>Paris</h3>
+              Lorem ipsum dolor site geril amet, consectetur cing eliti. Suspendisse nulla leo mew dignissim eu velite a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat. Rabi tur oliti aliquam bibendum olor quis malesuadivamu. <a href="#" class="btn">Details</a> </figcaption>
+          </figure>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="grid_8">
+        <div id="tabs">
+          <ul>
+            <li><a href="/upcoming_events/live_events" style="text-decoration: none;">Live Events</a></li>
+            <li><a href="/upcoming_events/upcomings" style="text-decoration: none;">Upcoming Events</a></li>
+            <li><a href="/upcoming_events/past_events" style="text-decoration: none;">Past Events</a></li>
+          </ul>
+          <div class="clear"></div>
             <% @homes.each do |home_page| %>
-            <% home_page.pictures.each do |pic, remov| %>
-                <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
-            <% end %>
-						<div style="margin-right:10px; margin-left:10px;"><%= truncate(home_page.body, length: 350) %></div>
-						<div class="ficon">
-              <%= link_to '...Read more', '', class: "read-more-#{home_page.id}", style:"color:green; font-size: 17px; " %>
-              <script>
-              $('.read-more-<%= home_page.id %>').on('click', function(e) {
-                e.preventDefault()
-                $(this).parent().html('<%= escape_javascript home_page.body %>')
-              })
-              </script>
+              <% home_page.pictures.each do |pic, remov| %>
+                <div class="tab_cont" id="tabs-1"> <%= image_tag(pic.image.url(:square), class: "img-responsive") if pic.image? %>
               <% end %>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="wow fadeInUp" data-wow-delay="0.4s">
-					<div class="align-center"  style="background: white">
-						<h4>John Doe</h4>
-						<div class="icon">
-						</div>
-						<img src="images/camp.jpg" alt="" class="img-responsive">
-						<p>
-						 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-						</p>
-						<div class="ficon">
-							<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="wow fadeInUp" data-wow-delay="0.6s">
-					<div class="align-center">
-						<h4 class="" style="color:red; font-family:ariel; font-style:italic">Our Social Media</h4>
-						<div class="icon">
-              <%= render "shared/events" %>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+              <div class="extra_wrapper">
+                <!-- <div class="text1">Rem psum dr sit amet. </div> -->
+                <p class="style1">
+                  <%= truncate(home_page.body, length: 1700) %>
+                  <%= link_to '...Read more', '', class: "read-more-#{home_page.id}", style:"color:green; font-size: 17px;" %>
+                  <script>
+                    $('.read-more-<%= home_page.id %>').on('click', function(e) {
+                      e.preventDefault()
+                      $(this).parent().html('<%= escape_javascript home_page.body %>')
+                    })
+                  </script>
+                </div>
+              <% end %>
+              </p>
+            <div>
+              <div class="clear "></div>
+            </div>
+            <div class="clear cl1"></div>
+            <img src="images/page1_img5.jpg" alt="">
+            <div class="extra_wrapper">
+              <div class="text1 tx1">Hem psuf abr sit dmety. </div>
+              Julla facilisi. Ut ut tincidunt lacus, ut auctor libero. Fuis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisi. Vestibulum eu eleifend metus, ut ornare nibh. Vestibulumul tincidunt interdum libero vitae faucibus. Gonec dapibus feugiate auctor. In ac dapibus lacus. Maecenas in pharetra mim asellus a sagittis dui, eu adipiscinget nisi.
+              <div class="clear"></div>
+              <a href="#" class="btn bt1">Details</a>
+              <div class="clear "></div>
+            </div>
+          </div>
+          <div class="tab_cont" id="tabs-2"> <img src="images/page1_img4.jpg" alt="">
+            <div class="extra_wrapper">
+              <div class="text1">Rem psum dr sit amet. </div>
+              <p class="style1">Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro.</p>
+              Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro. <a href="#" class="btn">Details</a>
+              <div class="clear "></div>
+            </div>
+            <div class="clear cl1"></div>
+            <img src="images/page1_img5.jpg" alt="">
+            <div class="extra_wrapper">
+              <div class="text1 tx1">Hem psuf abr sit dmety. </div>
+              Julla facilisi. Ut ut tincidunt lacus, ut auctor libero. Fuis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisi. Vestibulum eu eleifend metus, ut ornare nibh. Vestibulumul tincidunt interdum libero vitae faucibus. Gonec dapibus feugiate auctor. In ac dapibus lacus. Maecenas in pharetra mim asellus a sagittis dui, eu adipiscinget nisi.
+              <div class="clear"></div>
+              <a href="#" class="btn bt1">Details</a>
+              <div class="clear "></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_4">
+        <div class="newsletter_title">Our Ministries </div>
+        <div class="n_container">
+          <ul class="list">
+            <li><a href="/pages/filter/children" class="" style="font-weight:bold; color:white; text-decoration: none;">Children Ministry</a></li>
+            <li><a href="/pages/filter/elder" class="" style="font-weight:bold; color:white; text-decoration: none;">Elders Ministry</a></li>
+            <li><a href="/pages/filter/youth" class="" style="font-weight:bold; color:white; text-decoration: none;">Youths Ministry</a></li>
+            <li><a href="/pages/filter/hospital" class="" style="font-weight:bold; color:white; text-decoration: none;">Prison Ministry</a></li>
+            <li><a href="/pages/filter/prison" class="" style="font-weight:bold; color:white; text-decoration: none;">Hospital Ministry</a></li>
+            <li><a href="/pages/filter/food" class="" style="font-weight:bold; color:white; text-decoration: none;">Warefare Ministry</a></li>
+          </ul>
+        </div>
+        <div class="newsletter_title">Days of Worship </div>
+        <div class="n_container">
+          <ul class="list">
+            <li><a href="/pages/filter/sunday" class="" style="font-weight:bold; color:white; text-decoration: none;">Sunday</a></li>
+						<li><a href="/pages/filter/tuesday" class="" style="font-weight:bold; color:white; text-decoration: none;">Tuesday</a></li>
+						<li><a href="/pages/filter/thursday" class="" style="font-weight:bold; color:white; text-decoration: none;">Thursday</a></li>
+						<li><a href="/pages/filter/friday" class="" style="font-weight:bold; color:white; text-decoration: none;">Friday</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="bottom_block">
+    <div class="container_12">
+      <div class="grid_2">
+        <ul>
+          <li><a href="#">contacts</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+      <div class="grid_2">
+        <ul>
+          <li><a href="#">Insurance</a></li>
+          <li><a href="#">Family Travel</a></li>
+        </ul>
+      </div>
+      <div class="grid_2">
+        <h4>Contact Us:</h4>
+        TEL: 1-800-234-5678<br>
+        <a href="#">inforccgkog.org</a> </div>
+      <div class="clear"></div>
+    </div>
+  </div>
 </div>
-
-<div class="container">
-	<div class="row">
-		<hr>
-	</div>
 </div>
-	<!--start footer-->
-
-	<div class="container">
-		<div class="row">
-			<hr>
-		</div>
-	</div>
-
-	<div id="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="copyright">
-						<p>
-							<span>&copy; Kingsley, All right reserved.</span>
-						</p>
-              <div class="credits">
-                <a href="https://bootstrapmade.com/">Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-              </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<footer>
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="socials"> <a href="#"></a> <a href="https://web.facebook.com/RCCG-The-King-of-Glory-Cape-Town-1741406809415560/" target="_blank"></a> <a href="#"></a> <a href="#"></a> </div>
+      <div class="copy"> Church &copy; 2016 | <a href="#">Privacy Policy</a> | Design by: <a href="">Kingsley Chukwuma</a> </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
 </footer>

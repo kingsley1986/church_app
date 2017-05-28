@@ -12,9 +12,6 @@ class Page < ActiveRecord::Base
                  'Sunday',
                  'Tuesday',
                  'Thursday',
-                 'Father',
-                 'Son',
-                 'Holy Spirit',
                  'Home Page',
                  'Contact'
                ]
@@ -29,10 +26,7 @@ scope :hospital, -> { where(page_type: 'Hospital') }
 scope :sunday, -> { where(page_type: 'Sunday') }
 scope :tuesday, -> { where(page_type: 'Tuesday') }
 scope :thursday, -> { where(page_type:  'Thursday')  }
-scope :father, -> { where(page_type: 'Father') }
-scope :son, -> { where(page_type:  'Son')  }
 scope :home, -> { where(page_type:  'Home Page')  }
-scope :holy_spirit, -> { where(page_type: 'Holy Spirit') }
 scope :home, -> { where(page_type: 'Home Page') }
 scope :contact, -> { where(page_type: 'Contact') }
 

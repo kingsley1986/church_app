@@ -1,15 +1,4 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require font-awesome
  *= require_tree .
  *= require_self
@@ -19,293 +8,27 @@
  @import "main";
 
 
+ .container-table {
+   display: table;
+   font-family: 'Gabriela', serif;
+   color: #FFF;
+   border-radius: 20px;
+   background-color: rgb(30%,50%,70%);
 
 
+  //  background-color:  rgba(54, 25, 25, .5);
+  //  background-color: rgb(30%,50%,70%);
 
- body {
-   background: #92c7d6;
-   background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
-   background-image: -moz-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
-   background-image: -o-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
-   background-image: radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+   padding: 0.5em 0.2em 0.8em 0.5em;
  }
 
-
-
- .jssorb01 {
-     position: absolute;
- }
- .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
-     position: absolute;
-     /* size of bullet elment */
-     width: 12px;
-     height: 12px;
-     filter: alpha(opacity=70);
-     opacity: .7;
-     overflow: hidden;
-     cursor: pointer;
-     border: #000 1px solid;
- }
- .jssorb01 div { background-color: gray; }
- .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
- .jssorb01 .av { background-color: #fff; }
- .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555;
+ header h1 a img {
+   width:150px;
+ height:150px;
+ border-radius:50%;
+ overflow:hidden;
  }
 
- .jssora02l, .jssora02r {
-     display: block;
-     position: absolute;
-     /* size of arrow element */
-     width: 45px;
-     height: 55px;
-     cursor: pointer;
-     background: url('img/a02.png') no-repeat;
-     overflow: hidden;
- }
- .jssora02l { background-position: -3px -33px; }
- .jssora02r { background-position: -63px -33px; }
- .jssora02l:hover { background-position: -123px -33px; }
- .jssora02r:hover { background-position: -183px -33px; }
- .jssora02l.jssora02ldn { background-position: -3px -33px; }
- .jssora02r.jssora02rdn { background-position: -63px -33px; }
- .jssora02l.jssora02lds { background-position: -3px -33px; opacity: .3; pointer-events: none; }
- .jssora02r.jssora02rds { background-position: -63px -33px; opacity: .3; pointer-events: none; }
- // image slider ends here
-
-
-
-
-// a, a:link, a:visited {
-//    color: white;
-//    text-decoration: none;
-//  }
-
- // body {
- //   background: url(http://css3exp.com/moon/img/space-bg.png) repeat-x fixed -80% 0;
- //   background:
- //     url(http://css3exp.com/moon/img/stars-1.png) repeat-x fixed -130% 0,
- //     url(http://css3exp.com/moon/img/stars-2.png) repeat-x fixed 40% 0,
- //     url(http://css3exp.com/moon/img/space-bg.png) repeat-x fixed -80% 0,
- //     url(http://css3exp.com/moon/img/clouds.png) repeat-x fixed 100% 0;
- //   background-color: #1a1a1a;
- // }
-
-// background: -webkit-linear-gradient(left, grey, grey 30%, white 30%, #3D9970);
-
-
-div.btn.btn-primary.church_name {
-  font-size:25px;
-  position:relative;
-  left:18px;
-}
-
-// body{
-//  margin: 0;
-//  padding: 0;
-//  font: 300 14px/18px Roboto;
-//  background: url('images/image.png');
-//  }
-
-div.container {
-  background: url(http://css3exp.com/moon/img/space-bg.png) repeat-x fixed -80% 0;
-  background:
-    url(http://css3exp.com/moon/img/stars-1.png) repeat-x fixed -130% 0,
-    url(http://css3exp.com/moon/img/stars-2.png) repeat-x fixed 40% 0,
-    url(http://css3exp.com/moon/img/space-bg.png) repeat-x fixed -80% 0,
-    url(http://css3exp.com/moon/img/clouds.png) repeat-x fixed 100% 0;
-  background-color: #1a1a1a;
-  // width: 60%;
-
-}
-
-@media (max-width: 767px) {
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: white;
-    }
-}
-
-@media (max-width: 1200px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in{
-        display:block !important;
-    }
-}
-
-.navbar-inverse {
-  background: #074e68;
-  border: 2px dashed yellow;
-   border-radius: 10px;
-}
-.mega-dropdown {
-  position: static !important;
-}
-.mega-dropdown-menu {
-    padding: 20px 0px;
-    width: 100%;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-}
-.mega-dropdown-menu > li > ul {
-  padding: 0;
-  margin: 0;
-}
-.mega-dropdown-menu > li > ul > li {
-  list-style: none;
-}
-.mega-dropdown-menu > li > ul > li > a {
-  display: block;
-  color: #222;
-  padding: 3px 5px;
-}
-.mega-dropdown-menu > li ul > li > a:hover,
-.mega-dropdown-menu > li ul > li > a:focus {
-  text-decoration: none;
-}
-.mega-dropdown-menu .dropdown-header {
-  font-size: 18px;
-  color: #ff3546;
-  padding: 5px 60px 5px 5px;
-  line-height: 30px;
-}
-
-.carousel-control {
-  width: 30px;
-  height: 30px;
-  top: -35px;
-
-}
-.left.carousel-control {
-  right: 30px;
-  left: inherit;
-}
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  font-size: 12px;
-  background-color: #fff;
-  line-height: 30px;
-  text-shadow: none;
-  color: #333;
-  border: 1px solid #ddd;
-}
-
- //Church Name stylings
-
- $layer-count: 20;
- $layer-spread: 3px;
- $layer-fade: 2px;
- $start-shadows: ();
- $stop-shadows: ();
-
- @function layer($color,$distance, $fade) {
-   // which shadows we are going for
-   $l: ();
-   // straight factor (make circular)
-   $factor: 1.3;
-   // bottom
-   $l: append($l, 0px ( $distance * $factor) $fade $color, comma);
-   // top
-   $l: append($l, 0px (-$distance * $factor) $fade $color, comma);
-   // right
-   $l: append($l, ( $distance * $factor) 0px $fade $color, comma);
-   // left
-   $l: append($l, (-$distance * $factor) 0px $fade $color, comma);
-   // top left
-   $l: append($l, (-$distance) (-$distance)  $fade $color, comma);
-   // top right
-   $l: append($l, ( $distance) (-$distance)  $fade $color, comma);
-   // bottom right
-   $l: append($l, ( $distance) ( $distance)  $fade $color, comma);
-   // bottom left
-   $l: append($l, (-$distance) ( $distance)  $fade $color, comma);
-
-   @return $l;
- }
-
-
-
- @for $i from 1 through $layer-count {
-   $color: hsl(360 * ($i / $layer-count), 50%, 50%);
-   $throttle-factor: $i * $i / 4;
-   $start-shadows: append($start-shadows, layer(transparentize($color,0.8), 0, 0px), comma);
-   $stop-shadows:  append($stop-shadows,  layer(transparentize($color,1.0), $layer-spread * $throttle-factor, $layer-fade * $i), comma);
- }
-
- /* #{$start-shadows} */
-
- @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
-
- $pulse-ease: cubic-bezier(0, 1.74, 0.61, 0.62);
- $pulse-ease: cubic-bezier(0, 2.48, 0.43, 1);
- $pulse-ease: cubic-bezier(0, 1.43, 0.58, 1);
- $pulse-time: 3s;
-
- .church_name {
-   color: white;
-   text-shadow: $start-shadows;
-     font-family: Times, "Times New Roman", Georgia, serif;
-     font-style: italic;
-   animation:
-     flicker 100ms linear infinite,
-     pulse   $pulse-time $pulse-ease infinite,
-     rainbow $pulse-time ease-in-out infinite;
- }
-
- @keyframes rainbow {
-   to { text-shadow: $stop-shadows; }
- }
-
- @keyframes flicker {
-   0%   { color: rgba(white, 1.0); }
-   100% { color: rgba(white, 0.9); }
- }
-
- @keyframes pulse {
-   0%, 10%, 90%, 100% { transform: translateY(-50%) scale(1.0); }
-   45%, 55%  { transform: translateY(-50%) scale(1.05); }
- }
-
-
- .church_name {
-   position: absolute;
-   top: 50%; left: 0;
-   width: 100%;
-   transform: translateY(-50%);
-   margin: 0;
-   font-size: 6rem;
-   text-align: center;
- }
-
- .church_name {
-   position: relative;
-   top:20px;
+ a.btn{
+   text-decoration: none;
  }
