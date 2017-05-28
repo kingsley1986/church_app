@@ -1,104 +1,29 @@
-<div class="container">
-  <nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-    	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
-  			<span class="sr-only">Toggle navigation</span>
-  			<span class="icon-bar"></span>
-  			<span class="icon-bar"></span>
-  			<span class="icon-bar"></span>
-		  </button>
-      <a class="fa fa-home btn btn-success navbar-brand" style="color:white; font-size:20px; font-weight:bold; position:relative;" href="/">Home</a>
-	  </div>
-
-  	<div class="collapse navbar-collapse js-navbar-collapse">
-  		<ul class="nav navbar-nav">
-  			<li class="dropdown mega-dropdown">
-  				<a href="#" class="dropdown-toggle" style="color:white; font-weight:bold;" data-toggle="dropdown">Ministries <span class="caret"></span></a>
-  				<ul class="dropdown-menu mega-dropdown-menu">
-  					<li class="col-sm-3">
-  						<ul>
-  							<li class="dropdown-header">Men Collection</li>
-                  <div id="menCollection" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <a href="#"><img src="http://placehold.it/254x150/ff3546/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
-                      </div><!-- End Item -->
-                      <div class="item">
-                        <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
-                      </div><!-- End Item -->
-                      <div class="item">
-                        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
-                      </div><!-- End Carousel Inner -->
-                    <!-- Controls -->
-                      <a class="left carousel-control" href="#menCollection" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#menCollection" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-                  </div><!-- /.carousel -->
-                  <li class="divider"></li>
-    						</ul>
-    					</li>
-    					<li class="col-sm-3">
-    						<ul>
-    							<li class="dropdown-header" style="color:white">Ministries</li>
-                  <li><a href="/pages/filter/children" class="" style="font-weight:bold">Children</a></li>
-                  <li><a href="/pages/filter/elder" class="" style="font-weight:bold">Elders</a></li>
-                  <li><a href="/pages/filter/youth" class="" style="font-weight:bold">Youths</a></li>
-                  <li><a href="/pages/filter/hospital" class="" style="font-weight:bold">Prison</a></li>
-                  <li><a href="/pages/filter/prison" class="" style="font-weight:bold">Hospital</a></li>
-                  <li><a href="/pages/filter/food" class="" style="font-weight:bold">Warefare</a></li>
-    							<li class="divider"></li>
-    						</ul>
-    					</li>
-    					<li class="col-sm-3">
-    						<ul>
-    							<li class="dropdown-header">worship Days</li>
-    							<li><a href="/pages/filter/sunday" class="" style="font-weight:bold">Sunday</a></li>
-    							<li><a href="/pages/filter/tuesday" class="" style="font-weight:bold">Tuesday</a></li>
-    							<li><a href="/pages/filter/thursday" class="" style="font-weight:bold">Thursday</a></li>
-    							<li><a href="/pages/filter/friday" class="" style="font-weight:bold">Friday</a></li>
-    						</ul>
-    					</li>
-  			    </li>
-  			  </ul>
-  			</li>
-        <li><a href="/news" class="fa fa-bullhorn news" style="color:white;font-weight:bold;font-size:20px; ">News</a></li>
-        <li><a href="#" style="color:white;font-weight:bolder">Images</a></li>
-        <li>
-          <div class="btn btn-primary church_name">RCCG King Of Glory Parish
-        </li>
-  		</ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" style="color:white;font-weight:bold" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <% unless current_user && user_signed_in? %>
-              <li><a href="/sign_up" style="font-weight:bold">Sign Up</a></li>
-              <li><a href="/login" style="font-weight:bold">Sign In</a></li>
-            <% end %>
-            <% if current_user && user_signed_in? %>
-              <li><a href="/logout" style="font-weight:bold">Log Out</a></li>
-              <li class="divider"></li>
-              <li><a href="/edit" style="font-weight:bold">Edit User</a></li>
-            <% end %>
-          </ul>
-        </li>
-        <li><a href="/pages/filter/sunday" class="fa fa-phone-square btn btn-success" style="color:white;font-weight:bold; font-size:20px;">Contacts</a></li>
-      </ul>
-  	</div><!-- /.nav-collapse -->
-  </nav>
-</div>
-<!-- <li class="col-sm-3">
-  <ul>
-    <li class="dropdown-header">Much more</li>
-                  <li><a href="#">Easy to Customize</a></li>
-    <li><a href="#">Calls to action</a></li>
-    <li><a href="#">Custom Fonts</a></li>
-    <li><a href="#">Slide down on Hover</a></li>
-  </ul>
-</li> -->
+<body class="page1">
+<header>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1><a href="/"><img src="images/rcg.png" alt=""></a></h1>
+      <div class="clear"></div>
+    </div>
+    <div class="menu_block">
+      <nav>
+        <ul class="sf-menu">
+					<li class="current"><%= link_to "Home", root_path %></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/posts">Blog</a></li>
+          <% unless current_user && user_signed_in? %>
+            <li><a href="/sign_up" style="">Sign Up</a></li>
+            <li><a href="/login" style="">Sign In</a></li>
+          <% end %>
+          <% if current_user && user_signed_in? %>
+            <li><a href="/edit" style="">Edit account</a></li>
+            <li><a href="/logout" style="">Log Out</a></li>
+          <% end %>
+        </ul>
+      </nav>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</header>
