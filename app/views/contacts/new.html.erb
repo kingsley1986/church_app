@@ -1,0 +1,20 @@
+<h1 id="page_title">Say Hello!</h1>
+
+<div class="skinny_wrapper wrapper_padding">
+  <%= simple_form_for @contactform do |f| %>
+    <%= f.input :name, required: true %>
+    </br>
+
+    <%= f.input :email, required: true %>
+
+    </br>
+
+    <%= f.input :message, as: :text %><br>
+
+    <div class="hidden">
+      <%= f.input :nickname, hint: "leave this field blank " %>
+    </div>
+
+    <%= f.submit 'Send Message', class:"button" %>
+  <% end %>
+</div>

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
   # resources :pages
   resources :news
+  resources :contacts, only: [:new, :create]
   get 'pages/filter/:scope' => 'pages#index', as: :filtered_page
   # resources :imagegalleries
    root to: 'home#index'
