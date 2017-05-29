@@ -1,13 +1,13 @@
 class ContactsController < ApplicationController
 
   def new
-    @contactform = Contact.new
+    @contact = Contact.new
   end
 
   def create
-    @contactform = Contact.new(params[:contact])
-    @contactform.request = request
-    if @contactform.deliver
+    @contact = Contact.new(params[:contact])
+    @contact.request = request
+    if @contact.deliver
       flash.now[:error] = nil
     else
       flash.now[:error] = "Cannot send message"

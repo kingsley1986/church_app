@@ -129,37 +129,38 @@
                     })
                   </script>
                 </div>
-              <% end %>
               </p>
+            <% end %>
             <div>
               <div class="clear "></div>
             </div>
-            <div class="clear cl1"></div>
-            <img src="images/page1_img5.jpg" alt="">
+          </div>
+          <div><%= simple_form_for  Contact.new, :html => {:class => "tab_cont", id:"tabs-2"} do |f| %>
             <div class="extra_wrapper">
-              <div class="text1 tx1">Hem psuf abr sit dmety. </div>
-              Julla facilisi. Ut ut tincidunt lacus, ut auctor libero. Fuis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisi. Vestibulum eu eleifend metus, ut ornare nibh. Vestibulumul tincidunt interdum libero vitae faucibus. Gonec dapibus feugiate auctor. In ac dapibus lacus. Maecenas in pharetra mim asellus a sagittis dui, eu adipiscinget nisi.
-              <div class="clear"></div>
-              <a href="#" class="btn bt1">Details</a>
-              <div class="clear "></div>
+              <div class="text1">This is prayer contact form. Send Your Prayer Request to us </div>
+
+              <div class="row">
+                <div class="form-group col-lg-10">
+                  <%= f.input :name,  class:"form-control", required: true %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-lg-10">
+                  <%= f.input :email, class:"form-control input-normal" %><br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-lg-8" >
+                  <%= f.input :message, :placeholder => "Please type your Prayer request inside here", as: :text, input_html: { rows: "12" }, class:"form-control input-normal"%><br>
+                </div>
+              </div>
+              <div class="row">
+                <button type="submit" class="btn btn-success" id="submit" style="position:relative; left:20px;" name="submit"/>Send Your Prayer</button>
+                <% end %>
+              </div>
             </div>
           </div>
-          <div class="tab_cont" id="tabs-2"> <img src="images/page1_img4.jpg" alt="">
-            <div class="extra_wrapper">
-              <div class="text1">Rem psum dr sit amet. </div>
-              <p class="style1">Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro.</p>
-              Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro. <a href="#" class="btn">Details</a>
-              <div class="clear "></div>
-            </div>
-            <div class="clear cl1"></div>
-            <img src="images/page1_img5.jpg" alt="">
-            <div class="extra_wrapper">
-              <div class="text1 tx1">Hem psuf abr sit dmety. </div>
-              Julla facilisi. Ut ut tincidunt lacus, ut auctor libero. Fuis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisi. Vestibulum eu eleifend metus, ut ornare nibh. Vestibulumul tincidunt interdum libero vitae faucibus. Gonec dapibus feugiate auctor. In ac dapibus lacus. Maecenas in pharetra mim asellus a sagittis dui, eu adipiscinget nisi.
-              <div class="clear"></div>
-              <a href="#" class="btn bt1">Details</a>
-              <div class="clear "></div>
-            </div>
+          <div class="clear cl1"></div>
           </div>
         </div>
       </div>
