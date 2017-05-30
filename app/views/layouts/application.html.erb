@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <%= csrf_meta_tags %>
+
 </head>
 <%= render  "shared/header" %>
 <% flash.each do |name, msg| %>
@@ -13,15 +14,7 @@
  <% end %>
 
 <body>
-  <main>
-  <div class="pulser"></div>
-  <div class="pulser"></div>
-  <div class="pulser"></div>
-  <div class="pulser"></div>
-  <div class="pulser"></div>
-  <div class="pulser"></div>
-  <div class="pulser"></div>
-</main>
+
 
   <% if current_page?(root_path) %>
     <%= render "shared/headertwo" %>
