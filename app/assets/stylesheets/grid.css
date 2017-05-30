@@ -128,6 +128,8 @@ body {
 
 .container_12 .grid_12 {
 	width:1128px;
+  position: relative;
+  bottom: 40px;
 }
 
 
