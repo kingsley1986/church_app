@@ -12,8 +12,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update_attributes(like: true)
     @post.liker_id += [current_user.id]
-    @post.save
-    redirect_to :back
+    respond_to do |format |
+      if @post.save
+        format.json { render json: @post }
+      end
+    end
   end
 
 
@@ -21,8 +24,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update_attributes(like: false)
     @post.liker_id -= [current_user.id]
-    @post.save
-    redirect_to :back
+    respond_to do |format |
+      if @post.save
+        format.json { render json: @post }
+      end
+    end
   end
 
   def new

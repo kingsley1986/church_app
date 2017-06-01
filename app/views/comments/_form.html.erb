@@ -1,9 +1,7 @@
-<%= simple_form_for ([@post, @post.comments.build]), :html => { :id => "new_comment_on_#{@post.id}" }  do |f| %>
-  <%= f.input :body%>
-    <%= f.simple_fields_for :pictures, Picture.new do |comment_pic| %>
-      <%=comment_pic.input :image %>
+<%= simple_form_for([@post, @post.comments.build], :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
+  <%= f.input :body, as: :text, input_html: { rows: "12" } %>
+    <%= f.simple_fields_for(Picture.new)  do |comment_pic| %>
+      <div style="text-align: center;"><%= comment_pic.input :image %></div>
     <% end %>
-      <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
-    </div>
-  </div>
+  <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
 <% end %>

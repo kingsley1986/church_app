@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
     if @comment.user_id == current_user.id || current_user.admin?
       @comment.destroy
       respond_to do |format|
-        format.json { render json: @post, location: @post }
+        format.json { render json: @post }
       end
     else
       redirect_to :back
@@ -34,8 +34,11 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.update_attributes(like: true)
     @comment.liker_id += [current_user.id]
-    @comment.save
-    redirect_to :back
+    respond_to do |format|
+      if @comment.save
+        format.json { render json: @comment }
+      end
+    end
   end
 
 
@@ -43,8 +46,11 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.update_attributes(like: false)
     @comment.liker_id -= [current_user.id]
-    @comment.save
-    redirect_to :back
+    respond_to do |format|
+      if @comment.save
+        format.json { render json: @comment }
+      end
+    end
   end
 
   def find_comment_id

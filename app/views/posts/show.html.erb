@@ -1,17 +1,17 @@
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 col-md-offset-3" style="text-align: center; padding-top:70px; position:relative; left:70px;">
   <div class="row item" >
     <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
       <h2><%= @post.title %></strike></h2>
-      <div style="jwidth:455px;text-align:justify;"><%= @post.post_body %></div>
-      <p>posted <%= time_ago_in_words(@post.created_at) %> ago</p>
+      <div style="text-align: center;  text-align: justify;margin: 0 auto; padding-bottom:30px;"><%= @post.post_body %></div>
       <% @post.pictures.each do |pic, remov| %>
-        <p><%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %></p>
+        <p><%= image_tag(pic.image.url(:medium), class: "") if pic.image? %></p>
+        <p>posted <%= time_ago_in_words(@post.created_at) %> ago</p>
       <% end %>
       <% if current_user && user_signed_in? %>
         <% if [@post.liker_id].any? { |l| l&.include?(current_user.id)} %>
-          <%= link_to "Unlike", unlike_post_path(@post, like: true), method: :delete, :class => 'unliker', style:"color: red; margin-right: 20px" %>
+          <%= link_to "Unlike", unlike_post_path(@post, like: true), method: :delete, :remote => true,  :class => 'unlikepost', style:"color: red; margin-right: 20px" %>
         <%else %>
-          <%= link_to "Like", like_post_path(@post, like: true), method: :post, :class => 'liker', style:"color: red; margin-top: 30px;" %>
+          <%= link_to "Like", like_post_path(@post, like: true), method: :post, remote: true, :class => 'likepost', style:"color: red; margin-top: 30px;" %>
         <% end %>
         <%= pluralize( @post.liker_id&.count, "like") %>
       <% end %>
@@ -22,7 +22,7 @@
         <%= render @post.comments %>
       <hr class="devidepost">
 
-      <h3> Add a Comment: </h3>
+      <h4>Make your Comments: </h4>
       <% if current_user && user_signed_in? %>
         <%= render "comments/form" %>
       <% end %>

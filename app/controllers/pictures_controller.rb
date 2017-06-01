@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  
+
   def new
     @picture = Picture.new
   end
@@ -7,7 +7,11 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.create(picture_params)
     @picture.user = current_user
-    @picture.save
+    respond_to do |format |
+      if @picture.save
+        format.json { render json: @picture }
+      end
+    end
   end
 
   def show
