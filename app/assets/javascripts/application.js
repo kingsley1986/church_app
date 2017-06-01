@@ -15,3 +15,19 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+$(document).on('ready page:load', function() {
+  $(".tab_cont").submit(function () {
+    var valuesToSubmit = $(this).serialize();
+    $.ajax({
+      type: "POST",
+      url: $(this).attr('action'), //sumbits it to the given url of the form
+      data: valuesToSubmit,
+      dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+    }).success(function(json){
+      console.log("success", json);
+    });
+    $(".tab_cont").trigger('reset');
+  })
+})
