@@ -8,17 +8,16 @@
     <div class="menu_block">
       <nav>
         <ul class="sf-menu">
-					<li class="current"><%= link_to "Home", root_path %></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="/news" style="">News</a></li>
-          <li><a href="/posts" >Blog</a></li>
+          <li class="current"><a href="/", style="text-decoration: none;">Home</a></li>
+          <li><a href="gallery.html", style="text-decoration: none;">Gallery</a></li>
+          <li><a href="/posts", style="text-decoration: none;" >Blog</a></li>
           <% unless current_user && user_signed_in? %>
-            <li><a href="/sign_up" style="">Sign Up</a></li>
-            <li><a href="/login" style="">Sign In</a></li>
+            <li><a href="/sign_up" style="text-decoration: none;">Sign Up</a></li>
+            <li><a href="/login" style="text-decoration: none;">Sign In</a></li>
           <% end %>
           <% if current_user && user_signed_in? %>
-            <li><a href="/logout" style="">Log Out</a></li>
-            <li><a href="/edit" style="">Edit account</a></li>
+            <li><a href="/logout" style="text-decoration: none;">Log Out</a></li>
+            <li><a href="/edit" style="text-decoration: none;">Edit account</a></li>
           <% end %>
         </ul>
       </nav>
