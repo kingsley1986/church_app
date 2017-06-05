@@ -2,7 +2,7 @@
 <header>
   <div class="container_12">
     <div class="grid_12">
-      <h1><a href="/"><%= image_tag("/images/rcg.png")%></a></h1>
+      <h1><a href="/", style=""><%= image_tag("/images/rcg.png")%></a></h1>
       <div class="clear"></div>
     </div>
     <div class="menu_block">
@@ -10,7 +10,7 @@
         <ul class="sf-menu">
           <li class="current"><a href="/", style="text-decoration: none;">Home</a></li>
           <li><a href="gallery.html", style="text-decoration: none;">Gallery</a></li>
-          <li><a href="/posts", style="text-decoration: none;" >Blog</a></li>
+          <li><a href="/posts", style="text-decoration: none; " >Blog</a></li>
           <% unless current_user && user_signed_in? %>
             <li><a href="/sign_up" style="text-decoration: none;">Sign Up</a></li>
             <li><a href="/login" style="text-decoration: none;">Sign In</a></li>
