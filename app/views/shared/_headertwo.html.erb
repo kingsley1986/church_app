@@ -108,18 +108,23 @@
       <div class="grid_8">
         <div id="tabs">
           <ul>
-            <li><a href="/upcoming_events/live_events" style="text-decoration: none;">Live Events</a></li>
-            <li><a href="/upcoming_events/upcomings" style="text-decoration: none;">Upcoming Events</a></li>
-            <li><a href="/upcoming_events/past_events" style="text-decoration: none;">Past Events</a></li>
+            <li><a href="/upcoming_events/live_events" style="text-decoration: none; letter-spacing: 0.1em;font-weight: bold; background-color: #0ADA14   !important;
+    color: black !important">Live Events</a></li>
+            <li><a href="/upcoming_events/upcomings" style="text-decoration: none; letter-spacing: 0.1em; background-color: #001f3f   !important;
+    color: white !important">Upcoming Events</a></li>
+            <li><a href="/upcoming_events/past_events" style="text-decoration: none; letter-spacing: 0.1em; background-color: #001f3f   !important;
+    color: white !important">Past Events</a></li>
+            <li><a href="/news" style="text-decoration: none; letter-spacing: 0.1em; background-color: #001f3f   !important;
+    color: white !important">News</a></li>
           </ul>
           <div class="clear"></div>
             <% @homes.each do |home_page| %>
               <% home_page.pictures.each do |pic, remov| %>
-                <div class="tab_cont" id="tabs-1"> <%= image_tag(pic.image.url(:square), class: "img-responsive") if pic.image? %>
+                <div class="tab_cont" style="background-color:white;" id="tabs-1"> <%= image_tag(pic.image.url(:square), class: "img-responsive") if pic.image? %>
               <% end %>
               <div class="extra_wrapper">
                 <!-- <div class="text1">Rem psum dr sit amet. </div> -->
-                <p class="style1">
+                <p class="style1" style="color:black">
                   <%= truncate(home_page.body, length: 1700) %>
                   <%= link_to '...Read more', '', class: "read-more-#{home_page.id}", style:"color:green; font-size: 17px;" %>
                   <script>
@@ -165,7 +170,8 @@
         </div>
       </div>
       <div class="grid_4">
-        <div class="newsletter_title">Our Ministries </div>
+        <div class="newsletter_title" style="background-color:#001f3f; color:white;letter-spacing: 0.1em;font-weight: bold;
+">Our Ministries </div>
         <div class="n_container">
           <ul class="list">
             <li><a href="/pages/filter/children" class="" style="font-weight:bold; color:white; text-decoration: none;">Children Ministry</a></li>
@@ -176,7 +182,7 @@
             <li><a href="/pages/filter/food" class="" style="font-weight:bold; color:white; text-decoration: none;">Warefare Ministry</a></li>
           </ul>
         </div>
-        <div class="newsletter_title">Days of Worship </div>
+        <div class="newsletter_title" style="background-color:#001f3f; color:white;letter-spacing: 0.1em;font-weight: bold;">Days of Worship </div>
         <div class="n_container">
           <ul class="list">
             <li><a href="/pages/filter/sunday" class="" style="font-weight:bold; color:white; text-decoration: none;">Sunday</a></li>

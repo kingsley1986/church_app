@@ -31,3 +31,7 @@ $(document).on('ready page:load', function() {
     $(".tab_cont").trigger('reset');
   })
 })
+
+$(document).on('click', '.deletecomment', function(event) {
+  $(event.target).closest(".comment_content").delay(1500).slideUp('slow');
+})

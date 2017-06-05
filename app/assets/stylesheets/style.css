@@ -31,7 +31,7 @@ body {
 	position:relative;
 	min-width:960px;
 	background: #000;
-	background: url(../images/bg_body.jpg) center 0 no-repeat #d6bba0;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAA1BMVEX/abP/tTvvAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC3AcUIAAFkqh/QAAAAAElFTkSuQmCC") center 0 no-repeat #d6bba0;
 	background-size: cover;
      background-repeat:   no-repeat;
      background-position: center center;
