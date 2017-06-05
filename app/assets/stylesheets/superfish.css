@@ -1,8 +1,9 @@
 
 .menu_block  {
 	position: relative;
-	padding-left: 90px;
+	padding-left: 170px;
 	padding-top: 30px;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 nav>.sf-menu {
@@ -44,7 +45,7 @@ nav{ position:relative;padding: 0px 0 0 0;}
 
 
 .sf-menu>li.sfHover>a, .sf-menu>li.current>a, .sf-menu>li:hover>a:hover {
-	color: #263555;
+	color:blue;
 }
 
 
