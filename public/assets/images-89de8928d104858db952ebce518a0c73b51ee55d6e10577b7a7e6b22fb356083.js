@@ -1,1 +1,0 @@
-(function(){jQuery(function(){return $("a.grouped_elements").fancybox({transitionIn:"elastic",transitionOut:"elastic",speedIn:600,speedOut:200,overlayShow:!1})})}).call(this);
