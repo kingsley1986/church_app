@@ -12,7 +12,7 @@ ActiveAdmin.register User do
       f.input :gender
       f.input :password
       f.input :password_confirmation
-      f.input :roles, as: :check_boxes, collection: User.roles_method
+      f.input :roles, as: :check_boxes, collection: User.roles
       f.input :admin, as: :boolean
     end
     f.actions
