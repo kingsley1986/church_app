@@ -8,10 +8,6 @@ class ReplyPolicy < ApplicationPolicy
     user.roles.include?("pastor")
   end
 
-  def index?
-    user.roles.include?("pastor")
-  end
-
   def destroy?
     user.roles.include?("pastor")
   end
