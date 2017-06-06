@@ -20,6 +20,7 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.3'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
 
 
 

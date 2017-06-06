@@ -1,0 +1,26 @@
+<div id="gallery">
+  <h2>All Images</h2>
+<% if  @images.exists? %>
+  <% @images.each_slice(4) do |imagegal| %>
+    <div class="row">
+      <% imagegal.each do |imager| %>
+        <div class="col-md-3">
+          <div class="photo photo-type-line" >
+            <a href="<%= imager.image.url() %>" class="photo-hover" data-lightbox="my-images" data-title="<%= imager.image_title %>">
+              <div class="photo-info">
+                <div class="headline"><%= imager.image_title %></div>
+                <div class="line"></div>
+                <div class="desc"><%= imager.image_description %></div>
+              </div>
+              <div class="mask"></div>
+            </a>
+            <div class="photo-images"><%= image_tag(imager.image.url(:thumb)) %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <% else %>
+  <p> There is no image</p>
+<% end %>
+</div>
