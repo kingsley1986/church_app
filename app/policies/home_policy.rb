@@ -1,14 +1,14 @@
 class HomePolicy < ApplicationPolicy
 
   def edit?
-    user.roles.include?("pastor")
+    user.roles.to_s.include?("pastor")
   end
 
   def update?
-    user.roles.include?("pastor")
+    user.roles.to_s.include?("pastor")
   end
 
   def destroy?
-    user.roles.include?("pastor")
+    user.roles.to_s.include?("pastor")
   end
 end

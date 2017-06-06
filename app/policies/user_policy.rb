@@ -7,9 +7,7 @@ class UserPolicy < ApplicationPolicy
   def update?
     user.roles.to_s.include?("pastor")
   end
-  def index?
-    user.roles.to_s.include?("pastor")
-  end
+
 
   def destroy?
     user.roles.to_s.include?("pastor")
