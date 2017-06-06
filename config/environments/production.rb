@@ -30,7 +30,8 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
-  config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
+  config.assets.precompile += ['active_admin.css', 'active_admin.js']
+
 
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
