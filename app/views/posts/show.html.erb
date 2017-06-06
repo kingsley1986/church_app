@@ -22,13 +22,11 @@
         <%= render @post.comments %>
       <hr class="devidepost">
       <div class="col-md-6 col-md-offset-3 settingcommentform">
-        <div class="row item" >
           <div class="col-md-8 anothersettingcomment">
             <h4>Make your Comments: </h4>
             <% if current_user && user_signed_in? %>
               <%= render "comments/form" %>
             <% end %>
-          </div>
         </div>
       </div>
     </div>
