@@ -16,13 +16,13 @@ class User < ActiveRecord::Base
          has_many :replies
          has_many :pictures
 
-  #   before_validation :params_sanitizer, only: :update
-  #
-  # def params_sanitizer
-  #   if self[:roles].include?("")
-  #     self.roles.delete("")
-  #   end
-  # end
+    before_validation :params_sanitizer, only: :update
+
+  def params_sanitizer
+    if self.roles.to_s.include?("")
+      self.roles.to_s.delete("")
+    end
+  end
 
   def self.roles_method
     ['pastor', 'assistant pastor']
