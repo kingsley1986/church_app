@@ -7,17 +7,10 @@
  @import "bootstrap";
  @import "main";
 
- div.col-md-6.col-md-offset-3.settingcommentform {
-   text-align: center;
-    padding-top:70px;
-    position:relative;
-    left:70px;
- }
-
- div.col-md-8.anothersettingcomment{
-   background-color:white;
-   margin-bottom:20px;
- }
+ .center_div{
+    margin: 0 auto;
+    width:45% /* value of your choice which suits your alignment */
+}
 
 .fa.fa-comment {
   color:white;
@@ -74,6 +67,11 @@ margin-bottom: -120px;
    text-decoration: none;
  }
 
+button#submit.btn.btn-success {
+  position: relative;
+  left:44%;
+
+}
 
 input[type="file"] {
   position: relative;

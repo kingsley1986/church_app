@@ -1,6 +1,4 @@
-<div class="col-md-6 col-md-offset-3" style="text-align: center; padding-top:70px; position:relative; left:70px;">
-  <div class="row item" >
-    <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
+<div class="center_div" style="text-align: center;background-color:white; padding-top:70px; position:relative;">
       <h2><%= @post.title %></strike></h2>
       <div style="text-align: center;  text-align: justify;margin: 0 auto; padding-bottom:30px;"><%= @post.post_body %></div>
       <% @post.pictures.each do |pic, remov| %>
@@ -21,14 +19,10 @@
         <%= "#{approved_comments.count} Comments" %>
         <%= render @post.comments %>
       <hr class="devidepost">
-      <div class="col-md-6 col-md-offset-3 settingcommentform">
-          <div class="col-md-8 anothersettingcomment">
-            <h4>Make your Comments: </h4>
-            <% if current_user && user_signed_in? %>
-              <%= render "comments/form" %>
-            <% end %>
-        </div>
+      <div class="center_div" style="">
+        <h4 style="text-align:center">Make your Comments: </h4>
+        <% if current_user && user_signed_in? %>
+          <%= render "comments/form" %>
+        <% end %>
       </div>
-    </div>
-  </div>
 </div>
