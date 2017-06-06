@@ -7,6 +7,18 @@
  @import "bootstrap";
  @import "main";
 
+ div.col-md-6.col-md-offset-3.settingcommentform {
+   text-align: center;
+    padding-top:70px;
+    position:relative;
+    left:70px;
+ }
+
+ div.col-md-8.anothersettingcomment{
+   background-color:white;
+   margin-bottom:20px;
+ }
+
 .fa.fa-comment {
   color:white;
 }
