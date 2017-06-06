@@ -55,8 +55,8 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # within the application controller.
   config.authentication_method = :authenticate_admin_user!
-  # config.authorization_adapter = ActiveAdmin::PunditAdapter
-  # config.pundit_default_policy = "ApplicationPolicy"
+  config.authorization_adapter = ActiveAdmin::PunditAdapter
+  config.pundit_default_policy = "ApplicationPolicy"
 
 
 

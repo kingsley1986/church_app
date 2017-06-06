@@ -46,6 +46,7 @@ class PostsController < ApplicationController
     @post = Post.create(post_params)
     @post.user = current_user
     if pastor
+      authorize @post
       @post.save
         redirect_to posts_path
     else
