@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       get 'live_events'
     end
   end
-  # resources :pages
+  resources :images
   resources :news
   resources :contacts, only: [:new, :create]
   get 'pages/filter/:scope' => 'pages#index', as: :filtered_page
