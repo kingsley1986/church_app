@@ -7,9 +7,6 @@ class CommentPolicy < ApplicationPolicy
     user.roles.include?("pastor")
   end
 
-  def index?
-    user.roles.include?("pastor")
-  end
 
   def show?
     user.roles.include?("pastor")

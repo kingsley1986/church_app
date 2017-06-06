@@ -12,11 +12,6 @@ class PostPolicy < ApplicationPolicy
     user.roles.include?("pastor")
   end
 
-  def index?
-    user.roles.include?("pastor")
-  end
-
-
   def create?
     if user.roles?
       user.roles.include?("pastor")
