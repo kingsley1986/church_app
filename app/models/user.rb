@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   #   end
   # end
 
-  def self.roles_method
+  def self.roles
     ['pastor', 'assistant pastor']
   end
 end
