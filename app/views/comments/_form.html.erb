@@ -1,7 +1,13 @@
-<%= simple_form_for([@post, @post.comments.build], :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
-  <%= f.input :body, as: :text, input_html: { rows: "12" } %>
-    <%= f.simple_fields_for(Picture.new)  do |comment_pic| %>
-      <div style="text-align: center;"><%= comment_pic.input :image %></div>
-    <% end %>
-  <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
-<% end %>
+<div class="col-md-6 col-md-offset-3" style="text-align: center; position:relative; left:70px;">
+  <div class="row item" >
+    <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
+      <%= simple_form_for([@post, @post.comments.build], :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
+        <%= f.input :body, as: :text, input_html: { rows: "12" } %>
+          <%= f.simple_fields_for(Picture.new)  do |comment_pic| %>
+            <div style="text-align: center;"><%= comment_pic.input :image %></div>
+          <% end %>
+        <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
+      <% end %>
+    </div>
+  </div>
+</div>
