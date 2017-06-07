@@ -1,7 +1,6 @@
-<div class="comment_content">
 <% if comment.approved == ["approved"] %>
 <hr class="devidepost">
-  <div class="postboy" style="font-size:15px; margin-bottom:15px;">
+  <div class="postboy" style="font-size:15px; margin-bottom:15px; padding-left:30px; padding-right:30px; text-align: center;  text-align: justify;margin: 0 auto;">
     <%= comment.body %>
   </div>
   <% comment.pictures.each do |comment_pic| %>
@@ -29,10 +28,9 @@
 
   <% if current_user && user_signed_in? %>
     <%= simple_form_for ([comment, comment.replies.new]), html: {id: "replycomment" }  do |f| %>
-      <%= f.input :reply_body, as: :text, input_html: { ROWS: "3", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
+      <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", style:"width: 300px; margin:auto", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
       <%= comment.user.first_name %>
       <%= time_ago_in_words((comment.created_at)) %>ago
     <% end %>
   <% end %>
 <% end %>
-</div
