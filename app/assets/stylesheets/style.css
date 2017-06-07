@@ -26,15 +26,11 @@ text-decoration:none;
 
 
 body {
-	font: 13px/19px  Arial, Helvetica, sans-serif;
-	color:#666565;
-	position:relative;
-	min-width:960px;
-	background: #000;
-	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAA1BMVEX/abP/tTvvAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC3AcUIAAFkqh/QAAAAAElFTkSuQmCC") center 0 no-repeat #d6bba0;
-	background-size: cover;
-     background-repeat:   no-repeat;
-     background-position: center center;
+	background: url("/images/back3.jpg") no-repeat center center fixed;
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 -o-background-size: cover;
+	 background-size: cover
 
 }
 
