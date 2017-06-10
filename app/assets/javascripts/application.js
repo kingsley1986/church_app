@@ -33,6 +33,12 @@ $(document).on('ready page:load', function() {
   })
 })
 
+// $(".resetcomments").click();
+// $(".resetcomments").trigger('reset');
+// }
+
+
 $(document).on('click', '.deletecomment', function(event) {
   $(event.target).closest(".center_div_comment").delay(1500).slideUp('slow');
+
 })
