@@ -18,7 +18,10 @@
   <% if  @post.liker_id&.size >= 1 %>
     <div class="fa fa-thumbs-o-up" style="margin-left:5px; margin-right:20px;"></div>
   <% end %>
+  </br>
+  <div class="resetcomments">
     <%= "#{approved_comments.count} Comments" %>
+  </div>
     <%= render @post.comments %>
   <hr class="devidepost">
 </div>
