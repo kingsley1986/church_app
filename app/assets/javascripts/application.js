@@ -34,5 +34,5 @@ $(document).on('ready page:load', function() {
 })
 
 $(document).on('click', '.deletecomment', function(event) {
-  $(event.target).closest(".comment_content").delay(1500).slideUp('slow');
+  $(event.target).closest(".center_div_comment").delay(1500).slideUp('slow');
 })
