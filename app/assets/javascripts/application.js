@@ -18,6 +18,30 @@
 
 
 
+// $(document).on('click', '#goingpeople_upcoming_event', function(event) {
+//   alert("kdjfkdjfkdjfkdjkfdjkfj")
+//   $.ajax({
+//     url: $(this).attr('ajax_path'),
+//     data: { },
+//     async: true,
+//     dataType: 'script'
+//   });
+//   return false;
+// });
+$(document).on('click', '.specific_service', function(event) {
+   if (confirm("would you like to come with a friend or family?")) {
+
+     $(".specific_service").hide();
+     $("#questionclass").show();
+     $("#hiderthisclass").show();
+   } else {
+     alert("Thank you for chosing to come for this programme")
+
+   }
+
+});
+
+
 $(document).on('ready page:load', function() {
   $(".tab_cont").submit(function () {
     var valuesToSubmit = $(this).serialize();
@@ -32,10 +56,6 @@ $(document).on('ready page:load', function() {
     $(".tab_cont").trigger('reset');
   })
 })
-
-// $(".resetcomments").click();
-// $(".resetcomments").trigger('reset');
-// }
 
 
 $(document).on('click', '.deletecomment', function(event) {

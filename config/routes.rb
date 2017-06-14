@@ -8,11 +8,16 @@ Rails.application.routes.draw do
     }
    } )
   resources :upcoming_events do
+    member do
+      put 'goingpeople'
+      put 'coming_with_person'
+    end
     collection do
       get  'past_events'
       get 'upcomings'
       get 'live_events'
     end
+
   end
   resources :images
   resources :news

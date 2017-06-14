@@ -1,3 +1,56 @@
-// Place all the styles related to the UpcomingEvents controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+div.page_wrapper_upcoming_event {
+  background-color: white;
+  margin: 0 auto;
+  width:20%
+}
+
+
+.upcomings_body {
+    background-color:white;
+    font-size:16px;
+    padding-left:10px;
+    padding-right:10px;
+    text-align: justify;
+}
+
+a.specific_service {
+  font-weight:bold;
+  color:white;
+  font-size:20px;
+  text-decoration:none
+}
+
+a#hiderthisclass {
+  display:none;
+  background:white;
+  font-size:16px;
+  display:none;
+}
+
+#questionclass {
+  display:none;
+  background:white;
+  font-size: 20px;
+}
+
+
+.starting_date_class, .end_date_class{
+ -webkit-animation: background 5s cubic-bezier(1,0,0,1) infinite;
+ animation: background 5s cubic-bezier(1,0,0,1) infinite;
+ font-size:18px; font-weight:bold
+}
+
+
+@-webkit-keyframes background {
+ 0% { background-color: #f99; }
+ 33% { background-color: #9f9; }
+ 67% { background-color: #99f; }
+ 100% { background-color: #f99; }
+}
+
+@keyframes background {
+ 0% { background-color: #f99; }
+ 33% { background-color: #9f9; }
+ 67% { background-color: #99f; }
+ 100% { background-color: #f99; }
+}
