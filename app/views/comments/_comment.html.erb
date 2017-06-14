@@ -23,6 +23,8 @@
 
   <% if current_user && user_signed_in? && comment.user_id == current_user.id || current_user && current_user.admin? %>
     <%= link_to "Delete", comment_path(comment), data: {confirm: 'Are you sure?'},  method: :delete, remote: true,  class:"deletecomment", style:"margin-left:30px;" %>
+    <%= link_to 'Edit', edit_comment_path(:id => comment.id), :id => "edit_comment_link"%>
+
   <% end %>
   <%= link_to  pluralize(comment.replies.count, "reply"), comment_replies_path(comment.id, @reply ), class:"viewreply", style:"margin-left:30px;" %>
   </br>
