@@ -15,7 +15,7 @@ class Page < ActiveRecord::Base
                  'Home Page',
                  'Contact',
                  'About_Redeedemed',
-                 'KOG',
+                 'About_Go',
                  'About_Parish_pastor'
                ]
 
