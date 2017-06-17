@@ -85,10 +85,21 @@
                     <% page.pictures.each do |pic| %>
                       <%= image_tag(pic.image.url(:medium), class: "about_redeemed_image") if pic.image? %>
                     <% end %>
+                    <h1>About Redeeemed</h1>
+                    <div class="extra_wrapper">
+                      <p class="style1" style="text-align: justify;">
+                        <%= truncate(page.body, length: 90) %>
+                        <%= link_to '...Read more', '', class: "read-more-#{page.id}", style:"color:green;" %>
+                        <script>
+                          $('.read-more-<%= page.id %>').on('click', function(e) {
+                            e.preventDefault()
+                            $(this).parent().html('<%= escape_javascript page.body %>')
+                          })
+                        </script>
+                      </p>
+                    </div>
                   <% end %>
                 <% end %>
-                <h1>About Redeeemed</h1>
-                <p>Pellentesque lacinia mi nisi, id auctor sem ornare sed. Vivamus vitae facilisis metus. Praesent placerat enim velit</p>
               </div>
             </div>
             <div class="span4">
@@ -98,10 +109,21 @@
                     <% page.pictures.each do |pic| %>
                       <%= image_tag(pic.image.url(:medium), class: "img-responsive", style:"display: block;margin: 0 auto;") if pic.image? %>
                     <% end %>
+                    <h1>About Our General Over-seer</h1>
+                    <div class="extra_wrapper">
+                      <p class="style1" style="text-align: justify;">
+                        <%= truncate(page.body, length: 90) %>
+                        <%= link_to '...Read more', '', class: "read-more-#{page.id}", style:"color:green;" %>
+                        <script>
+                          $('.read-more-<%= page.id %>').on('click', function(e) {
+                            e.preventDefault()
+                            $(this).parent().html('<%= escape_javascript page.body %>')
+                          })
+                        </script>
+                      </p>
+                    </div>
                   <% end %>
                 <% end %>
-                <h1>About General Overseer</h1>
-                <p>Jolentesque lacinia mi nisi, id auctor sem ornare sed. Vivamus vitae facilisis metus. Praesent placerat enim velit</p>
               </div>
             </div>
             <div class="span4">
@@ -111,10 +133,21 @@
                     <% page.pictures.each do |pic| %>
                       <%= image_tag(pic.image.url(:medium), class: "img-responsive", style:"display: block;margin: 0 auto;") if pic.image? %>
                     <% end %>
+                    <h1>Our Parish Pastor</h1>
+                    <div class="extra_wrapper">
+                      <p class="style1" style="text-align: justify;">
+                        <%= truncate(page.body, length: 90) %>
+                        <%= link_to '...Read more', '', class: "read-more-#{page.id}", style:"color:green;" %>
+                        <script>
+                          $('.read-more-<%= page.id %>').on('click', function(e) {
+                            e.preventDefault()
+                            $(this).parent().html('<%= escape_javascript page.body %>')
+                          })
+                        </script>
+                      </p>
+                    </div>
                   <% end %>
                 <% end %>
-                <h1>About Parish Pastor</h1>
-                <p>Curinentesque lacinia mi nisi, id auctor sem ornare sed. Vivamus vitae facilisis metus. Praesent placerat enim velit</p>
               </div>
             </div>
           </div>
