@@ -1,29 +1,51 @@
-<header role="banner">
-<nav id="navbar-primary" class="navbar" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/component.css">
+
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+<div class="header-wrapper">
+  <div class="container">
+    <div class="logo">
+      <h1>Rccg King of Glory</h1>
     </div>
-    <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/", style="color:	#00FF00; text-decoration:none;font-weight:bold; font-size:30px;">HOME</a></li>
-        <li class="active "><a href="/posts", class="fa fa-comment" style=" text-decoration:none;font-weight:bold; font-size:30px;">Blog</a></li>
-        <li><a href="/"><img id="logo-navbar-middle" src="/images/rcg.png", style=" width:150px;
-         height:150px;
-         border-radius:50%;
-         overflow:hidden;", width="200" alt="Logo Thing main logo"></a></li>
-
-        <li><a href="/images", style="color:black; text-decoration:none;font-weight:bold; font-size:30px; color:white">Gallery</a></li>
-        <li><a href="/pages/filter/children", style="text-decoration:none;font-weight:bold; font-size:30px; color:white">About</a></li>
-
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</header><!-- header role="banner" -->
+    <div class="menu">
+      <div class="navbar">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <i class="fw-icon-th-list"></i>
+        </a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/filter/about">About</a></li>
+            <li><a href="/images">Gallery</a></li>
+            <li>
+              <div class="site-name">
+                <h1>Rccg King of Glory</h1>
+              </div>
+            </li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/posts">Blog</a></li>
+            <li><a href="/contacts">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+</div>

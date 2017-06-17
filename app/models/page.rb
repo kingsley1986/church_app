@@ -13,7 +13,10 @@ class Page < ActiveRecord::Base
                  'Tuesday',
                  'Thursday',
                  'Home Page',
-                 'Contact'
+                 'Contact',
+                 'About_Redeedemed',
+                 'KOG',
+                 'About_Parish_pastor'
                ]
 
 
@@ -29,5 +32,8 @@ scope :thursday, -> { where(page_type:  'Thursday')  }
 scope :home, -> { where(page_type:  'Home Page')  }
 scope :home, -> { where(page_type: 'Home Page') }
 scope :contact, -> { where(page_type: 'Contact') }
+scope :contact, -> { where(page_type: 'About_Redeedemed') }
+scope :contact, -> { where(page_type: 'About_Parish_pastor') }
+scope :contact, -> { where(page_type: 'About_Go') }
 
 end
