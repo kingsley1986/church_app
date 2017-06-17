@@ -7,54 +7,7 @@
  @import "bootstrap";
  @import "main";
 
- .center_div{
-    margin: 0 auto;
-    width:45% /* value of your choice which suits your alignment */
-}
-
-.fa.fa-comment {
-  color:white;
-}
-
-#navbar-primary .navbar-nav {
-//  background: #ededed;
-margin-bottom: -120px;
-  width: 100%;
-  text-align: center;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-               0px 8px 13px rgba(0,0,0,0.1),
-               0px 18px 23px rgba(0,0,0,0.1);
-  > li {
-    display: inline-block;
-    float: none;
-    > a {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-  }
-}
-
-// new ends here
-
-
- .container-table {
-   display: table;
-   font-family: 'Gabriela', serif;
-   color: #FFF;
-   border-radius: 20px;
-   border-width: 3px;
-   border-style: solid;
-   border-color: white;
-  //  background: #600	;
-  // border-color: cyan magenta yellow
-   background: 	#F39;
-
-
-  //  background-color:  rgba(54, 25, 25, .5);
-  //  background-color: rgb(30%,50%,70%);
-
-   padding: 0.5em 0.2em 0.8em 0.5em;
- }
+ 
 
  header h1 a img {
    width:150px;
