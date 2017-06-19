@@ -148,14 +148,23 @@ $ARROW_SIZING: 40px;
   padding:10px 4px;
 }
 
-.about_king_of_glory{
-  display: block;
+
+
+
+.tab_cont {
   margin: 0 auto;
-  display: block;
   display:block;
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
+  width: 90%;
   overflow: hidden;
   padding:10px 4px;
+}
+
+label.control-label.string.required {
+  position: relative;
+  left:28px;
+}
+
+label.control-label.email.required {
+  position: relative;
+  left:28px;
 }

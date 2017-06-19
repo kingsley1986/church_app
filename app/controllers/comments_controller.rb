@@ -26,6 +26,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.update_attributes(comment_params)
+    @comment.save
+  end
+
   def index
     @comment = Comment.all
   end

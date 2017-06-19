@@ -5,7 +5,7 @@
     <%= comment.body %>
   </div>
   <% comment.pictures.each do |comment_pic| %>
-    <%= link_to(image_tag(comment_pic.image.url(:medium)), comment_pic, class: "img-responsive") if comment_pic.image? %>
+    <div  style="margin-top:30px; margin-bottom:30px;"><%= link_to(image_tag(comment_pic.image.url(:medium)), comment_pic, class: "") if comment_pic.image? %></div>
   <% end %>
 
   <% if current_user && user_signed_in? %>
@@ -13,7 +13,7 @@
       <br>
       <%= link_to "Unlike", unlike_comment_path(comment, like: true), remote: true, method: 'delete', class:"unlikecomment", style:"color:blue; margin-right:20px; font-weight:bold" %>
     <% else %>
-      <%= link_to "Like", like_comment_path(comment, like: true, remote: true), remote: true, method: 'post', class:"likecomment", style:"color:blue;  font-weight:bold" %>
+      <%= link_to "Like", like_comment_path(comment, like: true, remote: true), remote: true, method: 'post', class:"likecomment", style:"color:blue;  font-weight:bold; margin-right:75px; position:relative; right:20px" %>
     <% end %>
   <% end %>
   <% if comment.liker_id.size > 0 %>
@@ -22,14 +22,17 @@
   <% end %>
 
   <% if current_user && user_signed_in? && comment.user_id == current_user.id || current_user && current_user.admin? %>
-    <%= link_to "Delete", comment_path(comment), data: {confirm: 'Are you sure?'},  method: :delete, remote: true,  class:"deletecomment", style:"margin-left:30px;" %>
+  <%= link_to "Delete", comment_path(comment), data: {confirm: 'Are you sure?'},  method: :delete, remote: true,  class:"deletecomment", style:"margin-left:30px;" %>
+</br>
+    <%= link_to 'Edit', edit_comment_path(:id => comment.id), :id => "edit_comment_link", style:"position:relative; right:10px;"%>
+
   <% end %>
-  <%= link_to  pluralize(comment.replies.count, "reply"), comment_replies_path(comment.id, @reply ), class:"viewreply", style:"margin-left:30px;" %>
+  <%= link_to  pluralize(comment.replies.count, "reply"), comment_replies_path(comment.id, @reply ), class:"viewreply", style:"margin-left:110px;" %>
   </br>
 
   <% if current_user && user_signed_in? %>
     <%= simple_form_for ([comment, comment.replies.new]), html: {id: "replycomment" }  do |f| %>
-      <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", style:"width: 300px; margin:auto", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
+      <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", style:"width: 200px; margin:auto", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
       <%= comment.user.first_name %>
       <%= time_ago_in_words((comment.created_at)) %>ago
     <% end %>
