@@ -33,7 +33,11 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     @comment.update_attributes(comment_params)
-    @comment.save
+    if @comment.save
+      @updated_comment = @comment.post_id
+      @post = Post.find(@updated_comment)
+      redirect_to @post
+    end
   end
 
   def index
