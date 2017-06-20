@@ -2,7 +2,7 @@
   <div class="container">
     <div class="container container-table">
       <div class="row vertical-center-row">
-        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:15px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
+        <div id="jssor_1" style="position:relative;margin:0 auto; left:1rem; top:0px;;width:600px;height:300px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
           <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
@@ -209,10 +209,10 @@
               <li class="span6" style="background:#AAAAAA" >
                 <div class="block">
                   <img src="images/prayer1.png" alt="">
-                  <h1 style="padding-left:50px;">Send Us Your prayer Request</h1>
+                  <h1>Send Us Your prayer Request</h1>
                   <p>
                     <div>
-                      <%= simple_form_for  Contact.new, :remote => true, :html => {:class => "tab_cont", style:"position:relative; left:30px"} do |f| %>
+                      <%= simple_form_for  Contact.new, :remote => true, :html => {:class => "tab_cont", style:""} do |f| %>
                         <div class="extra_wrapper">
                           <div class="row">
                             <div class="form-group col-lg-10">
@@ -371,6 +371,41 @@
                     </ul>
                   </div>
                 </div>
+                <div id="circ">
+                  <ul>
+                    <li class="animated zoomIn">
+                      <div class="back"></div>
+                      <div class="icon">
+                        <a href="https://web.facebook.com/RCCG-The-King-of-Glory-Cape-Town-1741406809415560/" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                      </div>
+                    </li>
+                    <li class="animated zoomIn delayone">
+                      <div class="back"></div>
+                      <div class="icon">
+                        <i class="fa fa-twitter"></i>
+                      </div>
+                    </li>
+                    <li class="animated zoomIn delaytwo">
+                      <div class="back"></div>
+                      <div class="icon">
+                        <i class="fa fa-linkedin"></i>
+                      </div>
+                    </li>
+                    <li class="animated zoomIn delaythree">
+                      <div class="back"></div>
+                      <div class="icon">
+                        <i class="fa fa-youtube"></i>
+                      </div>
+                    </li>
+                    <li class="animated zoomIn delayfive">
+                      <div class="back"></div>
+                      <div class="icon">
+                        <i class="fa fa-google-plus"></i>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="copy-rights">
@@ -380,24 +415,6 @@
         </div>
       </div>
       <!-- removed some js requires -->
-      <script src="js/jquery-1.9.1.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/masonry.pkgd.min.js"></script>
-        <script src="js/imagesloaded.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/AnimOnScroll.js"></script>
-      <script>
-      new AnimOnScroll( document.getElementById( 'grid' ), {
-      minDuration : 0.4,
-      maxDuration : 0.7,
-      viewportFactor : 0.2
-      } );
-      </script>
-      <script>
-      $('#myCarousel').carousel({
-      interval: 1800
-      });
-      </script>
     </div>
   </div>
 </div>

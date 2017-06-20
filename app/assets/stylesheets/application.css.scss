@@ -7,6 +7,123 @@
  @import "bootstrap";
  @import "main";
 
+ @import "bourbon";
+
+//Fonts
+@import url(https://fonts.googleapis.com/css?family=Damion);
+$font-curse: 'Damion', cursive;
+
+//Colors
+$color-teal: #00897b;
+$color-pea: #004d40;
+$color-snow: #fff;
+
+
+.delayone {
+  -moz-animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+}
+.delaytwo {
+  -moz-animation-delay: .4s;
+  -webkit-animation-delay: .4s;
+}
+.delaythree {
+  -moz-animation-delay: .6s;
+  -webkit-animation-delay: .6s;
+}
+.delayfour {
+  -moz-animation-delay: .8s;
+  -webkit-animation-delay: .8s;
+}
+.delayfive {
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.icon {
+  position: absolute;
+  width: 100%;
+  margin-top: 30%;
+  display: block;
+  color: $color-pea;
+  font-size: 3em;
+  @include transition(all .2s $ease-out-circ);
+  background: white;
+}
+#circ {
+  max-width: 100%;
+  min-height: 200px;
+  width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+    width: 100%;
+    li {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 120px;
+        height: 120px;
+        margin: 0 20px 20px 20px;
+        text-align: center;
+        background: $color-snow;
+        border: solid 8px $color-teal;
+      position: relative;
+      @include transition(all .4s);
+        &:hover {
+          border: solid 8px $color-pea;
+          @include transition(all .4s);
+          cursor: pointer;
+        }
+    }
+  }
+}
+
+@media only screen and(max-width: 1200px) {
+  .icon {
+  position: relative;
+  margin-top: 30%;
+  color: $color-pea;
+  font-size: 2em;
+  @include transition(all .2s $ease-in-out-cubic);
+  }
+  #circ {
+    ul {
+      li {
+        width: 80px;
+        height: 80px;
+        margin: 0 5px 5px 5px;
+        &:hover {
+          .icon {
+            font-size: 2.5em;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width: 690px) {
+  #circ {
+    ul {
+      li {
+        border-radius: 0;
+        border: none;
+        margin: 0;
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.icon:after, .icon:before {
+  border: none;
+}
+
  div.heading_for_blog {
    text-align: center;
    background: url("/images/banner-bg.jpg") repeat;      /* Generic*/
@@ -30,6 +147,14 @@
     min-width: 80%;
   }
 }
+
+// @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+//     #jssor_1{
+//       width: 300px;
+// }
+// }
+
+
 
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
