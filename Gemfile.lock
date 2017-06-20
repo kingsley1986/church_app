@@ -435,6 +435,7 @@ DEPENDENCIES
   activeadmin!
   autoprefixer-rails
   bootstrap-sass (~> 3.3, >= 3.3.4.1)
+  bourbon
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)
