@@ -19,6 +19,14 @@ $color-teal: #00897b;
 $color-pea: #004d40;
 $color-snow: #fff;
 
+@font-face {
+  font-family: 'MuseoSans-700';
+  src: url(font-path('museoSans/244DD4_0_0.eot'));
+  src: url(font-path('museoSans/244DD4_0_0.eot?#iefix')) format('embedded-opentype');
+  src: url(font-path('museoSans/244DD4_0_0.woff')) format('woff');
+  src: url(font-path('museoSans/244DD4_0_0.ttf')) format('truetype');
+}
+
 
 .delayone {
   -moz-animation-delay: .2s;
