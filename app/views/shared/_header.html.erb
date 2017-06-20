@@ -43,6 +43,14 @@
             <li><a href="/news">News</a></li>
             <li><a href="/posts">Blog</a></li>
             <li><a href="/pages/filter/contact">Contact</a></li>
+            <% unless current_user && user_signed_in? %>
+              <li><a href="/sign_up" style="text-decoration: none; font-size:10px; color:white">Sign Up</a></li>
+              <li><a href="/login" style="text-decoration: none; color:white; font-size:10px;">Sign In</a></li>
+            <% end %>
+            <% if current_user && user_signed_in? %>
+              <li><a href="/logout" style="text-decoration: none;font-size:10px; color:white">Log Out</a></li>
+              <li><a href="/edit" style="text-decoration: none;font-size:10px; color:white">Edit account</a></li>
+            <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

@@ -27,12 +27,14 @@
     <%= link_to 'Edit', edit_comment_path(:id => comment.id), :id => "edit_comment_link", style:"position:relative; right:10px;"%>
 
   <% end %>
-  <%= link_to  pluralize(comment.replies.count, "reply"), comment_replies_path(comment.id, @reply ), class:"viewreply", style:"margin-left:110px;" %>
+  <%= link_to  pluralize(comment.replies.count, "reply"), comment_replies_path(comment.id, @reply), remote: true, class:"viewreply", style:"margin-left:110px;" %>
   </br>
 
   <% if current_user && user_signed_in? %>
     <%= simple_form_for ([comment, comment.replies.new]), html: {id: "replycomment" }  do |f| %>
       <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", style:"width: 200px; margin:auto", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
+      <button type="submit" class="btn btn-success" id="submit" name="submit"/>Reply</button>
+    </br>
       <%= comment.user.first_name %>
       <%= time_ago_in_words((comment.created_at)) %>ago
     <% end %>

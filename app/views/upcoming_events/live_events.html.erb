@@ -9,12 +9,12 @@
           <%= live.body %>
         </div>
       </br>
-        <div class="starting_date_class"><%= upcoming_event.starting_date.strftime("Starting on:  %Y-%m-%d %H:%M:%S") %></div>
+        <div class="starting_date_class"><%= live.starting_date.strftime("Starting on:  %Y-%m-%d %H:%M:%S") %></div>
       </br>
-        <div class="end_date_class"><%= upcoming_event.end_date.strftime("Ends on:  %Y-%m-%d %H:%M:%S") %></div>
+        <div class="end_date_class"><%= live.end_date.strftime("Ends on:  %Y-%m-%d %H:%M:%S") %></div>
       </br>
         <div class="img img1.imgAlbum" >
-          <% upcoming_event.pictures.each do |pic, remov| %>
+          <% live.pictures.each do |pic, remov| %>
             <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
           <% end %>
         </div>

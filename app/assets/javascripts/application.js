@@ -17,7 +17,6 @@
 //= require_tree .
 
 
-
 // $(document).on('click', '#goingpeople_upcoming_event', function(event) {
 //   alert("kdjfkdjfkdjfkdjkfdjkfj")
 //   $.ajax({

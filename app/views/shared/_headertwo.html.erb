@@ -72,6 +72,30 @@
           <div class="row-fluid">
             <div class="span4">
               <div class="block">
+                <h1><a href="/upcoming_events/live_events">Live Events</a></h1>
+                <p>Pellentesque lacinia mi nisi, id auctor sem ornare sed. Vivamus vitae facilisis metus. Praesent placerat enim velit</p>
+              </div>
+            </div>
+            <div class="span4">
+              <div class="block">
+                <h1><a href="/upcoming_events/upcomings">Upcoming Events</a></h1>
+                <p>Jolentesque lacinia mi nisi, id auctor sem ornare sed. Vivamus vitae facilisis metus. Praesent placerat enim velit</p>
+              </div>
+            </div>
+            <div class="span4">
+              <div class="block">
+                <h1><a href="/upcoming_events/past_events">Past Events</a></h1>
+                <p>Curinentesque lacinia mi nisi, id auctor sem ornare sed. Vivamus vitae facilisis metus. Praesent placerat enim velit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="featured-blocks" style="margin-top:-90px;">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4">
+              <div class="block">
                 <% Page.all.each do |page| %>
                   <% if page.page_type == "About_Redeedemed" %>
                     <% page.pictures.each do |pic| %>
@@ -271,48 +295,63 @@
             </div>
           </div>
         </div>
+      <div class="featured-images" style="background:pink">
+        <div class="container">
+          <h1>We are not just a church, we are family</h1>
+          <h2>These are the lists of our Services and Days</h2>
+          <div class="hh-divider"></div>
+            <div class="row-fluid">
+              <ul class="grid effect-3" id="grid">
+                <li class="span2">
+                  <div class="user-info">
+                    <a href="/pages/filter/youth"><img src="images/langa4.jpg" alt=""></a>
+                    <h1><li><a href="/pages/filter/sunday">Sunday Service</a></li></h1>
+                    <p class="last">Duis suscipit tellus nisi, gravida hendrer</p>
+                  </div>
+                </li>
+                <li class="span2">
+                  <div class="user-info">
+                    <a href="/pages/filter/youth"><img src="images/langa4.jpg" alt=""></a>
+                    <h1><li><a href="/pages/filter/tuesday">Tuesday Bible Study</a></li></h1>
+                    <p class="last">Duis suscipit tellus nisi, gravida hendrer</p>
+                  </div>
+                </li>
+                <li class="span2">
+                  <div class="user-info">
+                    <a href="/pages/filter/youth"><img src="images/langa4.jpg" alt=""></a>
+                    <h1><li><a href="/pages/filter/thursday">Thursday Faith Clinic</a></li></h1>
+                    <p class="last">Duis suscipit tellus nisi, gravida hendrer</p>
+                  </div>
+                </li>
+                <li class="span2">
+                  <div class="user-info">
+                    <a href="/pages/filter/hospital"><img src="images/langa4.jpg" alt=""></a>
+                    <h1><li><a href="/pages/filter/fridaynightvigil">Friday Night Vigil</a></li></h1>
+                    <p class="last">Duis suscipit tellus nisi, gravida hendrer</p>
+                  </div>
+                </li>
+                <li class="span2">
+                  <div class="user-info">
+                    <a href="/pages/filter/food"><img src="images/langa4.jpg" alt=""></a>
+                    <h1><li><a href="/pages/filter/lunchhourprayer">Lunch Hour Prayer</a></li></h1>
+                    <p class="last">Duis suscipit tellus nisi, gravida hendrer</p>
+                  </div>
+                </li>
+                <li class="span2">
+                  <div class="user-info">
+                    <a href="/pages/filter/elder"><img src="images/langa4.jpg" alt=""></a>
+                    <h1><li><a href="/pages/filter/generalnightvigil">General Night Vigil</a></li></h1>
+                    <p class="last">Duis suscipit tellus nisi, gravida hendrer</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="footer-wrapper">
           <div class="container">
             <div class="site-footer">
               <div class="row-fluid">
-                <div class="span3">
-                  <div class="block">
-                    <h1>Worship Days</h1>
-                    <ul>
-                      <li><a href="/pages/filter/sunday">Sunday Service</a></li>
-                      <li><a href="/pages/filter/tuesday">Tuesday Bible Study </a></li>
-                      <li><a href="/pages/filter/thursday">Thursday Faith Clinic</a></li>
-                      <li><a href="#">Lunch Hour prayer</a></li>
-                      <li><a href="/pages/filter/friday">Second Friday of every Month </a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="span3">
-                  <div class="block">
-                    <h1>Our Events and Programmes</h1>
-                    <ul>
-                      <li><a href="/upcoming_events/live_events">Live Events</a></li>
-                      <li><a href="/upcoming_events/past_events">Past Events</a></li>
-                      <li><a href="/events">All Events</a></li>
-                      <li><a href="/upcoming_events/upcomings">Upcoming Events </a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="span3">
-                  <div class="block">
-                    <h1>Account and Settings</h1>
-                    <ul>
-                      <% unless current_user && user_signed_in? %>
-                        <li><a href="/sign_up" style="text-decoration: none; font-size:15px; color:white">Sign Up</a></li>
-                        <li><a href="/login" style="text-decoration: none; color:white;">Sign In</a></li>
-                      <% end %>
-                      <% if current_user && user_signed_in? %>
-                        <li><a href="/logout" style="text-decoration: none;font-size:10px; color:white">Log Out</a></li>
-                        <li><a href="/edit" style="text-decoration: none;font-size:10px; color:white">Edit account</a></li>
-                      <% end %>
-                    </ul>
-                  </div>
-                </div>
                 <div class="span3">
                   <div class="block">
                     <h1>Our Contacts informations</h1>
@@ -342,11 +381,11 @@
       </div>
       <!-- removed some js requires -->
       <script src="js/jquery-1.9.1.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/imagesloaded.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/AnimOnScroll.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/AnimOnScroll.js"></script>
       <script>
       new AnimOnScroll( document.getElementById( 'grid' ), {
       minDuration : 0.4,
