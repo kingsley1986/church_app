@@ -6,13 +6,11 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "main";
- @import "font-awesome";
-
 
  @import "bourbon";
 
 //Fonts
-
+@import url("https://fonts.googleapis.com/css?family=Damion");
 $font-curse: 'Damion', cursive;
 
 //Colors
