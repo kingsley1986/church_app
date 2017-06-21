@@ -5,8 +5,7 @@ class ArrayInput
   def to_html
     input_wrapping do
       inputs = []
-      binding.pry
-      @object[method].each.each_with_index do |v, x|
+      @object[method].try(:each_with_index) do |v, x|
         inputs << array_input_html(v)
       end
 
