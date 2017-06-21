@@ -46,7 +46,9 @@ class  UpcomingEventsController < ApplicationController
 
   def live_events
     UpcomingEvent.all.each do |live |
-      if live.starting_date.strftime('%Y-%m-%d %H:%M:%S') <= DateTime.now.strftime('%Y-%m-%d %H:%M:%S') && DateTime.now.strftime('%Y-%m-%d %H:%M:%S') <= live.end_date.strftime('%Y-%m-%d %H:%M:%S')
+      d = DateTime.now + 2.hours
+      binding.pry
+      if live.starting_date.strftime('%Y-%m-%d %H:%M:%S') <= d.strftime('%Y-%m-%d %H:%M:%S') && d.strftime('%Y-%m-%d %H:%M:%S') <= live.end_date.strftime('%Y-%m-%d %H:%M:%S')
         @lives = UpcomingEvent.where(id: live.id)
       end
     end
