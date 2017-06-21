@@ -6,7 +6,7 @@ class ArrayInput
     input_wrapping do
       inputs = []
 
-      @object[method].each_with_index do |v, x|
+      @object[method].to_s.each_with_index do |v, x|
         inputs << array_input_html(v)
       end
 
