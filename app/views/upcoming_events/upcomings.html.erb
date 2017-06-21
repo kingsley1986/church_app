@@ -16,9 +16,9 @@
           <% end %>
         </div>
       </br>
-        <div class="starting_date_class"><%= upcoming_event.starting_date.strftime("Starting on:  %Y-%m-%d %H:%M:%S") %></div>
+        <div class="starting_date_class"><%= upcoming_event.starting_date.strftime("Starting At:  %Y-%m-%d %H:%M:%S") %></div>
       </br>
-        <div class="end_date_class"><%= upcoming_event.end_date.strftime("Ends on:  %Y-%m-%d %H:%M:%S") %></div>
+        <div class="end_date_class"><%= upcoming_event.end_date.strftime("Ends At:  %Y-%m-%d %H:%M:%S") %></div>
       </br>
         <div class="btn btn-primary btn-sm"><%= link_to 'I am going',  goingpeople_upcoming_event_path(upcoming_event), method: :put, remote: true,
         class:'specific_service',

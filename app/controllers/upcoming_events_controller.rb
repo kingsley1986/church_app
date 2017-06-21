@@ -45,17 +45,15 @@ class  UpcomingEventsController < ApplicationController
   end
 
   def live_events
-    @lives =  UpcomingEvent.all
-    #    start = u.starting_date.to_datetime
-    #  finish = u.end_date.to_datetime
-    #  while(start < finish) do
-    #    start += 1.minute
-    #    if Time.now.to_s >= u.starting_date.to_s &&  start <= u.end_date
-    #      @live_events = start
-    #      return @live_events
-    #    end
-    #  end
-    # end
+    UpcomingEvent.all.each do |live |
+      if live.starting_date.strftime('%Y-%m-%d %H:%M:%S') <= DateTime.now.strftime('%Y-%m-%d %H:%M:%S') && DateTime.now.strftime('%Y-%m-%d %H:%M:%S') <= live.end_date.strftime('%Y-%m-%d %H:%M:%S')
+        @lives = UpcomingEvent.where(id: live.id)
+      end
+    end
+
+    # @li = live.starting_date
+    # while @li < live.end_date
+    # @li += 1.minute
   end
 
 
