@@ -27,6 +27,11 @@
 //   });
 //   return false;
 // });
+
+
+
+
+
 $(document).on('click', '.specific_service', function(event) {
    if (confirm("would you like to come with a friend or family?")) {
 

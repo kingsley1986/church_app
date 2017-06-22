@@ -69,10 +69,10 @@
       <!-- slider ends here  -->
       <div class="featured-blocks">
         <div class="container">
-          <div class="row-fluid">
-            <div class="span4">
-              <div class="block">
-                <h1><a href="/upcoming_events/live_events">Live Events</a></h1>
+          <div class="row-fluid" >
+            <div class="span4" >
+              <div class="block" style="background:#DDDDDD">
+                <h1 style=""><a href="/upcoming_events/live_events">Live Events</a></h1>
                 <p>Pellentesque lacinia mi nisi, id auctor sem ornare sed. Vivamus vitae facilisis metus. Praesent placerat enim velit</p>
               </div>
             </div>
@@ -179,7 +179,7 @@
           </div>
           <div class="row-fluid" >
             <ul class="grid effect-3" id="grid" >
-              <li class="span6" style="background:#AAAAAA " >
+              <li class="span6" style="" >
                 <div class="block">
                   <img src="images/prayer.jpg" alt="">
                   <h1 style="text-align:center">Read Details about Us</h1>
@@ -191,7 +191,7 @@
                       <% end %>
                       <div class="extra_wrapper">
                         <p class="style1" style="color:black;  padding-left:15px;padding-right:15px;text-align: justify; padding-top:15px;">
-                          <%= truncate(home_page.body, length: 440) %>
+                          <%= truncate(home_page.body, length: 470) %>
                           <%= link_to '...Read more', '', class: "read-more-#{home_page.id}", style:"color:green; font-size: 17px;" %>
                           <script>
                             $('.read-more-<%= home_page.id %>').on('click', function(e) {
@@ -206,7 +206,7 @@
                   </p>
                 </div>
               </li>
-              <li class="span6" style="background:#AAAAAA" >
+              <li class="span6" style="" >
                 <div class="block">
                   <img src="images/prayer1.png" alt="">
                   <h1>Send Us Your prayer Request</h1>
@@ -295,9 +295,8 @@
             </div>
           </div>
         </div>
-      <div class="featured-images" style="background:pink">
+      <div class="featured-images" style="background:#01FF70">
         <div class="container">
-          <h1>We are not just a church, we are family</h1>
           <h2>These are the lists of our Services and Days</h2>
           <div class="hh-divider"></div>
             <div class="row-fluid">
