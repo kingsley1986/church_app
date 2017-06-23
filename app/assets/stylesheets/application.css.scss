@@ -222,6 +222,9 @@ button#submit.btn.btn-success {
   left: -1.9%;
 
 }
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+  float:none;
+}
 
 // input[type="file"] {
 //   position: relative;
