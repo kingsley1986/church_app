@@ -254,7 +254,7 @@ ul{margin: 0 !important;}
 	.featured-blocks .block h1{padding-top: 40px; font-size: 24px; color: #2d6e84; font-family: 'fjalla_oneregular'; text-transform: uppercase; padding-bottom: 15px;}
 	.featured-blocks .block p{color: #44535a; font-size: 16px; line-height: 24px; font-family: 'source_sans_proregular';}
 
-	.featured-heading{background: #bcbcbc; padding-top: 60px; text-align: center; padding-bottom: 50px; border-bottom: 5px solid #2d6e84;}
+	.featured-heading{background: #2d6e84; padding-top: 60px; text-align: center; padding-bottom: 50px; border-bottom: 5px solid #2d6e84;}
 	.featured-heading h1{font-size: 44px; color: #2d6e84; text-transform: uppercase;}
 	.featured-heading h2{font-size: 34px; color: #2d6e84; font-family: 'source_sans_prolight'; text-align: center;}
 	.featured-heading .block{text-align: left;}
