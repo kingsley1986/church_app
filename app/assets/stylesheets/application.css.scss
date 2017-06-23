@@ -12,7 +12,9 @@
  @import "bourbon";
 
 
- 
+ .success {
+   display: none;
+ }
 
 //Fonts
 $font-curse: 'Damion', cursive;

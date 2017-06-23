@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'activeadmin', github: 'activeadmin'
+
 gem "pundit"
 gem 'devise'
 gem 'carrierwave'
@@ -16,7 +17,7 @@ gem "mini_magick"
 gem "fog"
 gem "figaro"
 gem 'rails_12factor', group: :production
-gem 'will_paginate', '~> 3.1', '>= 3.1.3'
+gem 'will_paginate'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
 gem 'mail_form', '~> 1.5', '>= 1.5.1'

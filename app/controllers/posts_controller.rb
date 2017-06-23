@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post_id, except: [:index, :like, :new, :create]
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page:  8)
+    @posts = Post.order('created_at DESC').paginate(page: params[:page], per_page:  5)
     # respond_to do |format|
     #   format.json { render :json =>  @posts}
     # end

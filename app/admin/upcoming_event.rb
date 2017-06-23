@@ -5,8 +5,8 @@ ActiveAdmin.register UpcomingEvent do
    f.inputs "Post Details" do
      f.input :title
      f.input :body, as: :text
-     f.input :starting_date, :as => :datetime_picker
-     f.input :end_date,:as => :datetime_picker
+     f.input :starting_date, as: :datetime_picker
+     f.input :end_date, as: :datetime_picker
      f.input :going, as: :array
      f.input :coming_with, as: :array
      f.has_many :pictures do |ff|

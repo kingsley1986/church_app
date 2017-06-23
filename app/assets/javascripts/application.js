@@ -29,9 +29,6 @@
 // });
 
 
-
-
-
 $(document).on('click', '.specific_service', function(event) {
    if (confirm("would you like to come with a friend or family?")) {
 
@@ -55,8 +52,8 @@ $(document).on('ready page:load', function() {
       data: valuesToSubmit,
       dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
     }).success(function(json){
-      console.log("success", json);
     });
+    alert("Your prayer request is being sent to Pastor, do you wish to continue?")
     $(".tab_cont").trigger('reset');
   })
 })
