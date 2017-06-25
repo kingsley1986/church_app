@@ -21,6 +21,11 @@ ActiveAdmin.register Home do
          image_tag a.image.url
        end
     end
+    row :foo do
+      link_to('this','#')
+    end
   end
+
+
 
 end
