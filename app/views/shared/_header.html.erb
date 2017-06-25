@@ -32,6 +32,9 @@
         </a>
         <div class="nav-collapse collapse">
           <ul class="nav">
+            <% if current_user && current_user.admin? %>
+              <li><a href="/admin">Admin</a></li>
+            <% end %>
             <li><a href="/">Home</a></li>
             <li><a href="/pages/filter/about">About</a></li>
             <li><a href="/images">Gallery</a></li>
