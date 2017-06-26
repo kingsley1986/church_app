@@ -11,10 +11,11 @@ class User < ActiveRecord::Base
          validates :phone, presence: true
          validates :gender, presence: true
 
-         has_many :posts
-         has_many :comments
-         has_many :replies
-         has_many :pictures
+         has_many :posts, dependent: :destroy
+         has_many :comments, dependent: :destroy
+         has_many :replies, dependent: :destroy
+         has_many :pictures, dependent: :destroy
+
 
     before_validation :params_sanitizer, only: :update
 

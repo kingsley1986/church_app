@@ -7,7 +7,6 @@ class Image < ActiveRecord::Base
 
   def update_image_attributes
     if image.present? && image_changed?
-      binding.pry
       self.image_content_type = image.file.content_type
       self.image_file_size = image.file.size
     end
