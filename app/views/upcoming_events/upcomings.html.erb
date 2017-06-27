@@ -20,9 +20,20 @@
       </br>
         <div class="end_date_class"><%= upcoming_event.end_date.strftime("Ends At:  %Y-%m-%d %H:%M:%S") %></div>
       </br>
-        <div class="btn btn-primary btn-sm"><%= link_to 'I am going',  goingpeople_upcoming_event_path(upcoming_event), method: :put, remote: true,
+      <div class="" style="color:white; font-size:18px; font-weight:bold">are you coming?</div>
+        <div class="btn btn-primary btn-sm"><%= link_to 'Yes',  goingpeople_upcoming_event_path(upcoming_event), method: :put, remote: true,
         class:'specific_service',
         data: {id: upcoming_event.id} %></div>
+
+      <div class="cd-popup" role="alert">
+      	<div class="cd-popup-container">
+      		<p>Do you want to come with a friend?</p>
+      		<ul class="cd-buttons">
+            <li><%= link_to "Yes", coming_with_person_upcoming_event_path(upcoming_event), :method=> :put %></li>
+      			<li><a href="#0">No</a></li>
+      		</ul>
+      	</div> <!-- cd-popup-container -->
+      </div>
 
       </br>
       <div  id="questionclass">Click the button below to indicate that you are coming with somone</div>

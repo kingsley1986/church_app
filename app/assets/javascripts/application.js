@@ -30,15 +30,18 @@
 
 
 $(document).on('click', '.specific_service', function(event) {
-   if (confirm("would you like to come with a friend or family?")) {
+  $('.cd-popup').addClass('is-visible');
 
-     $(".specific_service").hide();
-     $("#questionclass").show();
-     $("#hiderthisclass").show();
-   } else {
-     alert("Thank you for chosing to come for this programme")
-
-   }
+  //  if (confirm("would you like to come with a friend or family?")) {
+  //    $('.cd-popup').addClass('is-visible');
+   //
+  //    $(".specific_service").hide();
+  //    $("#questionclass").show();
+  //    $("#hiderthisclass").show();
+  //  } else {
+  //    alert("Thank you for chosing to come for this programme")
+   //
+  //  }
 
 });
 
