@@ -430,3 +430,19 @@ ul{margin: 0 !important;}
    .navbar .btn-navbar{background: #f9b701; color: #2d6e84; text-shadow: none; margin-left: 0; margin-right: 0;
    					  float: none; margin-bottom: 5px;}
    .navbar .btn-navbar:hover{color: #2d6e84;}
+
+
+
+
+
+   @media (max-width: 767px) {
+
+     .row, .thumbnails {
+       margin: 0;
+     }
+
+     .row {
+       margin-left: -35px;
+     }
+
+   }
