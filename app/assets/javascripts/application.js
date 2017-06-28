@@ -22,6 +22,8 @@ $(document).on('click', 'button#send_prayer', function(e) {
         },
     });
     e.preventDefault(); //THIS IS VERY IMPORTANT
+    $(".tab_cont").trigger('reset');
+
 
 
 });
