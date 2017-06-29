@@ -209,7 +209,7 @@ ul{margin: 0 !important;}
 /* ==========================================================================
    Menu custom styles starts here
    ========================================================================== */
-	.header-wrapper{background: #2d6e84; position: relative; text-align: center;}
+	.header-wrapper{background: #1e73be; position: relative; text-align: center; }
 	.site-name{background: #f9b701; padding: 25px; padding-bottom: 0;}
 	.logo{display: none;}
 	.menu{text-align: center;}
@@ -218,7 +218,7 @@ ul{margin: 0 !important;}
 							background-image: none; background: none;}
 	.menu .navbar .nav > .active > a:hover{color: #f9b701;box-shadow: none; background: none;}
 	.menu .navbar .nav > li{text-transform: uppercase; font-family: 'source_sans_probold';}
-	.menu .navbar .nav > li > a {color: #9dc3d0; font-size: 16px; text-shadow: none; padding: 20px 15px;}
+	.menu .navbar .nav > li > a {color: white; font-size: 19px; text-shadow: none; padding: 8px 7px;}
 	.menu .navbar .nav > li > a:hover{color: #f9b701;}
 
 	.banner{text-align: center;  background: url("/images/banner-bg.jpg") repeat;}
@@ -248,7 +248,7 @@ ul{margin: 0 !important;}
 						padding: 8px; text-transform: uppercase;font-family: 'fjalla_oneregular';}
 	.btn:hover{background: #f9b701; color: #2d6e84; transition:all 1s;}
 
-	.featured-blocks{padding: 60px 0; background: #2d6e84; text-align: center;}
+	.featured-blocks{padding: 60px 0; background: #1e73be; text-align: center;}
 	.featured-blocks .block{background: #bcbcbc; border-radius: 5px; padding: 35px; padding-top: 0;}
 	.featured-blocks .block [class^="fw-icon-"]{}
 	.featured-blocks .block h1{padding-top: 40px; font-size: 24px; color: #2d6e84; font-family: 'fjalla_oneregular'; text-transform: uppercase; padding-bottom: 15px;}

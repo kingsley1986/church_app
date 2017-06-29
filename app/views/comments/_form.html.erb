@@ -1,9 +1,11 @@
 <div class="header-wrapper">
   <div class="heading_for_blog">
     <div class="container"  style="width:30%; background:white;">
-      <%= simple_form_for([@post, @post.comments.build], :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
+      <%= simple_form_for([@post, @post.comments.build], remote: true, :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
         <%= f.input :body, as: :text, input_html: { rows: "3", style:"width: 70%; margin:auto"} %>
           <%= f.simple_fields_for(:pictures, Picture.new)  do |comment_pic| %>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
             <div style="text-align: center;"><%= comment_pic.input :image %></div>
           <% end %>
         <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>

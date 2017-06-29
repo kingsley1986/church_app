@@ -7,8 +7,10 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
+      respond_to do |format|
       flash[:notice] = "Successfully created a comment, we will review and approve your comment whithin 24 hours. Thank you #{@comment.user.first_name} "
-      redirect_to :back
+        format.json { render json: @post }
+      end
     else
       redirect_to :back
     end

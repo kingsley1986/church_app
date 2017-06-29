@@ -24,6 +24,20 @@
 //     e.preventDefault(); //THIS IS VERY IMPORTANT
 //     $(".tab_cont").trigger('reset');
 // });
+$(document).on('ready page:load', function() {
+  $("#newcomment").submit(function (event) {
+    var valuesToSubmit = $(this).serialize();
+    $.ajax({
+      type: "POST",
+      url: $(this).attr('action'), //sumbits it to the given url of the form
+      data: valuesToSubmit,
+      dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+    }).success(function(json){
+      console.log("success", json);
+    });
+    $("#newcomment").trigger('reset');
+  })
+})
 
 
 
