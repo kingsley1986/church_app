@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170612183307) do
+ActiveRecord::Schema.define(version: 20170630043107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,6 +124,14 @@ ActiveRecord::Schema.define(version: 20170612183307) do
 
   add_index "replies", ["comment_id"], name: "index_replies_on_comment_id", using: :btree
   add_index "replies", ["user_id"], name: "index_replies_on_user_id", using: :btree
+
+  create_table "sermons", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "preacher"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "upcoming_events", force: :cascade do |t|
     t.string   "title"

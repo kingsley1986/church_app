@@ -9,4 +9,5 @@ class Picture < ActiveRecord::Base
   belongs_to :news
   belongs_to :home
   belongs_to :upcoming_event
+  belongs_to :sermon
 end

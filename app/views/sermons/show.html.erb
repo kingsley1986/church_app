@@ -1,0 +1,21 @@
+<div class="container container-table" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
+  <didv class="content" >
+    <hr class="devidepost">
+      <div class="upcoming_title" style="background-color:white; font-weight:bold">
+        <%= @sermon.title %>
+      </div>
+      </br>
+      <div class="upcomings_body">
+        <%= @sermon.body %>
+      </div>
+      <div class="upcomings_body">
+        <%= @sermon.preacher %>
+      </div>
+      <div class="img img1.imgAlbum" >
+        <% @sermon.pictures.each do |pic, remov| %>
+          <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
