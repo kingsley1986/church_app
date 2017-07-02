@@ -350,26 +350,25 @@
                     <div class="row" >
                       <div class="clear" >
                         <% set_sermons.each do |sermon| %>
-                        <hr style="margin-left:50px; margin-right:30px; background:red" size="10">
                           <div class="col-md-6 col-md-offset-3" >
                           <% sermon.pictures.each do |pic, remov| %>
-                            <div class="row" style="">
-                              <div class="col-md-6" ><span class="pull-left" style=" margin-left:80px;"><%=image_tag(pic.image.url(:thumb)) if pic.image? %></span></div>
-                              <div class="row item" style=" display: inline-block;vertical-align: middle;float: none;">
-                                <h4 class="align-baseline"><%= link_to sermon.title, sermon %></h4>
-                              </br>
-                                <h4 class="align-bottom" style=";"><%=sermon.preacher %></h4>
-                              </br>
-                                <h4 class="align-bottom" style=";"><%=sermon.created_at.strftime("%Y-%m-%d %H:%M:%S") %></h4>
-                              </di>
-                              <%= link_to 'Read more', sermon_path(sermon), class:"btn btn-success sermon_link", style:"color:white;" %>
-
-                            </div>
+                          <table>
+                          <tr>
+                            <div><td><%=image_tag(pic.image.url(:thumb), style:"padding-left:35px; padding-right:100px;") if pic.image?  %></td></div>
+                            <td>
+                              <div ><%= link_to sermon.title, sermon, class:"sermon-title" %></div>
+                              <div class="sermon-preacher"><%=sermon.preacher %></div>
+                            </br>
+                              <div class="sermon-time"> <%=sermon.sermondate.strftime('%d-%b-%Y') unless sermon.sermondate.nil? %></div>
+                            </td>
+                          </tr>
+                          </table>
+                          <div><%= link_to 'Read more about this sermon', sermon_path(sermon), class:"btn btn-success sermon_link", style:"color:white; width:84%; margin-top:-30px; font-family:Georgia, serif" %></div>
                           <% end %>
                           </div>
                         <% end %>
+                        <div style="margin-right:30px;"><%= will_paginate set_sermons %></div>
                       <div>
-                      <div style="margin-right:30px;"><%= will_paginate set_sermons %></div>
                     </div>
                   </p>
                 </div>
@@ -394,7 +393,7 @@
                           </div>
                           <div class="row">
                             <div class="form-group col-lg-8" >
-                              <%= f.input :message, :placeholder => "Please type your Prayer request here", as: :text, input_html: { rows: "12" }, class:"form-control input-normal"%><br>
+                              <%= f.input :message, :placeholder => "Please type your Prayer request here", as: :text, input_html: { rows: "8" }, class:"form-control input-normal"%><br>
                             </div>
                           </div>
                           <div class="row">

@@ -19,7 +19,9 @@ Rails.application.routes.draw do
     end
 
   end
-  resources :sermons
+  resources :sermons do
+    resources :sermonreviews
+  end
   resources :images
   resources :news
   resources :contacts, only: [:new, :create]

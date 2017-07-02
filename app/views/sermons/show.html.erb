@@ -10,12 +10,15 @@
       </div>
       <div class="upcomings_body">
         <%= @sermon.preacher %>
+        <div class="sermon-time"> <%=@sermon.sermondate.strftime('%d-%b-%Y') unless @sermon.sermondate.nil? %></div>
       </div>
       <div class="img img1.imgAlbum" >
         <% @sermon.pictures.each do |pic, remov| %>
           <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
         <% end %>
       </div>
+      <%= render  @sermon.sermonreviews%>
+      <%= render "sermonreviews/form" %>
     </div>
   </div>
 </div>
