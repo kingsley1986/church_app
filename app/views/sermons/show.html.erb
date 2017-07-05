@@ -1,24 +1,20 @@
-<div class="container container-table" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
-  <didv class="content" >
-    <hr class="devidepost">
-      <div class="upcoming_title" style="background-color:white; font-weight:bold">
-        <%= @sermon.title %>
-      </div>
-      </br>
-      <div class="upcomings_body">
-        <%= @sermon.body %>
-      </div>
-      <div class="upcomings_body">
-        <%= @sermon.preacher %>
-        <div class="sermon-time"> <%=@sermon.sermondate.strftime('%d-%b-%Y') unless @sermon.sermondate.nil? %></div>
-      </div>
-      <div class="img img1.imgAlbum" >
-        <% @sermon.pictures.each do |pic, remov| %>
-          <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
-        <% end %>
-      </div>
-      <%= render  @sermon.sermonreviews%>
-      <%= render "sermonreviews/form" %>
+<div class="wrapper">
+  <% @sermon.pictures.each do |pic, remov| %>
+    <%= image_tag(pic.image.url(:square), class:"post-img") if pic.image? %>
+  <% end %>
+  <p style="font-size: 25px;text-transform: uppercase;margin:12px;color: #aa5a00;"><%= @sermon.title %></p>
+  <p style="padding-right:20px;font-size:18px"><%= @sermon.body %></p>
+  <div style="float:left;"><%= @sermon.preacher %></div>
+  </br>
+  <div class="sermon-time" style="float:left;"> <%=@sermon.sermondate.strftime('%d-%b-%Y') unless @sermon.sermondate.nil? %></div>
+  <hr class="devidepost">
+  <div style="background:white;">
+    <%= render  @sermon.sermonreviews%>
+    <hr>
+    <h2 style="background:#1e73be; color:white;"> Leave a Comment</h2>
+    <div style="background:silver;">
+    <div style="background:silver; text-align:center">Your Email will not be published</div>
+      <%= render "sermonreviews/form"%>
     </div>
   </div>
 </div>

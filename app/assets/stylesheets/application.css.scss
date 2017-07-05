@@ -12,37 +12,6 @@
  @import "bourbon";
  /* background and colonnes */
 
- a.sermon-title {
-   font-size: 17px;
-   color:red;
- }
-
- div.sermon-preacher {
-   font-size: 18px;
-   color:blue;
- }
-
-div.sermon-time {
-  font-size: 17px;
-}
-
- td:first-child {
- 	width:20%;
- 	text-align:center;
- 	font-size:150%;
- 	font-weight:bold;
- }
-
- table ~ table {
- 	width:80%;
- }
- table ~ table ~ table {
-
- 	}
- table ~ table ~ table td {
- color:white;
- }
-
 
 
 div#jssor_1 {
@@ -204,23 +173,6 @@ $color-snow: #fff;
 }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
-  a.btn.btn-success.sermon_link{
-    margin-right: -30px;
-    max-width: 80%;
-  }
-  div.sermon-time{
-    padding-left: 30px;
-  }
-  div.sermon-preacher{
-    font-size: 14px;
-    padding-left: 30px;
-  }
-  a.sermon-title{
-    font-size: 14px;
-    padding-left: 30px;
-  }
-}
 
 
 

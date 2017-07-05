@@ -6,11 +6,14 @@ class SermonreviewsController < ApplicationController
 
   def create
     @sermon = Sermon.find(params[:sermon_id])
-    @sermon_comment = @sermon.sermonreviews.create(sermon_comments_params)
-    if @sermon_comment.save
+    @sermoncomment = @sermon.sermonreviews.create(sermon_comments_params)
+    if @sermoncomment.save
+      flash[:notice] = "Your comment has been posted, we will review and approve it soon"
       redirect_to :back
     else
-      redirect_to :back
+      flash[:error] = @sermoncomment.errors.full_messages
+
+      redirect_to @sermon
     end
   end
 
