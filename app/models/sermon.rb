@@ -3,10 +3,4 @@ class Sermon < ActiveRecord::Base
   has_many :sermonreviews, dependent: :destroy
   accepts_nested_attributes_for :pictures, :reject_if => proc { |attributes| attributes['image'].blank? }
 
-
-  Sermon.all.each do |sermon|
-    sermon.pictures.each do |pic|
-      pic.image.recreate_versions!
-    end
-  end
 end
