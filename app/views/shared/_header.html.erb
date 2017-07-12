@@ -23,7 +23,7 @@
 <div class="header-wrapper">
   <div class="container">
     <div class="logo">
-      <h1>Rccg King of Glory</h1>
+      <h1><a href="/">Rccg King of Glory</h1>
     </div>
     <div class="menu">
       <div class="navbar">
@@ -36,7 +36,6 @@
               <li><a href="/admin">Admin</a></li>
             <% end %>
             <li><a href="/">Home</a></li>
-            <li><a href="/pages/filter/about">About</a></li>
             <li><a href="/images">Gallery</a></li>
             <li>
               <div class="site-name">
@@ -44,9 +43,16 @@
               </div>
             </li>
             <li><a href="/news">News</a></li>
-            <li><a href="/posts">Blog</a></li>
+            <li><a href="/posts">Balog</a></li>
             <li><a href="/pages/filter/contact">Contact</a></li>
-
+            <% unless current_user && user_signed_in? %>
+            <li><a href="/sign_up" style="text-decoration: none; font-size:10px; color:white">Sign Up</a></li>
+            <li><a href="/login" style="text-decoration: none; color:white; font-size:10px;">Sign In</a></li>
+          <% end %>
+          <% if current_user && user_signed_in? %>
+            <li><a href="/logout" style="text-decoration: none;font-size:10px; color:white">Log Out</a></li>
+            <li><a href="/edit" style="text-decoration: none;font-size:10px; color:white">Edit account</a></li>
+          <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
