@@ -10,10 +10,39 @@
  @import "main";
 
  @import "bourbon";
- /* background and colonnes */
+
+ /* Global */
+
+ .frame {
+   height: 30em;
+   width: 22em;
+   display: inline-block;
+   vertical-align: top; /*not required*/
+   border: 1px solid black; /*not required*/
+   position: relative;
+ }
+
+ /* everything below is not required */
+ .frame span {
+   font-family: arial, sans-serif;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   text-align: center;
+   color: white;
+   background: rgba(0,0,0,0.4);
+   font-size: 12px;
+ }
 
 
-
+ .frame:hover {
+   z-index: 1;
+   -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+}
 div#jssor_1 {
   border: 4px solid #4486f4;
 }
@@ -160,47 +189,42 @@ $color-snow: #fff;
   }
 }
 
-#nav-mobile {
-  overflow-x: hidden;
-  white-space: nowrap;
-  height: 1.2em;
-  width: 100%;
-}
 
-#nav-mobile li {
-  padding: 10px;
-  display: inline;
-}
 
+// @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+//     #jssor_1{
+//       width: 300px;
+// }
+// }
 
 
 
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   div.container{
-    min-width: 80%;
-    font-size: 15px;
-  }
+   min-width: 80%;
+   font-size: 15px;
+ }
   /* For portrait layouts only */
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   div.featured-heading{
-    min-width: 80%;
-  }
+   min-width: 80%;
+ }
   /* For portrait layouts only */
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   div.posttitle{
-    font-size: 20px;
-  }
+  font-size: 20px;
+ }
   /* For portrait layouts only */
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   div.post_body_index{
-    font-size: 10px;
-  }
+  font-size: 10px;
+ }
   /* For portrait layouts only */
 }
 
