@@ -347,33 +347,31 @@
               <li class="span6" style="" >
                 <div class="block">
                   <img src="images/prayer1.png" alt="">
-                  <h1>Send Us Your prayer Request</h1>
-                  <p>
-                    <div>
-                      <%= simple_form_for  Contact.new, :remote => true, :html => {:class => "tab_cont", style:""} do |f| %>
-                        <div class="extra_wrapper">
-                          <div class="row">
-                            <div class="form-group col-lg-10">
-                              <%= f.input :name,  class:"form-control", required: true %>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="form-group col-lg-10">
-                              <%= f.input :email, class:"form-control input-normal" %><br>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="form-group col-lg-8" >
-                              <%= f.input :message, :placeholder => "Please type your Prayer request here", as: :text, input_html: { rows: "8" }, class:"form-control input-normal"%><br>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <button type="submit" class="btn btn-success" id="submit" style="position:relative; left:20px; color:#0f6f2f @import" name="submit"/>Send Your Prayer</button>
+                  <h1 style="margin-top:-30px;">Send Us Your prayer Request</h1>
+                  <div>
+                    <%= simple_form_for  Contact.new, :remote => true, :html => {:class => "tab_cont", style:""} do |f| %>
+                      <div class="extra_wrapper">
+                        <div class="row">
+                          <div class="form-group col-lg-10">
+                            <%= f.input :name,  class:"form-control", required: true %>
                           </div>
                         </div>
-                      <% end %>
-                    </div>
-                  </p>
+                        <div class="row">
+                          <div class="form-group col-lg-10">
+                            <%= f.input :email, class:"form-control input-normal" %><br>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-lg-8" >
+                            <%= f.input :message, :placeholder => "Please type your Prayer request here", as: :text, input_html: { rows: "8" }, class:"form-control input-normal"%><br>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <button type="submit" class="btn btn-success" id="submit" style="position:relative; left:20px; color:#0f6f2f @import" name="submit"/>Send Your Prayer</button>
+                        </div>
+                      </div>
+                    <% end %>
+                  </div>
                 </div>
               </li>
             </ul>

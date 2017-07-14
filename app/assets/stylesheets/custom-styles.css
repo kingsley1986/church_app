@@ -71,7 +71,7 @@ p{color: #869093; font-size: 14px; line-height: 26px;  padding-bottom: 25px; mar
 .spacing-b{padding-bottom: 30px;}
 .spacing-l{padding-left: 30px;}
 .spacing-r{padding-right: 30px;}
-.last{padding-bottom: 0; margin-bottom: 0;}
+.last{padding-bottom: 0; margin-bottom: 0; padding-right:14px; padding-left: 14px;}
 .read-more{background: #f85c5e; padding:20px; border-radius: 0px 0px 5px 5px;}
 .read-more a{color: #fff; text-transform: uppercase; font-size: 13px; line-height: 24px;}
 .read-more a:hover{color: #383838; text-decoration: none;}
