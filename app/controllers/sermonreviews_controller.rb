@@ -7,7 +7,7 @@ class SermonreviewsController < ApplicationController
   def create
     @sermon = Sermon.find(params[:sermon_id])
     @sermoncomment = @sermon.sermonreviews.create(sermon_comments_params)
-    if @sermoncomment.save
+      if verify_recaptcha(model: @sermoncomment) && @sermoncomment.save
       flash[:notice] = "Your comment has been posted, we will review and approve it soon"
       redirect_to :back
     else

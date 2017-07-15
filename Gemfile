@@ -23,6 +23,9 @@ gem "font-awesome-rails"
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem "bourbon"
+gem "recaptcha", require: "recaptcha/rails"
+
+
 
 
 

@@ -361,6 +361,9 @@
                             <%= f.input :email, class:"form-control input-normal" %><br>
                           </div>
                         </div>
+                        <div class= "hidden">
+                          <%= f.input :nickname, hint: 'Leave this field blank!' %>
+                        </div>
                         <div class="row">
                           <div class="form-group col-lg-8" >
                             <%= f.input :message, :placeholder => "Please type your Prayer request here", as: :text, input_html: { rows: "8" }, class:"form-control input-normal"%><br>
