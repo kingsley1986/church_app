@@ -3,7 +3,6 @@
   <%= f.input :name, placeholder: "please enter your name here" %>
   <%= f.input :email, placeholder: "please enter your email here, your email will not be published" %>
   <div class="capcha-class">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <%= recaptcha_tags %>
   </div>
   <button type="submit" class="btn btn-success" id="submit" name="submit"/>Submit</button>
