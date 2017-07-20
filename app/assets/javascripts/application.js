@@ -4,7 +4,20 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
 
+  var ulNav= "#nav", openNav = "active";
+
+  $('.toggle-menu').click(function(e){
+
+      if($(ulNav).hasClass(openNav)){
+        $(ulNav).removeClass(openNav);
+      }else{
+        $(ulNav).addClass(openNav);
+      }
+      e.preventDefault();
+  })
+})
 
 
 // $(document).on('click', '.tab_cont', function(e) {

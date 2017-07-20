@@ -204,8 +204,6 @@ ul{margin: 0 !important;}
 
 
 
-
-
 /* ==========================================================================
    Menu custom styles starts here
    ========================================================================== */
@@ -220,8 +218,9 @@ ul{margin: 0 !important;}
 	.menu .navbar .nav > li{text-transform: uppercase; font-family: 'source_sans_probold';}
 	.menu .navbar .nav > li > a {color: white; font-size: 19px; text-shadow: none; padding: 8px 7px;}
 	.menu .navbar .nav > li > a:hover{color: #f9b701;}
+/*could put another background here*/
 
-	.banner{text-align: center;  background: url("/images/banner-bg.jpg") repeat;}
+	.banner{text-align: center;  background:;}
 	.banner .carousel{margin-bottom: 0;}
 	.banner .carousel-inner > .item > img{display: inline-block; margin-top: 275px;}
 	.banner .carousel-caption{background: none; top:14%; }

@@ -13,6 +13,8 @@
 
  /* Global */
 
+
+
  .frame {
    height: 30em;
    width: 22em;
@@ -172,7 +174,7 @@ $color-snow: #fff;
 
  body{
    text-align: center;
-   background: url("/images/banner-bg.jpg") repeat;      /* Generic*/
+   background: 	#FF1493     /* Generic*/
  }
 
  @media (max-width: 767px) {
@@ -191,6 +193,7 @@ $color-snow: #fff;
 
 
 
+
 // @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
 //     #jssor_1{
 //       width: 300px;
@@ -200,6 +203,13 @@ $color-snow: #fff;
 
 
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  div.container{
+   min-width: 80%;
+   font-size: 15px;
+ }
+  /* For portrait layouts only */
+}
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   div.container{
    min-width: 80%;

@@ -1,61 +1,101 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="css/bootstrap-responsive.css">
-    <link rel="stylesheet" href="css/custom-styles.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/component.css">
-
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-<div class="header-wrapper">
-  <div class="container">
-    <div class="logo">
-      <h1><a href="/">Rccg King of Glory</h1>
-    </div>
-    <div class="menu">
-      <div class="navbar">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <i class="fw-icon-th-list"></i>
-        </a>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <% if current_user && current_user.admin? %>
-              <li><a href="/admin">Admin</a></li>
-            <% end %>
-            <li><a href="/">Home</a></li>
-            <li><a href="/images">Gallery</a></li>
-            <li>
-              <div class="site-name">
-                <h1>Rccg King of Glory Parish</h1>
-              </div>
-            </li>
-            <li><a href="/news">News</a></li>
-            <li><a href="/posts">Blog</a></li>
-            <li><a href="/pages/filter/contact">Contact</a></li>
-            <% unless current_user && user_signed_in? %>
-            <li><a href="/sign_up" style="text-decoration: none; font-size:10px; color:white">Sign Up</a></li>
-            <li><a href="/login" style="text-decoration: none; color:white; font-size:10px;">Sign In</a></li>
-          <% end %>
-          <% if current_user && user_signed_in? %>
-            <li><a href="/logout" style="text-decoration: none;font-size:10px; color:white">Log Out</a></li>
-            <li><a href="/edit" style="text-decoration: none;font-size:10px; color:white">Edit account</a></li>
-          <% end %>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-  </div>
+<div class="mobile-display">
+  <h2 class="site-title">
+  	<a href="#">
+  		<img src="/images/rcg.png" alt="smashtheshell" >
+  	</a>
+  </h2>
 </div>
+
+<div class="body-two">
+<nav style="font-size:20px;">
+	<a href="#" class="toggle-menu">&#9776;</a>
+	<ul class="nav-list nav-open" id="nav">
+		<li><a href="/" style="background: rgba(0, 0, 0, 0.8); border-radius:50%;">Home</a></li>
+		<li><a href="/images" style="background: rgba(0, 0, 0, 0.8); border-radius:50%;">Gallery</a></li>
+		<li class="has-submenu"><a href="/news" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">News</a>
+			<!-- <ul>
+				<li><a href="#">Web Designing</a></li>
+				<li><a href="#">Web Development</a></li>
+				<li><a href="#">UI Designing</a></li>
+				<li><a href="#">Back End Development</a></li>
+				<li><a href="#">Front End Development</a></li>
+			</ul> -->
+		</li>
+		<li class="has-logo"><a href="/">
+			<h2 class="site-title">
+				<img src="/images/rcg.png" alt="smashtheshell">
+			</h2>
+		</a></li>
+		<li class="has-submenu"><a href="#" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Account</a>
+			<ul style="background:#008080;">
+        <% unless current_user && user_signed_in? %>
+          <li><a href="/sign_up" style="text-decoration: none; font-size:25px;color:white">Sign Up</a></li>
+          <li><a href="/login" style="text-decoration: none; font-size:25px;color:white">Sign In</a></li>
+        <% end %>
+        <% if current_user && user_signed_in? %>
+          <li><a href="/logout" style="text-decoration: none;font-size:25px;color:white">Log Out</a></li>
+          <li><a href="/edit" style="text-decoration: none;font-size:25px;color:white">Edit account</a></li>
+        <% end %>
+			</ul>
+		</li>
+		<li><a href="/posts" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Blog</a></li>
+		<li><a href="/pages/filter/contact" style="background: rgba(0, 0, 0, 0.8);border-radius:50%;">Contact</a></li>
+	</ul>
+</nav>
+</div>
+<% if current_page?(root_path) %>
+  <nav style="  width: 100%;
+    min-height: 50%;
+    text-align: center;">
+    <div class="button middle">
+      <a href="#" style="  display: block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">Live Events</a>
+    </div>
+    <div class="button middle">
+      <a href="#" style="  display: block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">future events</a>
+    </div>
+    <div class="button middle">
+      <a href="#" style="  display: block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">past Events</a>
+    </div>
+    <div class="button middle">
+      <a href="#" style="  display: block;
+        height: 100%;
+        width: 100%;
+        top: 40%;
+        font-weight: bold;
+        color: AliceBlue;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        z-index: 4;">All Events</a>
+    </div>
+  </nav>
+<% end %>
