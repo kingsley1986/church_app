@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   var ulNav= "#nav", openNav = "active";
 
-  $('.toggle-menu').click(function(e){
+  $(document).on('click', '.toggle-menu', function(e){
 
       if($(ulNav).hasClass(openNav)){
         $(ulNav).removeClass(openNav);
