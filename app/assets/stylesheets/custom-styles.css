@@ -220,7 +220,7 @@ ul{margin: 0 !important;}
 	.menu .navbar .nav > li > a:hover{color: #f9b701;}
 /*could put another background here*/
 
-	.banner{text-align: center;  background:;}
+	.banner{text-align: center;  background:none;}
 	.banner .carousel{margin-bottom: 0;}
 	.banner .carousel-inner > .item > img{display: inline-block; margin-top: 275px;}
 	.banner .carousel-caption{background: none; top:14%; }
