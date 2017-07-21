@@ -172,6 +172,12 @@ $color-snow: #fff;
    background: url("/images/banner-bg.jpg") repeat;      /* Generic*/
  }
 
+ @media only screen and (max-width: 500px) {
+    div.capcha-class{
+        margin-left: -10px;
+    }
+}
+
  body{
    text-align: center;
    background: 	#FF1493     /* Generic*/
