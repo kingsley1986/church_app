@@ -22,7 +22,7 @@
               </br>
               <div class="img img1.imgAlbum" >
                 <% upcoming_event.pictures.each do |pic, remov| %>
-                  <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
+                  <%= image_tag(pic.image.url(:medium)) if pic.image? %>
                 <% end %>
               </div>
             <% end %>
@@ -47,7 +47,7 @@
               </br>
               <div class="img img1.imgAlbum" >
                 <% upcoming_event.pictures.each do |pic, remov| %>
-                  <%= image_tag(pic.image.url(:medium), class: "img-responsive") if pic.image? %>
+                  <%= image_tag(pic.image.url(:medium)) if pic.image? %>
                 <% end %>
               </div>
             <% end %>
