@@ -169,7 +169,13 @@ $color-snow: #fff;
 
  div.heading_for_blog {
    text-align: center;
-   background: url("/images/banner-bg.jpg") repeat;      /* Generic*/
+   margin-top:30px;
+ }
+
+  @media only screen and (max-width: 500px) {
+     .heading_for_blog{
+       margin:0 auto;
+     }
  }
 
  @media only screen and (max-width: 500px) {

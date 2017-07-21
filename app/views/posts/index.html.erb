@@ -1,13 +1,13 @@
 <div class="heading_for_blog">
   <div class="container"  style="width:30%;">
     <% @posts.each do |post| %>
-      <div class="row item" >
-        <div class="col-md-8"  style="background-color:white; margin-bottom:20px;">
-          <div class="posttitle" style="color:blue; font-size20; font-weight:bold"><%= link_to post.title, post %></div>
-          <p ><div class="post_body_index" style="text-align: center;  text-align: justify; margin: 0 auto; padding-left:15px; margin-right:15px;"><%= truncate(post.post_body, length: 280) %></div></p>
+      <div class="row-item" >
+        <div class="col-md-8" style="background-color:white; margin-bottom:20px;">
+          <div class="posttitle"><%= link_to post.title, post %></div>
+          <p><div class="post_body_index"><%= truncate(post.post_body, length: 280) %></div></p>
           <% post.pictures.each do |pic, remov| %>
-              <div class="postimageclass" style="padding-top:40px;"><%= link_to image_tag(pic.image.url(:medium)), post_path(post) if pic.image? %></div>
-              <p>posted <%= time_ago_in_words(post.created_at) %> ago</p>
+              <div class="postimageclass"><%= link_to image_tag(pic.image.url(:medium)), post_path(post) if pic.image? %></div>
+              <p style="margin-left:20px;">posted <%= time_ago_in_words(post.created_at) %> ago</p>
           <% end %>
         </div>
       </div>

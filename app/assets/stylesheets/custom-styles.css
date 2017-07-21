@@ -436,12 +436,8 @@ ul{margin: 0 !important;}
 
    @media (max-width: 767px) {
 
-     .row, .thumbnails {
-       margin: 0;
-     }
-
      .row {
        margin-left: -35px;
      }
-
+  
    }
