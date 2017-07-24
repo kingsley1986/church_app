@@ -20,23 +20,21 @@ $(document).ready(function(){
 })
 
 
-// $(document).on('click', '.tab_cont', function(e) {
-//     $.ajax({
-//         url: $(this).attr('action'),
-//         data: $(this).serialize(),
-//         type: "POST",
-//         dataType: "json",
-//         success: function(response) {
-//             console.log(response)
-//         },
-//         error: function(xhr, textStatus, errorThrown) {
-//
-//           console.log(errorThrown)
-//         },
-//     });
-//     e.preventDefault(); //THIS IS VERY IMPORTANT
-//     $(".tab_cont").trigger('reset');
-// });
+$(function(){
+  $("#newcomment").on("submit", function(event){
+    $.ajax({
+      type: "POST",
+      url: this.action,
+      data: $(this).serialize(),
+      success: function(response) {
+        //update the DOM
+      }
+    });
+    $("#newcomment").trigger('reset');
+    event.preventDefault();
+  });
+})
+
 $(document).on('ready page:load', function() {
   $("#newcomment").submit(function (event) {
     var valuesToSubmit = $(this).serialize();

@@ -5,7 +5,7 @@
   <%= f.input :title %>
   <%= f.input :post_body %>
   <%= f.simple_fields_for :pictures, Picture.new do |ff| %>
-    <%= ff.input :image, multiple: true, name: "pictures[image][]" %>
+    <%= render 'pictures/pictures', f: ff %>
     <% end %>
   <%= f.submit %>
 <% end %>

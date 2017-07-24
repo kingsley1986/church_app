@@ -28,7 +28,7 @@
 
   <% if current_user && user_signed_in? %>
     <%= simple_form_for ([comment, comment.replies.new]), html: {id: "replycomment" }  do |f| %>
-      <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", style:"width: 280px; margin:auto", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
+      <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", style:"width: 460px; margin:auto", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
       <button type="submit" class="btn btn-success" id="submit" name="submit"/>Reply</button>
     </br>
       <%= comment.user.first_name %>

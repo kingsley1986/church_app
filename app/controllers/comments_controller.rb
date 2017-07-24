@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  skip_before_action :verify_authenticity_token
+
   before_action :find_comment_id, except: [:like, :create]
 
   def create
