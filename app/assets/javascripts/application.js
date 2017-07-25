@@ -35,37 +35,36 @@ $(function(){
   });
 })
 
-$(document).on('ready page:load', function() {
-  $("#newcomment").submit(function (event) {
-    var valuesToSubmit = $(this).serialize();
+$(function(){
+  $(".tab_cont").on("submit", function(event){
     $.ajax({
       type: "POST",
-      url: $(this).attr('action'), //sumbits it to the given url of the form
-      data: valuesToSubmit,
-      dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-    }).success(function(json){
-      console.log("success", json);
-    });
-    $("#newcomment").trigger('reset');
-  })
-})
-
-
-
-$(document).on('ready page:load', function() {
-  $(".tab_cont").submit(function () {
-    var valuesToSubmit = $(this).serialize();
-    $.ajax({
-      type: "POST",
-      url: $(this).attr('action'), //sumbits it to the given url of the form
-      data: valuesToSubmit,
-      dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-    }).success(function(json){
-      console.log("success", json);
+      url: this.action,
+      data: $(this).serialize(),
+      success: function(response) {
+        //update the DOM
+      }
     });
     $(".tab_cont").trigger('reset');
-  })
+    event.preventDefault();
+  });
 })
+
+//
+// $(document).on('ready page:load', function() {
+//   $("#submit_contact").submit(function () {
+//     var valuesToSubmit = $(this).serialize();
+//     $.ajax({
+//       type: "POST",
+//       url: $(this).attr('action'), //sumbits it to the given url of the form
+//       data: valuesToSubmit,
+//       dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+//     }).success(function(json){
+//       console.log("success", json);
+//     });
+//     $("#submit_contact").trigger('reset');
+//   })
+// })
 
 $(document).on('click', '.specific_service', function(event) {
   $('.cd-popup').addClass('is-visible');
