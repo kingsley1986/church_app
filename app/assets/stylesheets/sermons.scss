@@ -1,8 +1,17 @@
 
+
+
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
   div.container-fluid{
     margin-top:100px;
   }
+}
+
+#collection_index {
+  background-image: url(http://www.jkpcusa.org/wp-content/uploads/2012/06/bible-e1351017609503.jpg); background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 /* Container */
 .container-fluid {
@@ -13,6 +22,25 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+.col-md-6.col-md-offset-3.set_sermon_background {
+  background-color: rgba(0, 0, 0, 0.8);
+  position:relative;
+  top:-30px;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    img.sermon_image{
+        padding-right: 20px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .col-md-6.col-md-offset-3.set_sermon_background{
+      position:relative;
+      top:-8px;
+    }
+}
 
 /* Page Header */
 .page-header {
@@ -28,25 +56,35 @@
         color: #a83b3b;
         }
 
+        a.btn.btn-success.sermon_link {
+          text-decoration: none;
+        }
 
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+@media only screen and (max-width: 500px) {
   a.btn.btn-success.sermon_link{
     margin-right: -30px;
-    max-width: 80%;
-
+    max-width: 140%;
+    font-size: 10px;
   }
   div.sermon-time{
     padding-left: 30px;
   }
   div.sermon-preacher{
     font-size: 14px;
-    padding-left: 30px;
   }
   a.sermon-title{
     font-size: 14px;
-    padding-left: 30px;
   }
+
+}
+@media only screen and (max-width: 500px) {
+  div.btn.btn-success.view-all-sermon {
+    margin-left: -0.1%;
+  }
+}
+
+#backgroundimage img{
+   max-width:100%
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
@@ -129,7 +167,7 @@ p.slogan {
 a.sermon-title {
   font-size: 17px;
   color:red;
-
+  text-decoration: none;
 }
 a.sermon-title-index {
   font-size: 17px;
@@ -183,6 +221,19 @@ div.wrapper {
   padding: 0.5em 0.2em 0.8em 0.5em;
 }
 
-div.btn.btn-success.view-all-sermon {
-  margin-top:10px;
+a#view_sermon {
+  color:white;
+  text-decoration: none;
+}
+
+
+.btn.btn-success.view-all-sermon {
+  margin-top: 30px;
+  margin-left: 11%;
+  text-decoration: none;
+
+}
+.row.item_sermon {
+  width: 80%;
+  margin-left: -3.5%;
 }

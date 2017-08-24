@@ -5,10 +5,10 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'activeadmin', github: 'activeadmin'
+
 
 gem "pundit"
 gem 'devise'
@@ -25,6 +25,7 @@ gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem "bourbon"
 gem "recaptcha", require: "recaptcha/rails"
 
+gem 'turbolinks'
 
 
 

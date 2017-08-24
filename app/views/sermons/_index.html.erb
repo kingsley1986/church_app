@@ -1,16 +1,14 @@
 <div id="collection_index">
-<li class="span6" style="" >
+<li class="span6">
   <div class="block">
-    <img src="images/prayer.jpg" alt="">
-    <h1 style="text-align:center;background:#008080; color:white">Most Current Sermons</h1>
-      <div class="row" >
-        <div class="clear" >
+      <div class="row item_sermon">
+        <div class="clear">
           <% set_sermons.each do |sermon| %>
-            <div class="col-md-6 col-md-offset-3" >
+            <div class="col-md-6 col-md-offset-3 set_sermon_background" style="position:relative; left:15%;">
             <% sermon.pictures.each do |pic, remov| %>
             <table>
             <tr>
-              <div><td><%=image_tag(pic.image.url(:thumb), style:"padding-left:35px; padding-right:100px;") if pic.image?  %></td></div>
+              <div ><td class="sermon_image"><%=image_tag(pic.image.url(:thumb), class:"sermon_image") if pic.image?  %></td></div>
               <td>
                 <div ><%= link_to sermon.title, sermon, class:"sermon-title" %></div>
                 <div class="sermon-preacher"><%=sermon.preacher %></div>
@@ -19,14 +17,14 @@
               </td>
             </tr>
             </table>
-            <div><%= link_to 'Read more about this sermon', sermon_path(sermon), class:"btn btn-success sermon_link", style:"color:white; width:84%; margin-top:-30px; font-family:Georgia, serif" %></div>
+            <div><%= link_to 'Read more about this sermon', sermon_path(sermon), class:"btn btn-success sermon_link", style:"color:white; margin-top:-30px; font-family:Georgia, serif" %></div>
             <% end %>
             </div>
           <% end %>
-          <div class="btn btn-success view-all-sermon"><%=link_to "View All Sermons", sermons_path, style:"color:white"%></div>
         <div>
       </div>
     </p>
   </div>
 </li>
+<div class="btn btn-success view-all-sermon" style="position:relative; left:20%;"><%=link_to "View All Sermons", sermons_path, id:"view_sermon"%></div>
 </div>

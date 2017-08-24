@@ -1,0 +1,214 @@
+// ministtries
+.container > .row {
+	background: white;
+}
+
+.noTopMrgn{
+	margin-top:0px;
+	padding-top:0px;
+	background: #18d8dc;
+}
+
+.coloured{
+	color: #46bd55;
+}
+
+.service-v1 h3{
+
+font-size: 16px;
+
+color: #46bd55;
+
+font-weight: bold;
+
+margin-bottom: 10px;
+}
+.section-padding{
+
+}
+
+@media only screen and (max-width: 500px) {
+    .section-title.text-center{
+        margin-top: 220px
+    }
+    .section-title.text-center > h2 {
+      font-size: 28px;
+    }
+}
+// ends here
+
+// pastors name
+
+@media only screen and (max-width: 500px) {
+    h2.pastor_name_class{
+        margin-top: -190px
+    }
+}
+
+// it ends here
+
+// contactform alignments
+
+textarea#contact_message.form-control.text.required {
+	height: 120px;
+	width: 80%;
+}
+
+
+input#contact_email.form-control.string.email.required {
+	margin-left: -94px;
+}
+@media only screen and (max-width: 500px) {
+	input#contact_email.form-control.string.email.required {
+		margin: 0;
+	}
+}
+// ends here
+
+// form contacts
+@media only screen and (max-width: 500px) {
+	span.highlight-text {
+		font-size: 17px;
+	}
+}
+span.icon-bar.page_header {
+	color:white;
+	position:relative;
+	bottom:-20px;
+	left:-20px;
+	font-size:29px;
+	font-weight:bolder;font-family:Apple Chancery;text-shadow:
+-1px -1px 0 #000,
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000;
+}
+
+@media only screen and (max-width: 500px) {
+	span.icon-bar.page_header {
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.row.ministtries_class {
+		margin-top: -230px
+	}
+}
+
+
+
+	span.highlight-text {
+		margin-left: 30%;
+	}
+
+ a, a:link{
+	text-decoration: none
+}
+h3.page_title_class {
+	font-family:Apple Chancery;
+	font-weight:bold;
+	font-size:20px;
+}
+// ends here
+
+
+// evennts starts here
+
+
+
+
+// drop shadows end here
+
+ // upcoming events buttons
+
+ // .small {
+ //   width: 100px;
+ //   height: 100px;
+ // }
+
+a.give_font {
+  font-size: 14px;
+}
+ .middle {
+   width: 120px;
+   height: 120px;
+   position: relative;
+   z-index: 1;
+ }
+ //
+ // .big {
+ //   width: 150px;
+ //   height: 150px;
+ // }
+ @media only screen and (max-width: 500px) {
+     div.button {
+       margin: 2%;
+       position: relative;
+       right:0;
+     }
+ }
+
+ .button {
+   display: inline-block;
+   vertical-align: middle;
+   margin-left: 11%;
+   right:5%;
+   position: relative;
+   background: white;
+   -moz-box-shadow:    inset -1px -1px 1px 0 #48d1cc, inset 1px 1px 1px 0 #48d1cc;
+    -webkit-box-shadow: inset -1px -1px 1px 0 #48d1cc, inset 1px 1px 1px 0 #48d1cc;
+    box-shadow:  inset -1px -1px 1px 0 #48d1cc, inset 1px 1px 1px 0 #48d1cc;
+   transition: width 1s, height 1s, transform 1s;
+   -moz-transition: width 1s, height 1s, -moz-transform 1s;
+   -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+   -o-transition: width 1s, height 1s, -o-transform 1s;
+ }
+
+ .button:hover {
+     width: 160px;
+     height: 160px;
+     -moz-transform:rotate(3600deg);
+     -webkit-transform:rotate(360deg);
+     -o-transform:rotate(360deg);
+     transform:rotate(360deg);
+ }
+
+ .button:before {
+   content: '';
+   position: absolute;
+   bottom: 5%;
+   left: 5%;
+   width: 90%;
+   height: 90%;
+   background: #C71585;
+ }
+
+ .button:after {
+   content: '';
+   text-align: center;
+   position: absolute;
+   bottom: 10%;
+   left: 10%;
+   width: 80%;
+   height: 80%;
+   background: #111111
+;
+
+   -moz-box-shadow:    inset -1px -1px 1px 0 #20b2aa, inset 1px 1px 1px 0 #b0e0e6;
+    -webkit-box-shadow: inset -1px -1px 1px 0 #20b2aa, inset 1px 1px 1px 0 #b0e0e6;
+    box-shadow:  inset -1px -1px 2px 0 #20b2aa, inset 2px 2px 2px 0 #b0e0e6;
+ }
+
+ .button:active:after {
+   background-image: -webkit-linear-gradient(top, #87cefa, #add8e6);
+   background-image: -moz-linear-gradient(top, #87cefa, #add8e6);
+   background-image: -ms-linear-gradient(top, #87cefa, #add8e6);
+   background-image: -o-linear-gradient(top, #87cefa, #add8e6);
+   -moz-box-shadow:    inset -1px -1px 1px 0 #20b2aa, inset 1px 1px 1px 0 #b0e0e6;
+    -webkit-box-shadow: inset -1px -1px 1px 0 #20b2aa, inset 1px 1px 1px 0 #b0e0e6;
+    box-shadow:  inset -1px -1px 4px 0 #20b2aa, inset 1px 1px 3px 0 #b0e0e6;
+ }
+
+ .button, .button:before, .button:after {
+   border-radius: 50%;
+ }
