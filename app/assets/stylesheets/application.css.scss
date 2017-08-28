@@ -34,8 +34,10 @@ span.icon-bar.page_header {
 @media only screen and (max-width: 500px) {
     span.icon-bar.page_header {
         margin-top:30px;
-        margin-right: -2px;
         font-size:12px;
+        position: relative;
+        left: 50px;
+
       }
     }
 

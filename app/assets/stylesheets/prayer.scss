@@ -1,5 +1,15 @@
 
 
+a.navbar-brand > img {
+  margin-left: -60px
+}
+@media only screen and (max-width: 500px){
+  a.navbar-brand > img {
+    position: relative;
+    left:33px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
     div.square-flip{
         width: 90%;
@@ -376,11 +386,6 @@ span.icon-bar.page_header {
 1px 1px 0 #000;
 }
 
-@media only screen and (max-width: 500px) {
-	span.icon-bar.page_header {
-		font-size: 12px;
-	}
-}
 @media only screen and (max-width: 500px) {
 	.row.ministtries_class {
 		margin-top: -230px

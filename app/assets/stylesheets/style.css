@@ -202,10 +202,22 @@ header .navbar {
 }
 .navbar-default .navbar-brand{color: #5e5e5e;font-size: 24px;text-transform: uppercase;}
 
+
 header .navbar-collapse  ul.navbar-nav {
     float: right;
-    margin-right: 0;
+    margin-right: -40px;
 }
+
+
+@media only screen and (max-width: 500px) {
+    header .navbar-collapse  ul.navbar-nav{
+        margin-right: none;
+      }
+    }
+
+
+
+
 header .navbar {min-height: 70px;padding: 18px 0;background: #ffffff;}
 .home-page header .navbar-default{
     background: #0684f3;

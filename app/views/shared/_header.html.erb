@@ -27,20 +27,27 @@
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
                         <li class="active"><a class="waves-effect waves-dark" href="/">Home</a></li>
-						 <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">About Us <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="waves-effect waves-dark" href="about.html">Company</a></li>
-                            <li><a class="waves-effect waves-dark" href="#">Our Team</a></li>
-                            <li><a class="waves-effect waves-dark" href="#">News</a></li>
-                            <li><a class="waves-effect waves-dark" href="#">Investors</a></li>
-                        </ul>
-                    </li>
-						<li><a class="waves-effect waves-dark" href="services.html">Services</a></li>
-                        <li><a class="waves-effect waves-dark" href="portfolio.html">Gallery</a></li>
-                        <li><a class="waves-effect waves-dark" href="pricing.html">Pricing</a></li>
-                        <li><a class="waves-effect waves-dark" href="contact.html">Contact</a></li>
+
+												<li><a class="waves-effect waves-dark" href="/news">Testimonies</a></li>
+                        <li><a class="waves-effect waves-dark" href="/images">Gallery</a></li>
+                        <li><a class="waves-effect waves-dark" href="/posts">Blog</a></li>
+                        <li><a class="waves-effect waves-dark" href="pages/filter/contact">Contact</a></li>
+                        <li><a class="waves-effect waves-dark" href="pages/filter/contact">about</a></li>
+												<li class="dropdown">
+													<a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">Account<b class="caret"></b></a>
+													<ul class="dropdown-menu">
+														<% unless current_user && user_signed_in? %>
+          										<li><a class="waves-effect waves-dark"  href="/sign_up">Sign Up</a></li>
+          										<li><a class="waves-effect waves-dark"  href="/login">Sign In</a></li>
+        										<% end %>
+        										<% if current_user && user_signed_in? %>
+          										<li><a class="waves-effect waves-dark"  href="/logout">Log Out</a></li>
+          										<li><a class="waves-effect waves-dark"  href="/edit">Edit account</a></li>
+        										<% end %>
+													</ul>
+											</li>
                     </ul>
+
                 </div>
             </div>
         </div>
