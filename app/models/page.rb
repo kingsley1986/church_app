@@ -5,9 +5,9 @@ class Page < ActiveRecord::Base
 
   PAGE_TYPE = [  'Childrens',
                  'Youths',
-                 'Elders',
+                 'Women',
                  'Food',
-                 'Prison',
+                 'Community',
                  'Hospital',
                  'Sunday',
                  'Tuesday',
@@ -20,7 +20,6 @@ class Page < ActiveRecord::Base
                  'About',
                  'Fridaynightvigil',
                  'Lunchhourprayer',
-                 'Generalnightvigil'
                ]
 
 
@@ -28,7 +27,7 @@ scope :children, -> { where(page_type: 'Childrens')  }
 scope :youth, -> { where(page_type: 'Youths') }
 scope :elder, -> { where(page_type:  'Elders')  }
 scope :food, -> { where(page_type: 'Food') }
-scope :prison, -> { where(page_type: 'Prisonns') }
+scope :community, -> { where(page_type: 'Community') }
 scope :hospital, -> { where(page_type: 'Hospital') }
 scope :sunday, -> { where(page_type: 'Sunday') }
 scope :tuesday, -> { where(page_type: 'Tuesday') }
@@ -41,5 +40,6 @@ scope :about_parish_pastor, -> { where(page_type: 'About_Parish_pastor') }
 scope :fridaynightvigil, -> { where(page_type: 'Fridaynightvigil') }
 scope :lunchhourprayer, -> { where(page_type: 'Lunchhourprayer') }
 scope :generalnightvigil, -> { where(page_type: 'Generalnightvigil') }
+scope :women, -> { where(page_type: 'Women') }
 
 end

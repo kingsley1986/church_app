@@ -90,212 +90,342 @@
 				    </div>
 				  </div>
 
-					<% if current_page?(root_path) %>
-  <nav  class="events-link" style="width: 100%;
-    min-height: 50%;
-    text-align: center;
-		background:none">
-    <div class="button middle">
-      <a class="give_font" href="/upcoming_events/live_events" style="display: block;
-        height: 100%;
-        width: 100%;
-        top: 28%;
-        font-weight: bold;
-        color: AliceBlue;
-        position: absolute;
-        border-radius: 50%;
-        text-decoration: none;
-        z-index: 4;">Live Events</a>
-    </div>
-    <div class="button middle">
-      <a class="give_font" href="/upcoming_events/upcomings" style="display: block;
-        height: 100%;
-        width: 100%;
-        top: 28%;
-        font-weight: bold;
-        color: AliceBlue;
-        position: absolute;
-        border-radius: 50%;
-        text-decoration: none;
-        z-index: 4;">future events</a>
-    </div>
-    <div class="button middle">
-      <a class="give_font" href="/upcoming_events/past_events" style="display: block;
-        height: 100%;
-        width: 100%;
-        top: 28%;
-        font-weight: bold;
-        color: AliceBlue;
-        position: absolute;
-        border-radius: 50%;
-        text-decoration: none;
-        z-index: 4;">past Events</a>
-    </div>
-    <div class="button middle">
-      <a class="give_font" href="/upcoming_events" style="display:block;
-        height: 100%;
-        width: 100%;
-        top: 28%;
-        font-weight: bold;
-        color: AliceBlue;
-        position: absolute;
-        border-radius: 50%;
-        text-decoration: none;
-        z-index: 4;">All Events</a>
-    </div>
-  </nav>
+
+
+
+
+
+ <% if current_page?(root_path) %>
+ <nav  class="events-link">
+   <div class="button middle">
+     <a class="give_font" href="/upcoming_events/live_events" style="display: block;
+       height: 100%;
+       width: 100%;
+       top: 28%;
+       font-weight: bold;
+       color: AliceBlue;
+       position: absolute;
+       border-radius: 50%;
+       text-decoration: none;
+       z-index: 4;">Live Events</a>
+   </div>
+   <div class="button middle">
+     <a class="give_font" href="/upcoming_events/upcomings" style="display: block;
+       height: 100%;
+       width: 100%;
+       top: 28%;
+       font-weight: bold;
+       color: AliceBlue;
+       position: absolute;
+       border-radius: 50%;
+       text-decoration: none;
+       z-index: 4;">future events</a>
+   </div>
+   <div class="button middle">
+     <a class="give_font" href="/upcoming_events/past_events" style="display: block;
+       height: 100%;
+       width: 100%;
+       top: 28%;
+       font-weight: bold;
+       color: AliceBlue;
+       position: absolute;
+       border-radius: 50%;
+       text-decoration: none;
+       z-index: 4;">past Events</a>
+   </div>
+   <div class="button middle">
+     <a class="give_font" href="/upcoming_events" style="display:block;
+       height: 100%;
+       width: 100%;
+       top: 28%;
+       font-weight: bold;
+       color: AliceBlue;
+       position: absolute;
+       border-radius: 50%;
+       text-decoration: none;
+       z-index: 4;">All Events</a>
+   </div>
+ </nav>
 <% end %>
+<!--
+<section class="section-padding gray-bg">
+	<div id="fh5co-about-us" data-section="about" style="margin-top:20px;">
+		<div class="container" >
+			<h2 style="text-align:center"> These are the List of our services</h2>
+
+		</div>
+			</div>
+</section> -->
+
 
 
 	<!-- end slider -->
-	<section class="section-padding noTopMrgn">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-title text-center" style="padding-top:40px;">
-						<h2><span class="coloured">Our worship</span> Days</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row service-v1 margin-bottom-40">
-				<a href="/pages/filter/sunday" ><div class="col-sm-3 md-margin-bottom-40">
+
+	<section id="contact" class="section-wrapper contact-section" data-stellar-background-ratio="0.5">
+
+	 <div class="parallax-overlay"></div>
+		<div class="row">
+
+		<div class="centerflipcards">
+			<div class="square-flip">
 					<% Page.all.each do |page| %>
-					<% if page.page_type == "Sunday" %>
-					<% page.pictures.each do |page_pc| %>
-					<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
-					<% end %>
-					<% end %>
-					<% end %>
-							<h3 class="page_title_class">Sunday Service</h3>	</a>
-							<% Page.all.each do |page| %>
-							<% if page.page_type == "Sunday" %>
-								<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/sunday">Read More</span></p>
+						<% if page.page_type == "Sunday" %>
+							<% page.pictures.each do |page_pc| %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+			    					<div class="align-center">
+			      					<h3 class="boxshadow kallyas-button" alt="">Sunday Service</h3>
+			    					</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Sunday" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
 						<% end %>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
 					</div>
-
-						<a href="/pages/filter/tuesday" ><div class="col-sm-3 md-margin-bottom-40">
-							<% Page.all.each do |page| %>
-							<% if page.page_type == "Tuesday" %>
+				</div>
+			<div class="square-flip">
+					<% Page.all.each do |page| %>
+						<% if page.page_type == "Tuesday" %>
 							<% page.pictures.each do |page_pc| %>
-							<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+								<div class="square-container">
+									<div class="align-center">
+										<h3 class="boxshadow kallyas-button" alt=""><ul><li>Tuesday</li><li>Bible Study</li></ul></h3>
+									</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Tuesday" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
-							<% end %>
-							<% end %>
-	                <h3 class="page_title_class">Tuesday: Bible Study</h3>		</a>
-									<% Page.all.each do |page| %>
-	 								<% if page.page_type == "Tuesday" %>
-	 									<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/tuesday">Read More</span></p>
-	 								<% end %>
-	 							<% end %>
-	          </div>
-
-						<a href="/pages/filter/thursday" ><div class="col-sm-3 md-margin-bottom-40">
-							<% Page.all.each do |page| %>
-							<% if page.page_type == "Thursday" %>
+						<% end %>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
+					</div>
+				</div>
+			<div class="square-flip">
+					<% Page.all.each do |page| %>
+						<% if page.page_type == "Thursday" %>
 							<% page.pictures.each do |page_pc| %>
-							<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+										<div class="align-center">
+											<h3 class="boxshadow kallyas-button" alt=""><ul><li>Thursday</li><li>Faith Clinic</li></ul></h3>
+										</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Thursday" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
-							<% end %>
-							<% end %>
-	                <h3 class="page_title_class">Thursday: Faith clinic</h3></a>
-									<% Page.all.each do |page| %>
-	 								<% if page.page_type == "Thursday" %>
-	 									<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/thursday">Read More</span></p>
-	 								<% end %>
-	 							<% end %>
-	            </div>
-			    <a href="/pages/filter/friday_night_vigil" ><div class="col-sm-3 md-margin-bottom-40">
-						<% Page.all.each do |page| %>
+						<% end %>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
+					</div>
+				</div>
+			<div class="square-flip">
+					<% Page.all.each do |page| %>
 						<% if page.page_type == "Fridaynightvigil" %>
-						<% page.pictures.each do |page_pc| %>
-						<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
+							<% page.pictures.each do |page_pc| %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+										<div class="align-center">
+											<h3 class="boxshadow kallyas-button" alt=""><ul><li>Friday</li><li>Night Vigil</li></ul></h3>
+										</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Fridaynightvigil" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
+							<% end %>
 						<% end %>
-						<% end %>
-						<% end %>
-                <h3 class="page_title_class">Friday Night Vigil</h3></a>
-								<% Page.all.each do |page| %>
- 								<% if page.page_type == "Fridaynightvigil" %>
- 									<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/friday_night_vigil">Read More</span></p>
- 								<% end %>
- 							<% end %>
-            </div>
-        </div>
-		</div>
-		</section>
-
-	<section class="section-padding noTopMrgn">
-		<div class="container">
-			<div class="row ministtries_class" >
-				<div class="col-md-12">
-					<div class="section-title text-center">
-						<h2><span class="coloured">Our</span> Ministries</h2>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
 					</div>
 				</div>
-			</div>
-			<div class="row service-v1 margin-bottom-40">
-				<a href="/pages/filter/youth" ><div class="col-sm-3 md-margin-bottom-40">
+			<div class="square-flip">
 					<% Page.all.each do |page| %>
-					<% if page.page_type == "Youths" %>
-					<% page.pictures.each do |page_pc| %>
-					<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
-					<% end %>
-					<% end %>
-					<% end %>
-							<h3 class="page_title_class">Youths: Ministry</h3></a>
-							<% Page.all.each do |page| %>
-							<% if page.page_type == "Youths" %>
-								<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/youth">Read More</span></p>
+						<% if page.page_type == "Youths" %>
+							<% page.pictures.each do |page_pc| %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+										<div class="align-center">
+											<h3 class="boxshadow kallyas-button" alt="">Glorious Youth</h3>
+										</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Youths" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
 						<% end %>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
 					</div>
-						<a href="/pages/filter/prison" ><div class="col-sm-3 md-margin-bottom-40">
-							<% Page.all.each do |page| %>
-							<% if page.page_type == "Prison" %>
+				</div>
+			<div class="square-flip">
+					<% Page.all.each do |page| %>
+						<% if page.page_type == "Childrens" %>
 							<% page.pictures.each do |page_pc| %>
-							<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+										<div class="align-center">
+											<h3 class="boxshadow kallyas-button" alt="">Glorious Children</h3>
+										</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Childrens" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
-							<% end %>
-							<% end %>
-	                <h3 class="page_title_class">Prison: ministry</h3></a>
-									<% Page.all.each do |page| %>
-	 								<% if page.page_type == "Prison" %>
-	 									<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/prison">Read More</span></p>
-	 								<% end %>
-	 							<% end %>
-	            </div>
-						<a href="/pages/filter/hospital" ><div class="col-sm-3 md-margin-bottom-40">
-							<% Page.all.each do |page| %>
-							<% if page.page_type == "Hospital" %>
+						<% end %>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
+					</div>
+				</div>
+			<div class="square-flip">
+					<% Page.all.each do |page| %>
+						<% if page.page_type == "Women" %>
 							<% page.pictures.each do |page_pc| %>
-							<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+										<div class="align-center">
+											<h3 class="boxshadow kallyas-button" alt="">Excellent Women</h3>
+										</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Women" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
+						<% end %>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
+					</div>
+				</div>
+			<div class="square-flip">
+					<% Page.all.each do |page| %>
+						<% if page.page_type == "Hospital" %>
+							<% page.pictures.each do |page_pc| %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+										<div class="align-center">
+											<h3 class="boxshadow kallyas-button" alt="">Hospital Visit</h3>
+										</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Hospital" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
+						<% end %>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
+					</div>
+				</div>
+			<div class="square-flip">
+					<% Page.all.each do |page| %>
+						<% if page.page_type == "Community" %>
+							<% page.pictures.each do |page_pc| %>
+								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  					<div class="square-container">
+										<div class="align-center">
+											<h3 class="boxshadow kallyas-button" alt="">Community Help</h3>
+										</div>
+										<% Page.all.each do |page| %>
+											<% if page.page_type == "Community" %>
+												<h3><%= truncate(page.body, length: 70) %></h3>
+											<% end %>
+										<% end %>
+									</div>
+								<% end %>
 							<% end %>
-	                <h3 class="page_title_class">Hospital: Ministry</h3></a>
-									<% Page.all.each do |page| %>
-	 								<% if page.page_type == "Hospital" %>
-	 									<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/hospital">Read More</span></p>
-	 								<% end %>
-	 							<% end %>
-	            </div>
-			    <a href="/pages/filter/food" ><div class="col-sm-3 md-margin-bottom-40">
-						<% Page.all.each do |page| %>
-						<% if page.page_type == "Food" %>
-						<% page.pictures.each do |page_pc| %>
-						<%= image_tag page_pc.image.url(:medium),  class:"img-responsive" if page_pc.image? %>
 						<% end %>
-						<% end %>
-						<% end %>
-                <h3 class="page_title_class">Support: Ministry</h3></a>
-								<% Page.all.each do |page| %>
- 								<% if page.page_type == "Food" %>
- 									<p class="page_boyd_class"><%= truncate(page.body, length: 40) %><span><a href="/pages/filter/food">Read More</span></p>
- 								<% end %>
- 							<% end %>
-            </div>
+					<% end %>
+					<div class='square2' data-image="http://titanicthemes.com/files/flipbox/kallyas-bundle.png">
+						<div class="square-container2">
+							<div class="align-center"></div>
+							<a href="pages/filter/community" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						</div>
+						<div class="flip-overlay"></div>
+					</div>
+				</div>
 		</div>
-		</section>
+		</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
 <!--
 
 
@@ -364,7 +494,13 @@
 			<div class="container">
 				<div class="row row-bottom-padded-lg" id="about-us">
 					<div class="col-md-12 section-heading text-center">
-						<h2 class="to-animate" style="background:pink">About Us</h2>
+						<h2 class="to-animate" style="   display: inline-block;
+						   font-family: 'Gabriela', serif;
+						   color: #FFF;
+						   font-size: 1.1em;
+						   border-radius: 20px;
+						   background: rgba(43, 166, 203, 0.9);
+						   padding: 0.5em 0.2em 0.2em 0.2em;">About Us</h2>
 					</div>
 					<div class="col-md-8 to-animate">
 						<% Page.all.each do |page| %>
