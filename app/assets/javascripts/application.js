@@ -1,5 +1,7 @@
 //
 //= require jquery
+//= require jquery.turbolinks
+
 //= require jquery_ujs
 
 //= require turbolinks
@@ -7,7 +9,7 @@
 
 
 /* Demo purposes only */
-jQuery(document).ready(function($) {
+$(document).on('turbolinks:load', function() {
 
   //Count nr. of square classes
   var countSquare = $('.square').length;
