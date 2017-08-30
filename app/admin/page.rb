@@ -1,8 +1,9 @@
 ActiveAdmin.register Page do
-  permit_params :body, :page_type, pictures_attributes: [:id, :image, :_destroy ]
+  permit_params :body, :title, :page_type, pictures_attributes: [:id, :image, :_destroy ]
 
   form do |f|
     f.inputs "Page Details" do
+       f.input :title
        f.input :body, as: :text
        f.select :page_type, Page::PAGE_TYPE
        f.has_many :pictures do |ff|
@@ -15,6 +16,7 @@ ActiveAdmin.register Page do
   show do
     attributes_table do
       row :id
+      row :title
       row :body
       row :page_type
     end
