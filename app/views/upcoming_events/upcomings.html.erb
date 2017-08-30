@@ -1,4 +1,4 @@
-<div class="container container-table" style=" text-align: center; margin: 0 auto; background: rgba(54, 25, 25, .5);   margin:auto;width:30%;text-align:center;" >
+<div class="container container-table for-events" >
   <didv class="content" >
     <% @upcomings.each do |upcoming_event| %>
     <hr class="devidepost">
@@ -12,7 +12,7 @@
       </br>
         <div class="img img1.imgAlbum" >
           <% upcoming_event.pictures.each do |pic, remov| %>
-            <%= image_tag(pic.image.url(:medium)) if pic.image? %>
+            <%= image_tag(pic.image.url(:medium), class:"img-responsive future") if pic.image? %>
           <% end %>
         </div>
       </br>
@@ -22,8 +22,8 @@
       </br>
       <div class="" style="color:white; font-size:18px; font-weight:bold">are you coming?</div>
         <div class="btn btn-primary btn-sm"><%= link_to 'Yes',  goingpeople_upcoming_event_path(upcoming_event), method: :put, remote: true,
-        class:'specific_service',
-        data: {id: upcoming_event.id} %></div>
+          class:'specific_service', data: {id: upcoming_event.id} %>
+        </div>
 
       <div class="cd-popup" role="alert">
       	<div class="cd-popup-container">

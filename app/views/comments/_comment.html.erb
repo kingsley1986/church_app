@@ -2,37 +2,38 @@
 <% if comment.approved == ["approved"] %>
 <hr class="devidepost">
   <div class="commentbody"><%= comment.body %></div>
+</br>
+  <%= comment.user.first_name %>
+  <%= time_ago_in_words((comment.created_at)) %> ago
   <% comment.pictures.each do |comment_pic| %>
     <div  style="margin-top:30px; margin-bottom:30px;"><%= link_to(image_tag(comment_pic.image.url(:medium)), comment_pic, class: "") if comment_pic.image? %></div>
   <% end %>
-  <div class="links-class">
     <% if current_user && user_signed_in? %>
       <% if [comment.liker_id].any? { |l| l&.include?(current_user.id)} %>
         <br>
-        <%= link_to "Unlike", unlike_comment_path(comment, like: true), remote: true, method: 'delete', class:"unlikecomment" %>
+        <div style="font-size:14px; background:#F5FFFA" >
+        <span><%= link_to "Unlike", unlike_comment_path(comment, like: true), remote: true, method: 'delete', class:"unlikecomment" %></span>
       <% else %>
-        <%= link_to "Like", like_comment_path(comment, like: true), remote: true, method: 'post', class:"likecomment"%>
+        <span><%= link_to "Like", like_comment_path(comment, like: true), remote: true, method: 'post', class:"likecomment" , style:"padding-left:15px;"%></span>
       <% end %>
     <% end %>
     <% if comment.liker_id.size > 0 %>
-      <div class="fa fa-thumbs-o-up"><%= pluralize( comment.liker_id&.count, "like") %></div>
+      <span class="fa fa-thumbs-o-up" style=" padding-left:15px; color:blue"><%= pluralize( comment.liker_id&.count, "like") %></span>
     <% end %>
 
-    <% if current_user && user_signed_in? && comment.user_id == current_user.id || current_user && current_user.admin? %>
-    <%= link_to "Delete", comment_path(comment), data: {confirm: 'Are you sure?'},  method: :delete, remote: true,  class:"deletecomment" %>
-      <div><%= link_to 'Edit', edit_comment_path(:id => comment.id), id: "edit-comment_link"%></div>
-    <% end %>
-    <div><%= link_to  pluralize(comment.replies.count, "reply"), comment_replies_path(comment.id, @reply), remote: true, class:"viewreply" %></div>
+      <% if current_user && user_signed_in? && comment.user_id == current_user.id || current_user && current_user.admin? %>
+      <span style="color:blue" style=" padding-left:15px;"><%= link_to "Delete", comment_path(comment), data: {confirm: 'Are you sure?'},  method: :delete, remote: true,  class:"deletecomment", style:"padding-left:15px;" %></span>
+      <span style="color:blue" style=" padding-left:15px;"><%= link_to 'Edit', edit_comment_path(:id => comment.id), id: "edit-comment_link" , style:"padding-left:15px;"%></span>
+      <% end %>
+      <span style="color:blue" ><%= link_to  pluralize(comment.replies.count, "reply"), comment_replies_path(comment.id, @reply), remote: true, class:"viewreply", style:"padding-left:15px;" %></span>
   </div>
 </br>
 
   <% if current_user && user_signed_in? %>
     <%= simple_form_for ([comment, comment.replies.new]), html: {id: "replycomment" }  do |f| %>
-      <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", style:"width: 460px; margin:auto", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
+      <%= f.input :reply_body, as: :text, input_html: { ROWS: "2", WRAP:"HARD"}, placeholder: "Reply to this comment" %>
       <button type="submit" class="btn btn-success" id="submit" name="submit"/>Reply</button>
-    </br>
-      <%= comment.user.first_name %>
-      <%= time_ago_in_words((comment.created_at)) %>ago
+
     <% end %>
   <% end %>
 <% end %>

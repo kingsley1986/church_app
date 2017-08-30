@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+$(document).on('turbolinks:load', function()  {
 
    var images = [];
   $( ".lightbox" ).each(function( index ) {

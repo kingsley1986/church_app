@@ -1,0 +1,30 @@
+div.commentbody {
+  font-size:15px;
+  margin-bottom:15px;
+  padding-left:30px;
+  padding-right:30px;
+  text-align: center;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+textarea#comment_body.form-control.text.required {
+  width: 36rem;
+  margin-left: -48%;
+}
+
+
+@media only screen and (max-width: 500px) {
+  textarea#comment_body.form-control.text.required  {
+    width:23rem;
+    margin-left: -70%;
+  }
+}
+
+div.make-a-comment {
+  text-align: center;
+}
+
+label.control-label.text.required {
+  display: none
+}

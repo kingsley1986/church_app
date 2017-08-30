@@ -1,0 +1,20 @@
+<div class="container container-table post_index">
+  <div class="content">
+    <% @posts.each do |post| %>
+    <hr>
+      <div class="row-item" >
+        <div class="posttitle">
+          <%= link_to post.title, post %>
+        </div>
+        <p class="post_body_index"><%= truncate(post.post_body, length: 280) %></p>
+        <% post.pictures.each do |pic, remov| %>
+          <div class="postimageclass">
+            <%= link_to image_tag(pic.image.url(:medium), class:"img-responsive post_image"), post_path(post) if pic.image? %>
+          </div>
+          <p style="margin-left:15%;">posted <%= time_ago_in_words(post.created_at) %> ago</p>
+        <% end %>
+      </div>
+    <% end %>
+    <%= will_paginate @posts %>
+  </div>
+</div>
