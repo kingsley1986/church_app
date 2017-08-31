@@ -1,6 +1,29 @@
+@media only screen and (max-width: 500px) {
+  h2.most_recent_sermon{
+      font-size: 15px;
+  }
+}
 
 
+h2.most_recent_sermon {
+  text-align:center;
+  margin-top:-30px;
+  padding:20px;
+  margin-left:29%;
+  color: white;
+}
 
+.most_recent_sermon {
+  padding:0.1em 0.1em 0.1em 0.1em;
+  display:inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px;
+  border: 2px dotted;
+  border: medium dashed #7FDBFF
+;
+
+
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
   div.container-fluid{
@@ -31,9 +54,9 @@
 
 
 @media only screen and (max-width: 500px) {
-    img.sermon_image{
-        padding-right: 20px;
-    }
+  img.sermon_image{
+      padding-right: 20px;
+  }
 }
 @media only screen and (max-width: 500px) {
     .col-md-6.col-md-offset-3.set_sermon_background{
@@ -166,7 +189,7 @@ p.slogan {
 
 a.sermon-title {
   font-size: 17px;
-  color:red;
+  color:#00e3ff;
   text-decoration: none;
 }
 a.sermon-title-index {
@@ -178,7 +201,7 @@ a.sermon-title-index {
 
 div.sermon-preacher {
   font-size: 18px;
-  color:blue;
+  color:#07f33d;
 }
 div.sermon-preacher-index {
   font-size: 18px;
@@ -189,9 +212,13 @@ div.sermon-preacher-index {
 div.sermon-time-index {
  font-size: 17px;
  padding-left: 50px;
+ color: white;
 }
 div.sermon-time {
  font-size: 17px;
+ color: white;
+ font-weight: bold;
+
 }
 
 td:first-child {
