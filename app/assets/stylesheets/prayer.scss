@@ -1,4 +1,12 @@
 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+  div.square-flip{
+    width:40%;
+    height:400px;
+  }
+}
 
 a.navbar-brand > img {
   margin-left: -60px
@@ -18,11 +26,11 @@ a.navbar-brand > img {
        padding-top: 30px;
       }
     }
-@media only screen and (max-width: 500px) {
-    div.centerflipcards{
-       padding-top: 130px;
-      }
-    }
+// @media only screen and (max-width: 500px) {
+//     div.centerflipcards{
+//        padding-top: 130px;
+//       }
+//     }
 @media only screen and (max-width: 500px) {
     section.section-padding.gray-bg{
       position: relative;
@@ -325,9 +333,7 @@ font-weight: bold;
 
 margin-bottom: 10px;
 }
-.section-padding{
 
-}
 
 @media only screen and (max-width: 500px) {
     .section-title.text-center{
@@ -357,9 +363,7 @@ textarea#contact_message.form-control.text.required {
 }
 
 
-input#contact_email.form-control.string.email.required {
-	margin-left: -94px;
-}
+
 @media only screen and (max-width: 500px) {
 	input#contact_email.form-control.string.email.required {
 		margin: 0;
@@ -368,6 +372,23 @@ input#contact_email.form-control.string.email.required {
 // ends here
 
 // form contacts
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+  .icon-bar.page_header {
+    position: relative;
+    top: -3px;
+    padding-left: 7rem;
+    padding-bottom: 44px;
+  }
+
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    position: relative;
+    top:35px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
 	span.highlight-text {
 		font-size: 17px;

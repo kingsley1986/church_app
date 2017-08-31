@@ -247,7 +247,7 @@
 						   font-size: 1.1em;
 						   border-radius: 20px;
 						   background: rgba(43, 166, 203, 0.9);
-						   padding: 0.5em 0.2em 0.2em 0.2em;">About Us</h2>
+						   padding: 0.5em 0.2em 0.2em 0.2em;">Parish Pastor</h2>
 					</div>
 					<div class="col-md-8 to-animate">
 						<% Page.all.each do |page| %>
@@ -268,47 +268,7 @@
 					</div>
 				</div>
 	</section>
-	<section id="contact" class="section-wrapper contact-section" data-stellar-background-ratio="0.5">
-	 <div class="parallax-overlay"></div>
-			 <div class="container">
-					 <div class="row">
-
-							 <!-- Section Header -->
-						 <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-									 <h2><span class="highlight-text">Send Your Prayer Request</span></h2>
-							 </div>
-							 <!-- Section Header End -->
-
-		<div class="contact-details">
-
-
-									 <!-- Contact Form -->
-			<div class="contact-form wow bounceInRight">
-
-
-		 <%= simple_form_for  Contact.new, :remote => true, :html => {:class => "contactForm" } do |f| %>
-		 <div class="col-md-6">
-
-		 		<%= f.input :name, type:"text", class:"form-control", placeholder:"Full Name", id:"name" %>
-			</div>
-
-		<div class="col-md-6">
-			<%= f.input :email, type:"text", class:"form-control", placeholder:"Email", id:"name" %>
-		</div>
-
-	 <div class="col-md-12">
-		 <%= f.input :message, as: :text, class:"form-control", placeholder:"Message", id:"message" %>
-	 </div>
-
-	 <div class="row">
-	 <button type="submit" class="btn btn-success" id="submit_contact" style="position:relative; left:20px; color:#0f6f2f @import" name="submit"/>Send Your Prayer</button>
-	</div>
-	 <% end %>
-		 </div>
-
-					 </div>
-			 </div>
-	 </section>
+	<%= render "contacts/form" %>
 
 
 	<footer>

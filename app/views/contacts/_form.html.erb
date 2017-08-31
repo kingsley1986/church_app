@@ -1,0 +1,26 @@
+<section id="contact" class="section-wrapper contact-section" data-stellar-background-ratio="0.5">
+  <div class="parallax-overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="send_contact">
+          <h2 class="highlight-text">Send Your Prayer Request</h2>
+          <div class="message-class"></div>
+        </div>
+        <%= simple_form_for  Contact.new, :remote => true, :html => {:class => "contactForm" } do |f| %>
+          <div class="col-md-6">
+            <%= f.input :name, type:"text", class:"form-control", placeholder:"Full Name", id:"name" %>
+          </div>
+          <div class="col-md-6">
+            <%= f.input :email, type:"text", class:"form-control", placeholder:"Email", id:"name" %>
+          </div>
+          <div class="col-md-12">
+            <%= f.input :message, as: :text, class:"form-control", placeholder:"Message", id:"message" %>
+          </div>
+          <div class="row">
+            <button type="submit" class="btn btn-success" id="submit_contact" style="color:#0f6f2f @import" name="submit"/>Send Your Prayer</button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

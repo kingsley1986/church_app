@@ -1,0 +1,24 @@
+div.parallax-overlay {
+  padding-top:8%;
+}
+
+@media only screen and (max-width: 500px) {
+  section#contact.section-wrapper.contact-section {
+    padding-top:33%;
+  }
+}
+
+div.send_contact {
+  text-align: center;
+  margin: 0 auto;
+}
+
+form#new_contact.simple_form.contactForm {
+  margin-left: 12%;
+}
+
+@media only screen and (max-width: 500px) {
+  h2.highlight-text {
+    font-size: 14px;
+  }
+}
