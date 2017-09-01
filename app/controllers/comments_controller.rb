@@ -24,7 +24,8 @@ class CommentsController < ApplicationController
     if @comment.user_id == current_user.id || current_user.admin?
       @comment.destroy
       respond_to do |format|
-        format.json { render json: @post }
+        format.html { redirect_to @post.comments }
+        format.js
       end
     else
       redirect_to :back
