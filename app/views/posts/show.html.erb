@@ -26,9 +26,9 @@
     </br>
       <div class="resetcomments">
         <%= "#{approved_comments.count} Comments" %>
-      </div>
-      <%= render @post.comments %>
-      </div>
+        <div id="comments" >
+          <%= render @post.comments %>
+        </div>
       <% if current_user && user_signed_in? %>
       <div class="make-a-comment">Make your Comments: </div>
         <%= render "comments/form" %>

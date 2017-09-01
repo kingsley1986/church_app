@@ -3,7 +3,7 @@
     <div class="container"  style="width:50%; background:white;">
       <%= simple_form_for([@post, @post.comments.build], remote: true, :html => {:multipart => true, id: "newcomment"  } ) do |f| %>
         <%= f.input :body, as: :text, input_html: { rows: "3"} %>
-        <button type="submit" class="btn btn-success" id="comment-form" name="submit"/>Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
       <% end %>
     </div>
   </div>

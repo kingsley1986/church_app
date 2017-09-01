@@ -8,6 +8,7 @@
 //= require_tree .
 
 
+
 /* Demo purposes only */
 $(document).on('turbolinks:load', function() {
 
