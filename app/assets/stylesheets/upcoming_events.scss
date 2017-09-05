@@ -1,16 +1,27 @@
 @media only screen and (max-width: 500px) {
-    nav.events-link{
-        padding-bottom: 150px;
-      }
-    }
+  nav.events-link{
+    padding-bottom: 150px;
+  }
+}
 
+nav.events-link {
+  width: 100%;
+  min-height: 50%;
+  text-align: center;
+  background:none;
+  padding-bottom:140px;
+}
+
+@media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)  {
     nav.events-link {
-      width: 100%;
-      min-height: 50%;
-      text-align: center;
-      background:none;
-      padding-bottom:140px;
+    
+       overflow:hidden;
+
     }
+}
+
 
 div.container.container-table.for-events {
   text-align: center;
@@ -76,6 +87,7 @@ div.container.container-table.past_events.all_events {
     margin: 0 auto;
   }
 }
+
 @media only screen
   and (min-device-width : 768px)
   and (max-device-width : 1024px)  {

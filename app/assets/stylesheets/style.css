@@ -1012,7 +1012,7 @@ ul.general {
 }
 
 
-footer{background: #1e1e1e;}
+
 footer ul.link-list li a{
 	color: #8C8C8C;
 }
@@ -1634,7 +1634,7 @@ article img.pull-right, article .align-right{
 
 @media (max-width: 767px) {
 .navbar-default .navbar-collapse{border-color: none;/* background: #05142b; */}
-.navbar-default .navbar-toggle .icon-bar {background-color: #868686;border-radius: 0;}
+.navbar-default .navbar-toggle .icon-bar {background-color: white;border-radius: 0;}
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color: rgba(221, 221, 221, 0);
 }

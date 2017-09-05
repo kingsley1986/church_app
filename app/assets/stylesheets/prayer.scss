@@ -1,3 +1,11 @@
+input#contact_email.form-control.string.email.required {
+  margin-left: -16%;
+}
+
+button#submit_contact.btn.btn-success {
+  margin-left: -20%;
+}
+
 
 @media only screen
 and (min-device-width : 768px)
@@ -369,6 +377,15 @@ textarea#contact_message.form-control.text.required {
 		margin: 0;
 	}
 }
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+  input#contact_email.form-control.string.email.required {
+    margin:0;
+  }
+
+}
 // ends here
 
 // form contacts
@@ -446,6 +463,16 @@ h3.page_title_class {
 
 a.give_font {
   font-size: 14px;
+  display: block;
+    height: 100%;
+    width: 100%;
+    top: 28%;
+    font-weight: bold;
+    color: AliceBlue;
+    position: absolute;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 4;
 }
  .middle {
    width: 120px;
@@ -453,20 +480,16 @@ a.give_font {
    position: relative;
    z-index: 1;
  }
- //
- // .big {
- //   width: 150px;
- //   height: 150px;
- // }
- @media only screen and (max-width: 500px) {
-     div.button {
-       margin: 2%;
-       position: relative;
-       right:0;
-     }
- }
 
- .button {
+@media only screen and (max-width: 500px) {
+  div.button {
+   margin: 2%;
+   position: relative;
+   right:0;
+  }
+}
+
+.button {
    display: inline-block;
    vertical-align: middle;
    margin-left: 11%;
@@ -480,18 +503,18 @@ a.give_font {
    -moz-transition: width 1s, height 1s, -moz-transform 1s;
    -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
    -o-transition: width 1s, height 1s, -o-transform 1s;
- }
+}
 
- .button:hover {
-     width: 160px;
-     height: 160px;
-     -moz-transform:rotate(3600deg);
-     -webkit-transform:rotate(360deg);
-     -o-transform:rotate(360deg);
-     transform:rotate(360deg);
- }
+.button:hover {
+   width: 160px;
+   height: 160px;
+   -moz-transform:rotate(3600deg);
+   -webkit-transform:rotate(360deg);
+   -o-transform:rotate(360deg);
+   transform:rotate(360deg);
+}
 
- .button:before {
+.button:before {
    content: '';
    position: absolute;
    bottom: 5%;
@@ -499,9 +522,9 @@ a.give_font {
    width: 90%;
    height: 90%;
    background: #C71585;
- }
+}
 
- .button:after {
+.button:after {
    content: '';
    text-align: center;
    position: absolute;
@@ -509,8 +532,7 @@ a.give_font {
    left: 10%;
    width: 80%;
    height: 80%;
-   background: #111111
-;
+   background: #111111;
 
    -moz-box-shadow:    inset -1px -1px 1px 0 #20b2aa, inset 1px 1px 1px 0 #b0e0e6;
     -webkit-box-shadow: inset -1px -1px 1px 0 #20b2aa, inset 1px 1px 1px 0 #b0e0e6;

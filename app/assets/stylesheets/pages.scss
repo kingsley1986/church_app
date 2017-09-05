@@ -1,3 +1,14 @@
+div.parallax-overlay {
+  // padding-top: 20%;
+}
+
+@media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)  {
+  div.parallax-overlay {
+    padding-top: 4%;
+  }
+}
 
 p.page_body_class {
   margin-left:23%;
@@ -15,11 +26,11 @@ p.page_body_class {
 }
 
 
-    @media only screen and (max-width: 500px)  {
-      section.AI_lightbox_grid{
-        position: relative;
-        right: 5%;
-      }
+@media only screen and (max-width: 500px)  {
+  section.AI_lightbox_grid{
+    position: relative;
+    right: 5%;
+  }
 }
 
 

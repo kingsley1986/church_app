@@ -13,16 +13,17 @@ p.page_boyd_class {
 }
 
  ul.nav.navbar-nav {
-background-color:#8B008B;
+background-color:#0684f3;
 font-size: 20px;
  }
-//
-// div.row.vertical-center-row{
-//   background-image:    url(http://onewayjesus.weebly.com/uploads/2/8/8/7/2887265/927037885.jpg);
-//       background-size:     cover;                      /* <------ */
-//       background-repeat:   no-repeat;
-//       background-position: center center;
-// }
+ ul.nav.navbar-nav > li {
+   background-image: linear-gradient(white 33%, rgba(255,255,255,0) 0%);
+   background-position: right;
+   background-size: 1px 3px;
+   background-repeat: repeat-y;
+
+ }
+
 
 span.icon-bar.page_header {
     margin-left: 30px;
