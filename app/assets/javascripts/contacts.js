@@ -1,4 +1,4 @@
-$(function(){
+document.addEventListener("turbolinks:load", function() {
   $(".contactForm").on("submit", function(event){
     $.ajax({
       type: "POST",
