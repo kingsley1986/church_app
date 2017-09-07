@@ -8,7 +8,7 @@ nav.events-link {
   width: 100%;
   min-height: 50%;
   text-align: center;
-  background:none;
+  background:#DC143C;
   padding-bottom:140px;
 }
 
@@ -16,7 +16,7 @@ nav.events-link {
   and (min-device-width : 768px)
   and (max-device-width : 1024px)  {
     nav.events-link {
-    
+
        overflow:hidden;
 
     }
