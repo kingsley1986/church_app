@@ -5,12 +5,33 @@
  */
  @import "font-awesome";
 
+div.container.first-container {
+  position:relative; top:-5vw;
+}
+div.container.second-container {
+  position:relative; top:-5vw;
+}
+div.container.third-container {
+  position:relative; top:-5vw;
+}
+
+@media only screen and (max-width: 500px) {
+    div.container.first-container, div.container.second-container, div.container.third-container {
+        position:relative; top:-40vw;
+      }
+    }
+
+
+
 div.item.first {
   background-image: url("/images/langa4.jpg");
 
 }
 div.item.second {
-  background-image: url("/images/langa4.jpg");
+  background-image: url("/images/cp2.jpg");
+}
+div.item.third {
+  background-image: url("/images/cp.jpg");
 
 }
 
