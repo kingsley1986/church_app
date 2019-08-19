@@ -1,4 +1,4 @@
-class CreateSermonreviews < ActiveRecord::Migration
+class CreateSermonreviews < ActiveRecord::Migration[5.2]
   def change
     create_table :sermonreviews do |t|
       t.text :body

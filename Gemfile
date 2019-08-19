@@ -1,17 +1,19 @@
 source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '4.2.6'
+gem 'rails', '~> 5.2', '>= 5.2.3'
 gem 'pg'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'uglifier', '~> 4.1', '>= 4.1.20'
+gem 'coffee-rails', '~> 5.0'
+#
+gem 'jbuilder', '~> 2.9', '>= 2.9.1'
+# gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'activeadmin', '~> 2.2'
+gem 'railties', '5.2.3'
 
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'activeadmin', github: 'activeadmin'
-
-
+#
 gem "pundit"
-gem 'devise'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'carrierwave'
 gem "mini_magick"
 gem "fog"
@@ -20,8 +22,8 @@ gem 'rails_12factor', group: :production
 gem 'will_paginate'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
-gem 'mail_form', '~> 1.5', '>= 1.5.1'
-gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'mail_form', '~> 1.7', '>= 1.7.1'
+gem 'rmagick', '~> 4.0'
 gem "bourbon"
 gem "recaptcha", require: "recaptcha/rails"
 
@@ -32,27 +34,27 @@ gem 'turbolinks'
 
 
 
-#front-end
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.4.1'
+# front-end
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'autoprefixer-rails'
-gem 'sass-rails', '>= 3.2'
+gem 'sass-rails', '~> 5.1'
 gem 'slim'
-gem 'simple_form', '~> 3.4'
+gem 'simple_form', '~> 4.1'
 
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'pry'
   gem 'factory_girl_rails'
   gem 'byebug'
 end
 
 group :test do
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+   gem 'web-console', '>= 3.3.0'
   gem 'spring'
 end

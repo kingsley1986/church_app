@@ -813,8 +813,8 @@ form#commentform textarea {
 
 .about-text .btn {
 	margin-top: 20px;
-	//font-size: 15px;
-	//text-align: justify;
+	font-size: 15px;
+	text-align: justify;
 }
 
 .about-image img {
@@ -827,7 +827,6 @@ form#commentform textarea {
 
 .about-text li {
 	margin-bottom: 10px;
-	//
 	font-weight: bold;
 	list-style: none;
 }

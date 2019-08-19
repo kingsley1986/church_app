@@ -22,7 +22,7 @@ ActiveAdmin.register Post do
      f.input :title
      f.input :post_body, as: :text
      f.has_many :pictures do |ff|
-       ff.input :image, :as => :file, :hint => ff.template.image_tag(ff.object.image.url(:medium))
+       ff.input :image, :as => :file, :hint => ff.object.image.present? ? ff.template.image_tag(ff.object.image.url(:medium)) : ''
      end
    end
      f.has_many :comments do |fc|

@@ -1,4 +1,4 @@
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
   belongs_to :user
   has_many :pictures, as: :picturable, dependent: :destroy
   has_many :comments, dependent: :destroy
