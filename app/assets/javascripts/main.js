@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+document.addEventListener("turbolinks:load", function() {
 
     'use strict';
 
@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
            // fade:true,
             draggable:false,
             prevArrow:'<button class="PrevArrow"></button>',
-            nextArrow:'<button class="NextArrow"></button>', 
+            nextArrow:'<button class="NextArrow"></button>',
           });
 
         $('#nav-toggle').on('click', function (event) {
@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
             $this.addClass('active');
             $(tabgroup).children('div').hide();
             $(target).show();
-          
+
         })
 
 
@@ -72,20 +72,20 @@ jQuery(document).ready(function($) {
 
         var contentSection = $('.content-section, .main-banner');
         var navigation = $('nav');
-        
+
         //when a nav link is clicked, smooth scroll to the section
         navigation.on('click', 'a', function(event){
             event.preventDefault(); //prevents previous event
             smoothScroll($(this.hash));
         });
-        
+
         //update navigation on scroll...
         $(window).on('scroll', function(){
             updateNavigation();
         })
         //...and when the page starts
         updateNavigation();
-        
+
         /////FUNCTIONS
         function updateNavigation(){
             contentSection.each(function(){
