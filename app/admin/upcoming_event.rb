@@ -10,7 +10,7 @@ ActiveAdmin.register UpcomingEvent do
      f.input :going, as: :array
      f.input :coming_with, as: :array
      f.has_many :pictures do |ff|
-       ff.input :image, :as => :file, :hint => ff.template.image_tag(ff.object.image.url(:medium))
+       ff.input :image, :as => :file, :hint => ff.object.image.present? ? ff.template.image_tag(ff.object.image.url(:medium)) : ''
      end
    end
    f.actions
@@ -27,7 +27,7 @@ ActiveAdmin.register UpcomingEvent do
    end
     table_for upcoming_event.pictures do
       column :image do |a|
-        image_tag a.image.url
+        image_tag a.image.url(:medium)
       end
     end
   end

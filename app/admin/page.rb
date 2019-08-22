@@ -6,8 +6,8 @@ ActiveAdmin.register Page do
        f.input :title
        f.input :body, as: :text
        f.select :page_type, Page::PAGE_TYPE
-       f.has_many :pictures do |ff|
-         ff.input :image, multiple: true, name: "pictures[image][]", :as => :file, :hint => ff.template.image_tag(ff.object.image.url(:medium))
+       f.has_many :pictures, allow_destroy: true do |ff|
+         ff.input :image, multiple: true, name: "pictures[image][]", :as => :file, :hint => ff.object.image.present? ? ff.template.image_tag(ff.object.image.url(:medium)) : ''
        end
     end
     f.actions
@@ -20,7 +20,7 @@ ActiveAdmin.register Page do
       row :body
       row :page_type
     end
-      table_for page.pictures do
+      table_for Page.find(params[:id]).pictures do
         column :image do |a|
          image_tag a.image.url
        end

@@ -5,7 +5,7 @@ ActiveAdmin.register Home do
     f.inputs "Home Page Details" do
        f.input :body, as: :text
        f.has_many :pictures do |ff|
-         ff.input :image, multiple: true, name: "pictures[image][]", :as => :file, :hint => ff.template.image_tag(ff.object.image.url(:medium))
+         ff.input :image, :as => :file, :hint => ff.object.image.present? ? ff.template.image_tag(ff.object.image.url(:medium)) : ''
        end
     end
     f.actions
@@ -18,7 +18,7 @@ ActiveAdmin.register Home do
     end
       table_for home.pictures do
         column :image do |a|
-         image_tag a.image.url
+         image_tag a.image.url(:medium)
        end
     end
   end

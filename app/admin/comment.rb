@@ -11,7 +11,7 @@ ActiveAdmin.register Comment, as: 'PostComment' do
       f.input :body
       f.input :approved, as: :check_boxes, collection: Comment.approver
       f.has_many :pictures do |ff|
-        ff.input :image, :as => :file, :hint => ff.template.image_tag(ff.object.image.url(:medium))
+        ff.input :image, :as => :file, :hint => ff.object.image? ? ff.template.image_tag(ff.object.image.url(:medium)) : ''
       end
     end
     f.actions

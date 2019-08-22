@@ -5,9 +5,9 @@ class RepliesController < ApplicationController
      @reply = @comment.replies.create(params[:reply].permit(:reply_body))
      @reply.user = current_user
      if @reply.save
-       redirect_to(:back)
+       redirect_back fallback_location: root_path
      else
-       redirect_to :back
+       redirect_back fallback_location: root_path
      end
    end
 
@@ -20,9 +20,9 @@ class RepliesController < ApplicationController
      @reply = Reply.find(params[:id])
      if @reply.user_id == current_user.id || current_user.admin?
        @reply.delete
-      redirect_to :back
+      redirect_back fallback_location: root_path
     else
-      redirect_to :back
+      redirect_back fallback_location: root_path
     end
   end
 end

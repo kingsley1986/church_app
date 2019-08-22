@@ -40,7 +40,7 @@ class  UpcomingEventsController < ApplicationController
     @going_event.coming_with += [1]
     if @going_event.save
       flash[:notice] = "Thank you for coming and bringing someone with you"
-      redirect_to :back
+      redirect_back fallback_location: root_path
     end
   end
 

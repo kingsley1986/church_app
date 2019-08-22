@@ -14,4 +14,15 @@ module PagesHelper
     end
     return a
   end
+
+  #
+  # def children_page
+  #
+  #   case Page.find(params[:id])
+  #
+  #     when f.page_type = "Childrens"
+  #       Page.find_by_page_type("Children")
+  #     end
+  #
+  # end
 end

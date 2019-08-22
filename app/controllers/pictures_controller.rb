@@ -24,7 +24,7 @@ class PicturesController < ApplicationController
       @picture.delete
       redirect_to posts_path(@post)
     else
-      redirect_to :back
+      redirect_back fallback_location: root_path
     end
   end
 

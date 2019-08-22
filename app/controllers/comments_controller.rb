@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
         format.js
       end
     else
-      redirect_to :back
+      redirect_back fallback_location: root_path
     end
   end
 
@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
         format.js
       end
     else
-      redirect_to :back
+      redirect_back fallback_location: root_path
     end
   end
 

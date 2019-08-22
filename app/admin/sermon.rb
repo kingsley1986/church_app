@@ -8,7 +8,7 @@ ActiveAdmin.register Sermon do
        f.input :preacher
        f.input :sermondate, as: :date_picker
        f.has_many :pictures do |ff|
-         ff.input :image, multiple: true, name: "pictures[image][]", :as => :file, :hint => ff.template.image_tag(ff.object.image.url(:medium))
+         ff.input :image, multiple: true, name: "pictures[image][]", :as => :file, :hint => ff.object.image.present? ? ff.template.image_tag(ff.object.image.url(:medium)) : ''
        end
     end
     f.actions

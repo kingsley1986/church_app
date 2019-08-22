@@ -1,6 +1,6 @@
 class Page < ApplicationRecord
   has_many :pictures, as: :picturable, dependent: :destroy
-  accepts_nested_attributes_for :pictures, :reject_if => proc { |attributes| attributes['image'].blank? }
+  accepts_nested_attributes_for :pictures , allow_destroy: true, :reject_if => proc { |attributes| attributes['image'].blank? }
 
 
   PAGE_TYPE = [  'Childrens',

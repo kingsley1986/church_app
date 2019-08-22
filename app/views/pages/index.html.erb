@@ -1,15 +1,13 @@
 <div class="container" style="background:#DDDDDD">
     <% @pages.each do |page| %>
       <h2 style="margin-top:5%;"><%= page.title %></h2>
-    <section class="AI_lightbox_grid" style="margin-top:6%;">
-      <div class="block">
-      <% page.pictures.each do |pic| %>
-        <%= image_tag(pic.image.url(:large), class:"lightbox") %>
-
-      <% end %>
-    </div>
-    <p class="page_body_class" style="background:white; border: 1px;border: 2px dotted;
-      border: medium dashed #008080; padding:14px;"><%= page.body %></p>
+      <section class="AI_lightbox_grid" style="margin-top:6%;">
+        <div class="block">
+          <% page.pictures.each do |pic| %>
+            <%= image_tag(pic.image.url(:large), class:"lightbox") %>
+          <% end %>
+        </div>
+        <p class="page_body_class" style="background:white; border: 1px;border: 2px dotted; border: medium dashed #008080; padding:14px;"><%= page.body %></p>
     <% end %>
-</section>
+  </section>
 </div>
