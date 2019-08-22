@@ -10,7 +10,7 @@
                           <p>Sentra is free Bootstrap CSS Template by templatemo website.<br>
                           	Please share our site link to your friends.</p>
                           <div class="white-button button">
-                              <a href="#featured">Discover More</a>
+                              <!-- <a href="#featured">Discover More</a> -->
                           </div>
                         </div>
                         </div>
@@ -25,7 +25,7 @@
                 <p>Support templatemo by sharing a link to your friends.
 								<br>Thank you for helping us.</p>
                 <div class="white-button button">
-                <a href="#featured">Share More</a>
+                <!-- <a href="#featured">Share More</a> -->
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@
           	<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices <br>posuere cubilia Curae; Sed at massa turpis.</p>
 
           	<div class="white-button button">
-          		<a href="#featured">Learn More</a>
+          		<!-- <a href="#featured">Learn More</a> -->
           	</div>
         	</div>
       	</div>
@@ -54,20 +54,7 @@
 
 
 <% if current_page?(root_path) %>
- 	<nav  class="events-link">
-   	<div class="button middle">
-     	<a class="give_font" href="/upcoming_events/live_events">Live Events</a>
-   </div>
-   <div class="button middle">
-     <a class="give_font" href="/upcoming_events/upcomings">future events</a>
-   </div>
-   <div class="button middle">
-     <a class="give_font" href="/upcoming_events/past_events" >past Events</a>
-   </div>
-   <div class="button middle">
-     <a class="give_font" href="/upcoming_events" >All Events</a>
-   </div>
- 	</nav>
+ 	<%= render "upcoming_events/index" %>
 <% end %>
 <%= render "pages/index" %>
 
