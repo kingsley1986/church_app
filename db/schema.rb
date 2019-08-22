@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -25,11 +24,10 @@ ActiveRecord::Schema.define(version: 20170829075922) do
     t.string   "author_type"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
   end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
     t.string   "body"
@@ -40,9 +38,8 @@ ActiveRecord::Schema.define(version: 20170829075922) do
     t.boolean  "like",       default: false
     t.jsonb    "liker_id",   default: []
     t.jsonb    "approved",   default: []
+    t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
   end
-
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "homes", force: :cascade do |t|
     t.string   "body"
@@ -81,9 +78,8 @@ ActiveRecord::Schema.define(version: 20170829075922) do
     t.string   "picturable_type"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["picturable_type", "picturable_id"], name: "index_pictures_on_picturable_type_and_picturable_id", using: :btree
   end
-
-  add_index "pictures", ["picturable_type", "picturable_id"], name: "index_pictures_on_picturable_type_and_picturable_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -93,9 +89,8 @@ ActiveRecord::Schema.define(version: 20170829075922) do
     t.datetime "updated_at",                 null: false
     t.boolean  "like",       default: false
     t.jsonb    "liker_id",   default: []
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
-
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "replies", force: :cascade do |t|
     t.string   "reply_body"
@@ -103,10 +98,9 @@ ActiveRecord::Schema.define(version: 20170829075922) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_replies_on_comment_id", using: :btree
+    t.index ["user_id"], name: "index_replies_on_user_id", using: :btree
   end
-
-  add_index "replies", ["comment_id"], name: "index_replies_on_comment_id", using: :btree
-  add_index "replies", ["user_id"], name: "index_replies_on_user_id", using: :btree
 
   create_table "sermonreviews", force: :cascade do |t|
     t.text     "body"
@@ -116,9 +110,8 @@ ActiveRecord::Schema.define(version: 20170829075922) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.jsonb    "review_approve", default: []
+    t.index ["sermon_id"], name: "index_sermonreviews_on_sermon_id", using: :btree
   end
-
-  add_index "sermonreviews", ["sermon_id"], name: "index_sermonreviews_on_sermon_id", using: :btree
 
   create_table "sermons", force: :cascade do |t|
     t.string   "title"
@@ -159,10 +152,9 @@ ActiveRecord::Schema.define(version: 20170829075922) do
     t.string   "gender"
     t.boolean  "admin"
     t.jsonb    "roles",                  default: []
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "comments", "posts"
   add_foreign_key "posts", "users"

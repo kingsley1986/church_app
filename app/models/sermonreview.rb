@@ -1,4 +1,4 @@
-class Sermonreview < ActiveRecord::Base
+class Sermonreview < ApplicationRecord
   belongs_to :sermon
 
   validates :name, presence: true

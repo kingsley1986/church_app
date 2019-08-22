@@ -1,5 +1,5 @@
 /*global jQuery:false */
-jQuery(document).ready(function($) {
+document.addEventListener("turbolinks:load", function() {
 "use strict";
 
 
@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 		});
 
 
-    
+
 	/* -------- Isotope Filtering -------- */
 		var $container = $('#isotope-gallery-container');
 		var $filter = $('.filter');
