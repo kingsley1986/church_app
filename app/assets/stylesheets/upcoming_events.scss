@@ -1,3 +1,15 @@
+// This is read more and read less css for upcoming events
+a.morelink {
+  text-decoration: none;
+  outline: none;
+}
+.morecontent span {
+  display: none;
+}
+// ends here
+
+
+
 @media only screen and (max-width: 500px) {
   nav.events-link{
     padding-bottom: 150px;

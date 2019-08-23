@@ -19,7 +19,7 @@ gem "mini_magick"
 gem "fog"
 gem "figaro"
 gem 'rails_12factor', group: :production
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.1', '>= 3.1.8'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
 gem 'mail_form', '~> 1.7', '>= 1.7.1'
