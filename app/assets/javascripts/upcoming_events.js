@@ -5,7 +5,7 @@ $(document).on('click', '.specific_service', function(event) {
 
 $(document).on('turbolinks:load', function() {
     // Configure/customize these variables.
-    var showChar = 25;  // How many characters are shown by default
+    var showChar = 41;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "Read more";
     var lesstext = "Read less";

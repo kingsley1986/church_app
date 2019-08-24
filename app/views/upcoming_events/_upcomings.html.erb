@@ -1,9 +1,9 @@
 <% upcomings.in_groups_of(4, false).each do |up_coming| %>
   <div class='row'>
-    <% up_coming.each do |upc| %>
+    <%  upcomings.each do |upc| %>
       <div class='col-md-3'>
         <div class="upcomingtitle" style="font-weight:bold;font-size:17px; color:black; text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); background-color:#E5E7E9  "><%= upc.title %></div>
-        <div class='textControl'><%= upc.body %></div>
+        <div class='textControl' style="line-height: 20pt; font-size:16px; color:black; padding-top: 16px;"><%= upc.body %></div>
 
         <% upc.pictures.each do |pic, remov| %>
           <div><%= image_tag(pic.image.url(:square), class:"img-responsive future") if pic.image? %></div>
@@ -34,7 +34,6 @@
           <div class="countperson" style="background:white; font-size:18px; font-weight:bold;margin-bottom:40px;"><%= pluralize(he, "Person")%> going</div>
       </div>
     <% end %>
-      <%= will_paginate @ue %>
+    <%= paginate upcomings %><br/>
   </div>
-
 <% end %>

@@ -11,7 +11,6 @@ gem 'jbuilder', '~> 2.9', '>= 2.9.1'
 gem 'activeadmin', '~> 2.2'
 gem 'railties', '5.2.3'
 
-#
 gem "pundit"
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'carrierwave'
@@ -19,7 +18,6 @@ gem "mini_magick"
 gem "fog"
 gem "figaro"
 gem 'rails_12factor', group: :production
-gem 'will_paginate', '~> 3.1', '>= 3.1.8'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
 gem 'mail_form', '~> 1.7', '>= 1.7.1'
@@ -28,8 +26,8 @@ gem "bourbon"
 gem "recaptcha", require: "recaptcha/rails"
 
 gem 'turbolinks'
-
-
+gem 'will_paginate'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 
 
