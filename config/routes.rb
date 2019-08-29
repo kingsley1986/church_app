@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get 'pages/filter/:scope' => 'pages#index', as: :filtered_page
   # resources :imagegalleries
    root to: 'home#index'
-  resources :posts, :pictures, :aboutpages, shallow: true do
+  resources :posts, :upcoming_events, :pictures, :aboutpages, shallow: true do
     resources :pictures
     member do
       post 'like'

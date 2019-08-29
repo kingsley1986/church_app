@@ -1,3 +1,10 @@
+$(".messages").on(".message ", "ajax:success", function(data) {
+    var $link = $(this);
+    $link.closest(".message").remove();
+})
+
+
+
 $(document).on('click', '.specific_service', function(event) {
   $('.cd-popup').addClass('is-visible');
 });

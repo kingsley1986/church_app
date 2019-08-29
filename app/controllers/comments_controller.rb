@@ -2,14 +2,14 @@ class CommentsController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
-  before_action :find_comment_id, except: [:like, :create]
+  # before_action :find_comment_id, except: [:like, :create]
+    before_action :set_commenter
+
 
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.new(comment_params)
-    @comment.user = current_user
+    @comment =  @person.comments.create(comment_params)
     if @comment.save
-      flash[:notice] = "Successfully created a comment, we will review and approve your comment whithin 24 hours. Thank you #{@comment.user.first_name} "
+      flash[:notice] = "Successfully created a comment, we will review and approve your comment whithin 24 hours. Thank you "
       respond_to do |format|
         format.html { redirect_to @comment }
         format.js
@@ -47,7 +47,10 @@ class CommentsController < ApplicationController
   end
 
   def index
-    @comment = Comment.all
+    @comments =  @person.comments
+    respond_to do |format|
+      format.js
+    end
   end
 
   def like
@@ -81,5 +84,10 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body, :approved, pictures_attributes: [:id, :comment_id, :image])
+  end
+
+  def set_commenter
+    klass = [Post, UpcomingEvent].detect{|c| params["#{c.name.underscore}_id"]}
+    @person = klass.find(params["#{klass.name.underscore}_id"])
   end
 end

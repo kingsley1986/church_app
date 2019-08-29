@@ -1,4 +1,11 @@
 // This is read more and read less css for upcoming events
+
+// upcoming events form body area
+form textarea {
+  width: 100%
+}
+// ends here
+
 a.morelink {
   text-decoration: none;
   outline: none;
@@ -221,7 +228,8 @@ div.container.container-table.past_events.all_events {
     .starting_date_class, .end_date_class{
      -webkit-animation: background 5s cubic-bezier(1,0,0,1) infinite;
      animation: background 5s cubic-bezier(1,0,0,1) infinite;
-     font-size:18px; font-weight:bold
+     font-size:11px; font-weight:bold;
+     border: solid LightGrey 2px;
     }
 
 

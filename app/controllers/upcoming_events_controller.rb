@@ -26,23 +26,23 @@ class  UpcomingEventsController < ApplicationController
   end
 
   def goingpeople
-    @going_event = UpcomingEvent.find(params[:id])
-    @going_event.going += [1]
+    @going = UpcomingEvent.find(params[:id])
+    @going.going += [1]
     respond_to do |format|
-      if @going_event.save
-        format.json { render json: @going_event}
+      if @going.save
+        format.js
       end
     end
   end
 
-  def coming_with_person
-    @going_event = UpcomingEvent.find(params[:id])
-    @going_event.coming_with += [1]
-    if @going_event.save
-      flash[:notice] = "Thank you for coming and bringing someone with you"
-      redirect_back fallback_location: root_path
-    end
-  end
+  # def coming_with_person
+  #   @going_with = UpcomingEvent.find(params[:id])
+  #   @going_with.coming_with += [1]
+  #   if @going_with.save
+  #     flash[:notice] = "Thank you for coming and bringing someone with you"
+  #     redirect_back fallback_location: root_path
+  #   end
+  # end
 
   def live_events
     UpcomingEvent.all.each do |live |
@@ -60,6 +60,6 @@ class  UpcomingEventsController < ApplicationController
 
 
   def upcoming_events_params
-    params.require(:upcoming_event).permit(:title, :going, :body, :starting_date, :end_date, coming_with: [], pictures_attributes: [:id, :upcoming_event_id, :image] )
+    params.require(:upcoming_event).permit(:title, :starting_date, :end_date, coming_with: [], pictures_attributes: [:id, :upcoming_event_id, :image] )
   end
 end

@@ -1,8 +1,10 @@
 class Comment < ApplicationRecord
-
+    # belongs_to :picturable, polymorphic: true
   belongs_to :post
   belongs_to :user
   validates :body, presence: true
+  belongs_to :commentable, polymorphic: true
+  belongs_to :upcoming_event
   has_many :pictures, as: :picturable, dependent: :destroy
   has_many :replies, dependent: :destroy
 

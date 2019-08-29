@@ -4,8 +4,11 @@
  *= require_self
  */
  @import "font-awesome";
-
-
+// the upcoming events list has a long space with the image slider
+ ul, ol {
+   margin-top: -120px
+ }
+// ends here
 
 div.container.first-container {
   position:relative; top:-5vw;
