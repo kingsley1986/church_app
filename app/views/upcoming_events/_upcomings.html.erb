@@ -16,6 +16,8 @@
               <button type="submit" class="btn btn-success" style="width:100%">Comment</button>
             <% end %>
             <span style="color:blue" ><%= link_to  pluralize(upc.comments.count, "Comment"), upcoming_event_comments_path(upc.id, @comments), remote: true, class:"viewcomments", style:"padding-left:15px;" %></span>
+            <% last_comment = upc.comments.all.last %>
+            <%= last_comment.body %>
           </div>
         </div>
 
