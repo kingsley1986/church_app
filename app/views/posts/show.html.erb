@@ -25,8 +25,8 @@
     </br>
     </br>
       <div class="resetcomments">
-        <%= "#{approved_comments.count} Comments" %>
-        <div id="comments" >
+        <%= ActionController::Base.helpers.pluralize(approved_comments.size, "Comment")%>
+        <div id="newcomment" >
           <%= render @post.comments %>
         </div>
       <% if current_user && user_signed_in? %>

@@ -5,6 +5,6 @@ module CommentsHelper
   end
 
   def approved_comments
-     @post.comments.select { |a| a.approved == ["approved"] } 
+      @post.comments.select { |a| a.approved == ["approved"] }
   end
 end

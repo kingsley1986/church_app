@@ -3,26 +3,24 @@ class CommentsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   # before_action :find_comment_id, except: [:like, :create]
-    before_action :set_commenter
+    before_action :set_commenter, only: [:create]
 
 
   def create
     @comment =  @person.comments.create(comment_params)
     if @comment.save
-      flash[:notice] = "Successfully created a comment, we will review and approve your comment whithin 24 hours. Thank you "
       respond_to do |format|
-        format.html { redirect_to @comment }
         format.js
       end
-    else
-      redirect_back fallback_location: root_path
     end
   end
 
 
   def destroy
-    if @comment.user_id == current_user.id || current_user.admin?
-      @comment.destroy
+    # if @comment.user_id == current_user.id || current_user.admin?
+    if current_user.admin?
+      comment = Comment.find(params[:id])
+      comment.destroy
       respond_to do |format|
         format.html { redirect_to @post.comments }
         format.js
@@ -40,17 +38,12 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.update_attributes(comment_params)
     if @comment.save
-      @updated_comment = @comment.post_id
-      @post = Post.find(@updated_comment)
-      redirect_to @post
+      redirect_back fallback_location: root_path
     end
   end
 
   def index
-    @comments =  @person.comments
-    respond_to do |format|
-      format.js
-    end
+    @all_comments =  @person.comments
   end
 
   def like

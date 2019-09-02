@@ -26,4 +26,5 @@ class ApplicationController < ActionController::Base
   def pastor
     current_user.roles.include?("pastor")
   end
+  
 end

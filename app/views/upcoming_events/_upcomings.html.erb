@@ -1,3 +1,4 @@
+<div id="upc_comment">
 <% upcomings.in_groups_of(4, false).each do |up_coming| %>
   <div class='row'>
     <%  up_coming.each do |upc| %>
@@ -6,18 +7,14 @@
         <div class='textControl' style="line-height: 20pt; font-size:16px; color:black; padding-top: 16px;"><%= upc.body %></div>
 
         <% upc.pictures.each do |pic, remov| %>
-          <div><%= image_tag(pic.image.url(:square), class:"img-responsive future") if pic.image? %></div>
+          <div><%= link_to image_tag(pic.image.url(:square), class:"img-responsive future"), upcoming_event_path(upc) if pic.image? %></div>
         <% end %>
         <div class="starting_date_class"><%= upc.starting_date.strftime("Starting At:  %Y-%m-%d %H:%M:%S") %></div>
         <div class="end_date_class"><%= upc.end_date.strftime("Ends At:  %Y-%m-%d %H:%M:%S") %></div>
           <div class="comment_body_wrapper">
-            <%= simple_form_for([upc, upc.comments.build], remote: true, :html => {:multipart => true, id: "newcomment" } ) do |f| %>
-              <div class="upcoming_form_body" ><%= f.text_area :body, placeholder: "Are you coming? Drop your comment Here", input_html: { rows: "10"} %></div>
-              <button type="submit" class="btn btn-success" style="width:100%">Comment</button>
-            <% end %>
-            <span style="color:blue" ><%= link_to  pluralize(upc.comments.count, "Comment"), upcoming_event_comments_path(upc.id, @comments), remote: true, class:"viewcomments", style:"padding-left:15px;" %></span>
+            <span style="color:blue" ><%= link_to  pluralize(upc.comments.count, "Comment"), upcoming_event_path(upc), style:"padding-left:15px;" %></span>
             <% last_comment = upc.comments.all.last %>
-            <%= last_comment.body %>
+            <p class='textControl' style="line-height: 15pt; font-size:16px; color:black; padding-top: 16px;"><%= last_comment.body %></p>
           </div>
         </div>
 
@@ -25,3 +22,4 @@
     <div style="background-color:red"><%= paginate upcomings %></div>
   </div>
 <% end %>
+</div>

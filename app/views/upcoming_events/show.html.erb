@@ -1,0 +1,25 @@
+
+  <div class="upcomingtitle" style="font-weight:bold;font-size:17px; color:black; text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); background-color:#E5E7E9  "><%= @up_coming.title %></div>
+  <div class='textControl' style="line-height: 20pt; font-size:16px; color:black; padding-top: 16px;"><%= @up_coming.body %></div>
+
+  <% @up_coming.pictures.each do |pic, remov| %>
+    <div><%= image_tag(pic.image.url(:large), class:"img-responsive future", style: " display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;") if pic.image? %></div>
+  <% end %>
+  <div align="center" style="width: 62.5%;display: inline-block;" >
+  <div class="starting_date_class"><%= @up_coming.starting_date.strftime("Starting At:  %Y-%m-%d %H:%M:%S") %></div>
+  <div class="end_date_class"><%= @up_coming.end_date.strftime("Ends At:  %Y-%m-%d %H:%M:%S") %></div>
+</br>
+  <div id="newcomment" >
+    <%= render @up_coming.comments %>
+  </div>
+</br>
+  <div class="comment_body_wrapper">
+    <%= simple_form_for([@up_coming, @up_coming.comments.build], remote: true, :html => {:multipart => true, id: "upc_comment" } ) do |f| %>
+      <div class="upcoming_form_body" ><%= f.text_area :body, placeholder: "Are you coming? Drop your comment Here", input_html: { rows: "10"} %></div>
+      </br>
+      <button type="submit" class="btn btn-success" style="width:100%">Comment</button>
+    <% end %>
+  </div>

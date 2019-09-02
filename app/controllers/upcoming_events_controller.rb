@@ -11,6 +11,10 @@ class  UpcomingEventsController < ApplicationController
     end
   end
 
+  def show
+    @up_coming = UpcomingEvent.find(params[:id])
+  end
+
   def index
     @upcoming_events = UpcomingEvent.all
   end
