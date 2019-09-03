@@ -10,5 +10,4 @@
         <span style="color:blue"><%= link_to "Delete", comment_path(comment), data: {confirm: 'Are you sure?'},  method: :delete, remote: true,  class:"deletecomment" %></span>
         <span style="color:blue"><%= link_to 'Edit', edit_comment_path(:id => comment.id), id: "edit-comment_link"%></span>
     <% end %>
-
 </div>

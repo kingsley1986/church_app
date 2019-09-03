@@ -892,8 +892,9 @@ form#commentform textarea {
 	color: #fff;
 }
 section.section-padding.gray-bg {
-    background: #FFFFFF;
+    background: #CD5C5C;
     color: #484848;
+		margin-top: -0.9em
 }
 
   #accordion-alt3 .panel-heading h4 {

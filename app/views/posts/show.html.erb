@@ -10,18 +10,7 @@
     <div>posted <%= time_ago_in_words(@post.created_at) %> ago</div>
     </br>
     <% end %>
-    <% if current_user && user_signed_in? %>
-    <div class="action_buttons">
-      <% if [@post.liker_id].any? { |l| l&.include?(current_user.id)} %>
-        <%= link_to "Unlike", unlike_post_path(@post, like: true), method: :delete, :remote => true,  :class => 'unlikepost', style:"color: red; margin-right: 20px" %>
-      <%else %>
-      <div><%= link_to "Like", like_post_path(@post, like: true), method: :post, remote: true, :class => 'likepost', style:"color: red; margin-top: 30px;" %></div>
-        <% end %>
-        <%= pluralize( @post.liker_id&.count, "like") %>
-      <% end %>
-      <% if  @post.liker_id&.size >= 1 %>
-        <div class="fa fa-thumbs-o-up" style="margin-left:5px; margin-right:20px; color:blue"></div>
-      <% end %>
+    
     </br>
     </br>
       <div class="resetcomments">
@@ -29,10 +18,8 @@
         <div id="newcomment" >
           <%= render @post.comments %>
         </div>
-      <% if current_user && user_signed_in? %>
       <div class="make-a-comment">Make your Comments: </div>
         <%= render "comments/form" %>
-      <% end %>
     </div>
   </div>
 </div>

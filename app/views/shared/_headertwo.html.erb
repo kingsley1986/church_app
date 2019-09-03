@@ -54,9 +54,10 @@
 
 
 <% if current_page?(root_path) %>
- 	<%= render "upcoming_events/upcomings" %>
-<% end %>
 <%= render "pages/index" %>
+
+<% end %>
+	<%= render "upcoming_events/upcomings" %>
 
 <%= render "sermons/index" %>
 <section class="section-padding gray-bg">
@@ -66,23 +67,21 @@
 				<div class="col-md-12 section-heading text-center">
 					<h2 class="to-animate" style="display: inline-block; font-family: 'Gabriela', serif; color: #FFF; font-size: 1.1em; border-radius: 20px; background: rgba(43, 166, 203, 0.9); padding: 0.5em 0.2em 0.2em 0.2em;">Parish Pastor</h2>
 				</div>
-				<div class="col-md-8 to-animate">
+				<div class="col-md-8 to-animate1">
 					<% Page.all.each do |page| %>
 						<% if page.page_type == "About_Parish_pastor" %>
-							<% page.pictures.each do |page_pc| %>
+						    <%	page_pc = page.pictures.first %>
 								<%= image_tag page_pc.image.url(:large), class:"img-responsive img-rounded", alt:"Free HTML5 Template" if page_pc.image? %>
-							<% end %>
 						<% end %>
 					<% end %>
 				</div>
-				<div class="col-md-4 to-animate" style="margin-top:-10px;">
 					<% Page.all.each do |page| %>
 						<% if page.page_type == "About_Parish_pastor" %>
-							<p><%= truncate(page.body, length: 410) %></p>
+							<p class="col-md-4 to-animate1" style="margin-top:-5px; background-color:white"><%= truncate(page.body, length: 208) %></p>
 						<% end %>
 					<% end %>
-					<p><a href="/pages/filter/about_parish_pastor" class="btn btn-primary">Read More</a></p>
-				</div>
+					<a href="/pages/filter/about_parish_pastor" class="btn btn-primary">Read More</a>
+				</div
 			</div>
 		</div>
 </section>
