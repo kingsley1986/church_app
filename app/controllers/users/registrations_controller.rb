@@ -1,7 +1,6 @@
 class User::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_sign_up_params, only: [:create], if: :devise_controller?
 # before_action :configure_account_update_params, only: [:update]
-  prepend_before_filter :require_no_authentication, only: [:cancel, :create, :new ]
 
 
 
