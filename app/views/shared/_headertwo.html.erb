@@ -6,9 +6,9 @@
                     <div class="image"></div>
                     <div class="info">
                         <div>
-                          <h1>Beautiful Template Sentra</h1>
-                          <p>Sentra is free Bootstrap CSS Template by templatemo website.<br>
-                          	Please share our site link to your friends.</p>
+                          <h1>Sharing The Love of Jesus</h1>
+                          <p>To every One, to the poor and to the rich.<br>
+                          	Our Passion is to bring souls to Christ.</p>
                           <div class="white-button button">
                               <!-- <a href="#featured">Discover More</a> -->
                           </div>
@@ -60,6 +60,8 @@
 	<%= render "upcoming_events/upcomings" %>
 
 <%= render "sermons/index" %>
+<% page_present =  Page.where("page_type = 'About_Parish_pastor'") %>
+<% if page_present.present? %>
 <section class="section-padding gray-bg">
 	<div id="fh5co-about-us" data-section="about" style="margin-top:20px;">
 		<div class="container">
@@ -70,21 +72,19 @@
 				<div class="col-md-8 to-animate1">
 					<% Page.all.each do |page| %>
 						<% if page.page_type == "About_Parish_pastor" %>
-						    <%	page_pc = page.pictures.first %>
-								<%= image_tag page_pc.image.url(:large), class:"img-responsive img-rounded", alt:"Free HTML5 Template" if page_pc.image? %>
+            <% @page = page %>
+						    <%	@page_pc = page.pictures.first %>
+								<%= image_tag @page_pc.image.url(:large), class:"img-responsive img-rounded", alt:"Free HTML5 Template" if @page_pc.image? %>
 						<% end %>
 					<% end %>
 				</div>
-					<% Page.all.each do |page| %>
-						<% if page.page_type == "About_Parish_pastor" %>
-							<p class="col-md-4 to-animate1" style="margin-top:-5px; background-color:white"><%= truncate(page.body, length: 208) %></p>
-						<% end %>
-					<% end %>
+					<p class="col-md-4 to-animate1" style="margin-top:-5px; background-color:white"><%= truncate(@page.body, length: 208) %></p>
 					<a href="/pages/filter/about_parish_pastor" class="btn btn-primary">Read More</a>
-				</div
+				</div>
 			</div>
 		</div>
 </section>
+<% end %>
 <%= render "contacts/form" %>
 
 	<footer>

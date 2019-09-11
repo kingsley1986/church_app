@@ -2,7 +2,9 @@
 <li class="span6">
   <div class="block">
       <div class="row item_sermon">
-        <h2 class="most_recent_sermon">This is the most recent Sermons</h2>
+        <% unless set_sermons %>
+          <h2 class="most_recent_sermon">This is the most recent Sermons</h2>
+        <% end %>
         <div class="clear">
           <% set_sermons.each do |sermon| %>
             <div class="col-md-6 col-md-offset-3 set_sermon_background" style="position:relative; left:15%;">
@@ -27,5 +29,7 @@
     </p>
   </div>
 </li>
+<% unless set_sermons %>
 <div class="btn btn-success view-all-sermon"><%=link_to "View All Sermons", sermons_path, id:"view_sermon"%></div>
+<% end %>
 </div>

@@ -22,7 +22,7 @@ a.navbar-brand > img {
 @media only screen and (max-width: 500px){
   a.navbar-brand > img {
     position: relative;
-    left:33px;
+    left:69px;
   }
 }
 
@@ -30,15 +30,12 @@ a.navbar-brand > img {
     div.square-flip{
         width: 90%;
         position: relative;
-       left: -32.5px;
+       left: -110px;
        padding-top: 30px;
+       bottom: 6em;
       }
     }
-// @media only screen and (max-width: 500px) {
-//     div.centerflipcards{
-//        padding-top: 130px;
-//       }
-//     }
+
 @media only screen and (max-width: 500px) {
     section.section-padding.gray-bg{
       position: relative;
@@ -53,7 +50,8 @@ section.section-padding.gray-bg{
 
 
 div.square-flip {
-  margin-left: 50px;
+  margin-left: 130px;
+  margin-top: -6px;
 }
 
 
@@ -390,6 +388,7 @@ and (max-device-width : 1024px)  {
 // ends here
 
 // form contacts
+
 
 @media only screen
 and (min-device-width : 768px)
