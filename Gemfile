@@ -25,6 +25,7 @@ gem 'rmagick', '~> 4.0'
 gem "bourbon"
 gem "recaptcha", require: "recaptcha/rails"
 
+
 gem 'turbolinks'
 gem 'will_paginate'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
