@@ -12,7 +12,7 @@ gem 'activeadmin', '~> 2.2'
 gem 'railties', '5.2.3'
 
 gem "pundit"
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'carrierwave'
 gem "mini_magick"
 gem "fog"
