@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
-gem 'rails', '~> 5.2', '>= 5.2.3'
+gem 'rails', '~> 6.0', '>= 6.0.2.1'
 gem 'pg'
 gem 'uglifier', '~> 4.1', '>= 4.1.20'
 gem 'coffee-rails', '~> 5.0'
@@ -9,7 +8,7 @@ gem 'coffee-rails', '~> 5.0'
 gem 'jbuilder', '~> 2.9', '>= 2.9.1'
 # gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'activeadmin', '~> 2.2'
-gem 'railties', '5.2.3'
+gem 'railties', '~> 6.0', '>= 6.0.2.1'
 
 gem "pundit"
 gem 'devise', '~> 4.6', '>= 4.6.2'

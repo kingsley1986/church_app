@@ -13,8 +13,10 @@
         <div class="end_date_class"><%= upc.end_date.strftime("Ends At:  %Y-%m-%d %H:%M:%S") %></div>
           <div class="comment_body_wrapper">
             <span style="color:blue" ><%= link_to  pluralize(upc.comments.count, "Comment"), upcoming_event_path(upc), style:"padding-left:15px;" %></span>
-            <% last_comment = upc.comments.all.last %>
-            <p class='textControl' style="line-height: 15pt; font-size:16px; color:black; padding-top: 16px;"><%= last_comment.body %></p>
+            <% if upc.comments.any? %>
+              <% last_comment = upc.comments.all.last %>
+              <p class='textControl' style="line-height: 15pt; font-size:16px; color:black; padding-top: 16px;"><%= last_comment.body %></p>
+            <% end %>
           </div>
         </div>
 
