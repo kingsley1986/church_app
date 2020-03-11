@@ -274,7 +274,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (3.2.3)
+    fog-vsphere (3.2.5)
       fog-core
       rbvmomi (>= 1.9, < 3)
     fog-xenserver (1.0.0)
@@ -500,7 +500,7 @@ GEM
       faraday (>= 0.17.3, < 2.0)
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
-    simple_form (4.1.0)
+    simple_form (5.0.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     slim (4.0.1)
@@ -577,7 +577,7 @@ DEPENDENCIES
   rspec-rails (~> 3.8, >= 3.8.2)
   sass-rails (~> 5.1)
   shoulda-matchers (~> 4.1, >= 4.1.2)
-  simple_form (~> 4.1)
+  simple_form (~> 5.0)
   slim
   spring
   turbolinks
