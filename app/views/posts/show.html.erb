@@ -14,7 +14,7 @@
     </br>
     </br>
       <div class="resetcomments">
-        <%= ActionController::Base.helpers.pluralize(approved_comments.size, "Comment")%>
+        <%= ActionController::Base.helpers.pluralize(@post.comments.size, "Comment")%>
         <div id="newcomment" >
           <%= render @post.comments %>
         </div>
