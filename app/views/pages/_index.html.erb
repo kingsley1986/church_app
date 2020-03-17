@@ -1,62 +1,51 @@
 
-	<section id="contact" class="section-wrapper contact-section" data-stellar-background-ratio="0.5" style="background:#c70827">
-
-	 <div class="parallax-overlay"></div>
+<section id="contact" class="section-wrapper contact-section" data-stellar-background-ratio="0.5" style="background:#c70827">
+	<div class="parallax-overlay"></div>
 		<div class="row">
-
-		<div class="centerflipcards">
-			<div class="square-flip">
+			<div class="centerflipcards">
+				<div class="square-flip">
 					<% Page.all.each do |page| %>
 						<% case page.page_type %>
-						<% when "Sunday"  %>
-							<% page.pictures.each do |page_pc| %>
-								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
-			  					<div class="square-container">
-			    					<div class="align-center">
-			      					<h3 class="boxshadow kallyas-button" alt="">Sunday Service</h3>
-			    					</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Sunday" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
-									</div>
+							<% when "Sunday"  %>
+								<% page.pictures.each do |page_pc| %>
+									<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+			  							<div class="square-container">
+			    							<div class="align-center">
+			      								<h3 class="boxshadow kallyas-button" alt="">Sunday Service</h3>
+			    							</div>
+											<h3><%= truncate(page.body, length: 70) %></h3>
+										</div>
+									<% end %>
 								<% end %>
+								<%= content_tag :div, '', class: 'square2', data: { image: asset_path('/images/langa4.jpg') } do %>
+									<div class="square-container2">
+										<div class="align-center"></div>
+										<a href="/pages/filter/sunday" target="_blank" class="boxshadow kallyas-button">View Details</a>
+									</div>
+									<div class="flip-overlay"></div>
+								</div>
 							<% end %>
 
-					<%= content_tag :div, '', class: 'square2', data: { image: asset_path('/images/langa4.jpg') } do %>
-						<div class="square-container2">
-							<div class="align-center"></div>
-							<a href="/pages/filter/sunday" target="_blank" class="boxshadow kallyas-button">View Details</a>
-						</div>
-						<div class="flip-overlay"></div>
-					</div>
-				<% end %>
-			<div class="square-flip">
-						<% when"Tuesday" %>
-							<% page.pictures.each do |page_pc| %>
-								<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
+				<div class="square-flip">
+					<% when"Tuesday" %>
+						<% page.pictures.each do |page_pc| %>
+							<%= content_tag :div, '', class: 'square', data: { image: page_pc.image.url(:large) } do %>
 								<div class="square-container">
 									<div class="align-center">
 										<h3 class="boxshadow kallyas-button" alt=""><ul><li>Tuesday</li><li>Bible Study</li></ul></h3>
 									</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Tuesday" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
-									</div>
-								<% end %>
+										<h3><%= truncate(page.body, length: 70) %></h3>
+								</div>
 							<% end %>
-
-					<%= content_tag :div, '', class: 'square2', data: { image: asset_path('/images/langa4.jpg') } do %>
-						<div class="square-container2">
-							<div class="align-center"></div>
-							<a href="/pages/filter/tuesday" target="_blank" class="boxshadow kallyas-button">View Details</a>
+						<% end %>
+						<%= content_tag :div, '', class: 'square2', data: { image: asset_path('/images/langa4.jpg') } do %>
+							<div class="square-container2">
+								<div class="align-center"></div>
+								<a href="/pages/filter/tuesday" target="_blank" class="boxshadow kallyas-button">View Details</a>
+							</div>
+							<div class="flip-overlay"></div>
 						</div>
-						<div class="flip-overlay"></div>
-					</div>
-				<% end %>
+						<% end %>
 			<div class="square-flip">
 						<% when "Thursday" %>
 							<% page.pictures.each do |page_pc| %>
@@ -65,11 +54,9 @@
 										<div class="align-center">
 											<h3 class="boxshadow kallyas-button" alt=""><ul><li>Thursday</li><li>Faith Clinic</li></ul></h3>
 										</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Thursday" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
+										
+											<h3><%= truncate(page.body, length: 70) %></h3>
+										
 									</div>
 								<% end %>
 							<% end %>
@@ -90,11 +77,9 @@
 										<div class="align-center">
 											<h3 class="boxshadow kallyas-button" alt=""><ul><li>Friday</li><li>Night Vigil</li></ul></h3>
 										</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Fridaynightvigil" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
+										
+											<h3><%= truncate(page.body, length: 70) %></h3>
+											
 									</div>
 								<% end %>
 							<% end %>
@@ -115,11 +100,9 @@
 										<div class="align-center">
 											<h3 class="boxshadow kallyas-button" alt="">Glorious Youth</h3>
 										</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Youths" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
+										
+											<h3><%= truncate(page.body, length: 70) %></h3>
+										
 									</div>
 								<% end %>
 							<% end %>
@@ -140,11 +123,9 @@
 										<div class="align-center">
 											<h3 class="boxshadow kallyas-button" alt="">Glorious Children</h3>
 										</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Childrens" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
+										
+											<h3><%= truncate(page.body, length: 70) %></h3>
+										
 									</div>
 								<% end %>
 							<% end %>
@@ -165,11 +146,9 @@
 										<div class="align-center">
 											<h3 class="boxshadow kallyas-button" alt="">Excellent Women</h3>
 										</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Women" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
+										
+											<h3><%= truncate(page.body, length: 70) %></h3>
+										
 									</div>
 								<% end %>
 							<% end %>
@@ -190,11 +169,9 @@
 										<div class="align-center">
 											<h3 class="boxshadow kallyas-button" alt="">Hospital Visit</h3>
 										</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Hospital" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
+										
+											<h3><%= truncate(page.body, length: 70) %></h3>
+										
 									</div>
 								<% end %>
 							<% end %>
@@ -215,11 +192,9 @@
 										<div class="align-center">
 											<h3 class="boxshadow kallyas-button" alt="">Community Help</h3>
 										</div>
-										<% Page.all.each do |page| %>
-											<% if page.page_type == "Community" %>
-												<h3><%= truncate(page.body, length: 70) %></h3>
-											<% end %>
-										<% end %>
+										
+											<h3><%= truncate(page.body, length: 70) %></h3>
+											
 									</div>
 								<% end %>
 							<% end %>
