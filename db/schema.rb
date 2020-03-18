@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2017_08_29_075922) do
+ActiveRecord::Schema.define(version: 2020_03_17_224624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2017_08_29_075922) do
     t.boolean "like", default: false
     t.jsonb "liker_id", default: []
     t.jsonb "approved", default: []
+    t.string "name"
     t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
   end
 

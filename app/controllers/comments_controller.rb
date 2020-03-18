@@ -76,7 +76,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body, :approved, pictures_attributes: [:id, :comment_id, :image])
+    params.require(:comment).permit(:body, :name, :approved, pictures_attributes: [:id, :comment_id, :image])
   end
 
   def set_commenter

@@ -18,6 +18,8 @@
 </br>
   <div class="comment_body_wrapper">
     <%= simple_form_for([@up_coming, @up_coming.comments.build], remote: true, :html => {:multipart => true, id: "upc_comment" } ) do |f| %>
+      <%= f.input :name, label: false, as:"text", class:"upcoming_form_body", placeholder:"First Name", input_html: { style:" text-align: center;"} %>
+
       <div class="upcoming_form_body" ><%= f.text_area :body, placeholder: "Are you coming? Drop your comment Here", input_html: { rows: "10"} %></div>
       </br>
       <button type="submit" class="btn btn-success" style="width:100%">Comment</button>

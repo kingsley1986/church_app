@@ -28,3 +28,30 @@ div.make-a-comment {
 label.control-label.text.required {
   display: none
 }
+
+
+#commentfrom {
+  float:left;
+  font-size: 9px;
+  background-color: #F8F8FF;
+  color: black;
+  text-align: center;
+}
+#commentname {
+  padding-left : 10px;
+  float:left;
+  color:green;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: italic;
+  background-color: #F8F8FF;
+  text-align: center;
+  
+}
+
+.fromandcommentname {
+  position: relative;
+  top: -18px;
+  left:7%;
+  
+}
