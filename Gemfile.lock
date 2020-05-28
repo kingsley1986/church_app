@@ -336,19 +336,19 @@ GEM
       turbolinks
     json (2.3.0)
     jwt (2.2.1)
-    kaminari (1.2.0)
+    kaminari (1.2.1)
       activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.2.0)
-      kaminari-activerecord (= 1.2.0)
-      kaminari-core (= 1.2.0)
-    kaminari-actionview (1.2.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
       actionview
-      kaminari-core (= 1.2.0)
-    kaminari-activerecord (1.2.0)
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
       activerecord
-      kaminari-core (= 1.2.0)
-    kaminari-core (1.2.0)
-    loofah (2.4.0)
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
+    loofah (2.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -367,7 +367,7 @@ GEM
     mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.0)
+    minitest (5.14.1)
     multi_json (1.14.1)
     multipart-post (2.1.1)
     netrc (0.11.0)
@@ -521,7 +521,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uber (0.1.0)
     uglifier (4.2.0)
@@ -563,7 +563,7 @@ DEPENDENCIES
   jbuilder (~> 2.9, >= 2.9.1)
   jquery-rails
   jquery-turbolinks
-  kaminari (~> 1.1, >= 1.1.1)
+  kaminari (~> 1.2)
   mail_form (~> 1.7, >= 1.7.1)
   mini_magick
   pg
