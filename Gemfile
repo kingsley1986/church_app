@@ -27,7 +27,7 @@ gem "recaptcha", require: "recaptcha/rails"
 
 gem 'turbolinks'
 gem 'will_paginate'
-gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'kaminari', '~> 1.2'
 
 
 
